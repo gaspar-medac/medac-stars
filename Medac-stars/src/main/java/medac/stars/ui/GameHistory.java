@@ -3,6 +3,7 @@ package medac.stars.ui;
 import medac.stars.utils.FontBuilder;
 
 import javax.swing.*;
+import javax.swing.plaf.basic.BasicScrollBarUI;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.JTableHeader;
 import java.awt.*;
@@ -35,114 +36,159 @@ public class GameHistory extends JFrame {
 
         Object[][] data = {
             {
-                "[Player1 - MedacStar1][Player2 - MedacStar2]",
-                "[Player3 - MedacStar3][Player4 - MedacStar4]",
+                "[Player1 - MedacStar1] [Player2 - MedacStar2]",
+                "[Player3 - MedacStar3] [Player4 - MedacStar4]",
                 "Team 1 win"
             },
                 {
-                        "[Player1 - MedacStar1][Player2 - MedacStar2]",
-                        "[Player3 - MedacStar3][Player4 - MedacStar4]",
+                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
+                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
                         "Team 1 win"
                 },
                 {
-                        "[Player1 - MedacStar1][Player2 - MedacStar2]",
-                        "[Player3 - MedacStar3][Player4 - MedacStar4]",
+                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
+                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
                         "Team 1 win"
                 },
                 {
-                        "[Player1 - MedacStar1][Player2 - MedacStar2]",
-                        "[Player3 - MedacStar3][Player4 - MedacStar4]",
+                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
+                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
                         "Team 1 win"
                 },
                 {
-                        "[Player1 - MedacStar1][Player2 - MedacStar2]",
-                        "[Player3 - MedacStar3][Player4 - MedacStar4]",
+                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
+                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
                         "Team 1 win"
                 },
                 {
-                        "[Player1 - MedacStar1][Player2 - MedacStar2]",
-                        "[Player3 - MedacStar3][Player4 - MedacStar4]",
+                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
+                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
                         "Team 1 win"
                 },
                 {
-                        "[Player1 - MedacStar1][Player2 - MedacStar2]",
-                        "[Player3 - MedacStar3][Player4 - MedacStar4]",
+                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
+                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
                         "Team 1 win"
                 },
                 {
-                        "[Player1 - MedacStar1][Player2 - MedacStar2]",
-                        "[Player3 - MedacStar3][Player4 - MedacStar4]",
+                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
+                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
                         "Team 1 win"
                 },
                 {
-                        "[Player1 - MedacStar1][Player2 - MedacStar2]",
-                        "[Player3 - MedacStar3][Player4 - MedacStar4]",
+                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
+                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
                         "Team 1 win"
                 },
                 {
-                        "[Player1 - MedacStar1][Player2 - MedacStar2]",
-                        "[Player3 - MedacStar3][Player4 - MedacStar4]",
+                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
+                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
                         "Team 1 win"
                 },
                 {
-                        "[Player1 - MedacStar1][Player2 - MedacStar2]",
-                        "[Player3 - MedacStar3][Player4 - MedacStar4]",
+                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
+                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
                         "Team 1 win"
                 },
 
                 {
-                        "[Player1 - MedacStar1][Player2 - MedacStar2]",
-                        "[Player3 - MedacStar3][Player4 - MedacStar4]",
+                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
+                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
                         "Team 1 win"
                 },
                 {
-                        "[Player1 - MedacStar1][Player2 - MedacStar2]",
-                        "[Player3 - MedacStar3][Player4 - MedacStar4]",
+                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
+                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
                         "Team 1 win"
                 },
                 {
-                        "[Player1 - MedacStar1][Player2 - MedacStar2]",
-                        "[Player3 - MedacStar3][Player4 - MedacStar4]",
+                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
+                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
                         "Team 1 win"
                 },
                 {
-                        "[Player1 - MedacStar1][Player2 - MedacStar2]",
-                        "[Player3 - MedacStar3][Player4 - MedacStar4]",
+                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
+                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
                         "Team 1 win"
                 },
                 {
-                        "[Player1 - MedacStar1][Player2 - MedacStar2]",
-                        "[Player3 - MedacStar3][Player4 - MedacStar4]",
+                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
+                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
                         "Team 1 win"
                 },
                 {
-                        "[Player1 - MedacStar1][Player2 - MedacStar2]",
-                        "[Player3 - MedacStar3][Player4 - MedacStar4]",
+                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
+                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
                         "Team 1 win"
                 },
                 {
-                        "[Player1 - MedacStar1][Player2 - MedacStar2]",
-                        "[Player3 - MedacStar3][Player4 - MedacStar4]",
+                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
+                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
                         "Team 1 win"
                 },
                 {
-                        "[Player1 - MedacStar1][Player2 - MedacStar2]",
-                        "[Player3 - MedacStar3][Player4 - MedacStar4]",
+                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
+                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
                         "Team 1 win"
                 },
                 {
-                        "[Player1 - MedacStar1][Player2 - MedacStar2]",
-                        "[Player3 - MedacStar3][Player4 - MedacStar4]",
+                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
+                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
                         "Team 1 win"
                 },
                 {
-                        "[Player1 - MedacStar1][Player2 - MedacStar2]",
-                        "[Player3 - MedacStar3][Player4 - MedacStar4]",
+                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
+                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
                         "Team 1 win"
                 },
                 {
-                        "[Player1 - MedacStar1][Player2 - MedacStar2]",
-                        "[Player3 - MedacStar3][Player4 - MedacStar4]",
+                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
+                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
+                        "Team 1 win"
+                },
+                {
+                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
+                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
+                        "Team 1 win"
+                },
+                {
+                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
+                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
+                        "Team 1 win"
+                },
+                {
+                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
+                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
+                        "Team 1 win"
+                },
+                {
+                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
+                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
+                        "Team 1 win"
+                },
+                {
+                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
+                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
+                        "Team 1 win"
+                },
+                {
+                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
+                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
+                        "Team 1 win"
+                },
+                {
+                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
+                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
+                        "Team 1 win"
+                },
+                {
+                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
+                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
+                        "Team 1 win"
+                },
+                {
+                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
+                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
                         "Team 1 win"
                 },
 
@@ -166,5 +212,50 @@ public class GameHistory extends JFrame {
 
         JTableHeader header = historyTable.getTableHeader();
         header.setFont(montserratSemiBold.deriveFont(14f));
+
+
+        historyTableScrollPane = new JScrollPane();
+        historyTableScrollPane.getVerticalScrollBar().setPreferredSize(new Dimension(8, 0));
+        historyTableScrollPane.getVerticalScrollBar().setUI(new BasicScrollBarUI() {
+            @Override
+            protected void configureScrollBarColors() {
+                this.thumbColor = new Color(168,168, 168);
+                this.trackColor = new Color(0, 0, 0, 0);
+            }
+
+            @Override
+            protected JButton createDecreaseButton(int orientation) {
+                return new JButton() {
+                    @Override
+                    public Dimension getPreferredSize() {
+                        return new Dimension(0, 0);
+                    }
+                };
+            }
+
+            @Override
+            protected JButton createIncreaseButton(int orientation) {
+                return new JButton() {
+                    @Override
+                    public Dimension getPreferredSize() {
+                        return new Dimension(0, 0);
+                    }
+                };
+            }
+
+            @Override
+            protected void paintThumb(Graphics g, JComponent c, Rectangle thumbBounds) {
+                if (!thumbBounds.isEmpty() && this.scrollbar.isEnabled()) {
+                    int w = thumbBounds.width - 1;
+                    int h = thumbBounds.height - 1;
+
+                    Graphics2D g2 = (Graphics2D) g.create();
+                    g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+                    g2.setColor(thumbColor);
+                    g2.fillRoundRect(thumbBounds.x, thumbBounds.y, w, h, 7, 7);
+                    g2.dispose();
+                }
+            }
+        });
     }
 }
