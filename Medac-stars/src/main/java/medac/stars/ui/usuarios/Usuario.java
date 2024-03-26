@@ -15,6 +15,11 @@ public class Usuario extends javax.swing.JFrame {
      */
     public Usuario() {
         initComponents();
+        TextPrompt usuario = new TextPrompt("Introduce el usuario", jTextoUsuario);
+        TextPrompt email = new TextPrompt("Introduce el Email", jTextoEmail);
+        TextPrompt contraseña = new TextPrompt("Introduce contraseña", jContraseña);
+
+
     }
 
     /**
@@ -46,14 +51,11 @@ public class Usuario extends javax.swing.JFrame {
 
         jEmail.setText("Email");
 
-        jTextoUsuario.setText("introduce usuario");
         jTextoUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextoUsuarioActionPerformed(evt);
             }
         });
-
-        jTextoEmail.setText("introduce email");
 
         jTipoUsuario.setText("Tipo de Usuario");
 
@@ -64,8 +66,6 @@ public class Usuario extends javax.swing.JFrame {
         bGestor.setText("Gestor");
 
         jContraseñaLabel.setText("Contraseña");
-
-        jContraseña.setText("contraseña");
 
         bEntrar.setText("Entrar");
         bEntrar.addActionListener(new java.awt.event.ActionListener() {
@@ -131,7 +131,7 @@ public class Usuario extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jContraseñaLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(bVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -198,4 +198,5 @@ public class Usuario extends javax.swing.JFrame {
     private javax.swing.JLabel jTipoUsuario;
     private javax.swing.JLabel jUsuario;
     // End of variables declaration//GEN-END:variables
+
 }
