@@ -1,14 +1,17 @@
 package medac.stars.ui;
 
+import medac.stars.utils.FontBuilder;
+import medac.stars.utils.ImagePanel;
+
 import javax.swing.*;
 import java.awt.*;
 
 public class JoinGame extends JFrame {
 
     private JPanel JoinGamePanel;
-    private JButton unirseButton;
-    private JButton unirseButton1;
-    private JButton CANCELARButton;
+    private JButton joinButton;
+    private JButton joinButton2;
+    private JButton cancelButton;
     private JLabel slot1Label;
     private JLabel slot2Label;
     private JLabel slot3Label;
@@ -26,6 +29,16 @@ public class JoinGame extends JFrame {
 
         ImageIcon logo = new ImageIcon("./src/main/java/medac/stars/ui/assets/images/logo.png");
         setIconImage(logo.getImage());
+
+        Font montserratSemiBold = FontBuilder.getFont("Montserrat-SemiBold.ttf");
+        joinButton.setFont(montserratSemiBold.deriveFont(12f));
+        joinButton2.setFont(montserratSemiBold.deriveFont(12f));
+        cancelButton.setFont(montserratSemiBold.deriveFont(12f));
+        slot1Label.setFont(montserratSemiBold.deriveFont(12f));
+        slot2Label.setFont(montserratSemiBold.deriveFont(12f));
+        slot3Label.setFont(montserratSemiBold.deriveFont(12f));
+        slot4Label.setFont(montserratSemiBold.deriveFont(12f));
+        arenaNameLabel.setFont(montserratSemiBold.deriveFont(12f));
     }
 
     public static void main(String[] args) {
@@ -33,6 +46,9 @@ public class JoinGame extends JFrame {
     }
 
     private void createUIComponents() {
+        JoinGamePanel = new JPanel();
+        JoinGamePanel = new ImagePanel("background.jpg");
+
         slot1Label = new JLabel();
         slot2Label = new JLabel();
         arenaNameLabel = new JLabel();
