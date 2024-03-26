@@ -4,6 +4,10 @@
  */
 package medac.stars.ui.arena;
 
+import java.io.File;
+import javax.swing.ImageIcon;
+import javax.swing.JFileChooser;
+
 /**
  *
  * @author asier
@@ -27,43 +31,42 @@ public class EditArena extends javax.swing.JFrame {
     private void initComponents() {
 
         bCancelarEditar = new javax.swing.JButton();
-        pImagenArena = new javax.swing.JPanel();
         bCambiarImagen = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         tfEditarNombre = new javax.swing.JTextField();
         cbCuentaAtrasEditar = new javax.swing.JCheckBox();
-        tfEditarNumObjetos = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         tfEditarDescripcion = new javax.swing.JTextField();
         bGuardarCambios = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
+        jSpinner1 = new javax.swing.JSpinner();
+        jlimagenArena = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         bCancelarEditar.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
         bCancelarEditar.setText("Cancelar");
-
-        javax.swing.GroupLayout pImagenArenaLayout = new javax.swing.GroupLayout(pImagenArena);
-        pImagenArena.setLayout(pImagenArenaLayout);
-        pImagenArenaLayout.setHorizontalGroup(
-            pImagenArenaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        pImagenArenaLayout.setVerticalGroup(
-            pImagenArenaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 180, Short.MAX_VALUE)
-        );
+        bCancelarEditar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bCancelarEditarActionPerformed(evt);
+            }
+        });
 
         bCambiarImagen.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
         bCambiarImagen.setText("Nueva Imagen");
+        bCambiarImagen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bCambiarImagenActionPerformed(evt);
+            }
+        });
 
-        jLabel1.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
         jLabel1.setText("Nombre");
 
-        tfEditarNombre.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        tfEditarNombre.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
 
-        cbCuentaAtrasEditar.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        cbCuentaAtrasEditar.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
         cbCuentaAtrasEditar.setText("Cuenta atras");
         cbCuentaAtrasEditar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -71,20 +74,13 @@ public class EditArena extends javax.swing.JFrame {
             }
         });
 
-        tfEditarNumObjetos.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
-        tfEditarNumObjetos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tfEditarNumObjetosActionPerformed(evt);
-            }
-        });
-
-        jLabel2.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
         jLabel2.setText("Numero de Obstáculos");
 
-        jLabel3.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
         jLabel3.setText("Descripción");
 
-        tfEditarDescripcion.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+        tfEditarDescripcion.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
 
         bGuardarCambios.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
         bGuardarCambios.setText("Guardar cambios");
@@ -111,19 +107,19 @@ public class EditArena extends javax.swing.JFrame {
                 .addContainerGap(144, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(pImagenArena, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(bCambiarImagen, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(bCambiarImagen, javax.swing.GroupLayout.DEFAULT_SIZE, 205, Short.MAX_VALUE)
+                            .addComponent(jlimagenArena, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(74, 74, 74)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(jLabel1)
                                 .addComponent(jLabel2)
-                                .addComponent(tfEditarNumObjetos)
                                 .addComponent(jLabel3)
                                 .addComponent(tfEditarDescripcion)
                                 .addComponent(tfEditarNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(cbCuentaAtrasEditar))
+                            .addComponent(cbCuentaAtrasEditar)
+                            .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(133, 133, 133))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jLabel4)
@@ -138,17 +134,19 @@ public class EditArena extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(pImagenArena, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel1)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(tfEditarNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(28, 28, 28)
+                                .addGap(18, 18, 18)
                                 .addComponent(cbCuentaAtrasEditar)
                                 .addGap(18, 18, 18)
                                 .addComponent(jLabel2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(tfEditarNumObjetos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(9, 9, 9)
+                                .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(3, 3, 3)
+                                .addComponent(jlimagenArena, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(18, 18, 18)
                         .addComponent(bCambiarImagen, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
@@ -166,16 +164,27 @@ public class EditArena extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void cbCuentaAtrasEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbCuentaAtrasEditarActionPerformed
-        // TODO add your handling code here:
+       
     }//GEN-LAST:event_cbCuentaAtrasEditarActionPerformed
 
     private void bGuardarCambiosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bGuardarCambiosActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_bGuardarCambiosActionPerformed
 
-    private void tfEditarNumObjetosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfEditarNumObjetosActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tfEditarNumObjetosActionPerformed
+    private void bCambiarImagenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCambiarImagenActionPerformed
+                                           
+        JFileChooser fileChooser = new JFileChooser();
+        fileChooser.setSelectedFile(new File(""));
+        int resultado = fileChooser.showOpenDialog(this);
+        if (resultado == JFileChooser.APPROVE_OPTION) {
+            String ruta = fileChooser.getSelectedFile().getAbsolutePath();
+            loadAndSetImage(fileChooser.getSelectedFile().getAbsolutePath());
+        }          
+    }//GEN-LAST:event_bCambiarImagenActionPerformed
+
+    private void bCancelarEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCancelarEditarActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_bCancelarEditarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -213,8 +222,14 @@ public class EditArena extends javax.swing.JFrame {
                 new EditArena().setVisible(true);
             }
         });
-    }
 
+    }
+    private void loadAndSetImage(String imgPath) {
+        ImageIcon icon = new ImageIcon(imgPath);
+        ImageIcon icono = new ImageIcon(icon.getImage().getScaledInstance(200, 200, 1));
+        jlimagenArena.setIcon(icono);
+
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bCambiarImagen;
     private javax.swing.JButton bCancelarEditar;
@@ -224,9 +239,9 @@ public class EditArena extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JPanel pImagenArena;
+    private javax.swing.JSpinner jSpinner1;
+    private javax.swing.JLabel jlimagenArena;
     private javax.swing.JTextField tfEditarDescripcion;
     private javax.swing.JTextField tfEditarNombre;
-    private javax.swing.JTextField tfEditarNumObjetos;
     // End of variables declaration//GEN-END:variables
 }
