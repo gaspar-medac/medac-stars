@@ -35,7 +35,7 @@ public class ManageData {
         arenaSet.add(new Arena("arena10", false, "bla", "", 10));
         arenaSet.add(new Arena("arena11", false, "bla", "", 10));
         arenaSet.add(new Arena("arena12", false, "bla", "", 10));
-        
+
         
     }
 }
