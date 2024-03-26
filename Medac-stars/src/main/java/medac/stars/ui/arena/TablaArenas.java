@@ -94,10 +94,6 @@ public class TablaArenas extends javax.swing.JFrame {
 
     private void addArenaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addArenaButtonActionPerformed
         // TODO add your handling code here:
-        if (addArena == null || !addArenaButton.isVisible()) {
-            addArena = new AddArena();
-            addArena.setVisible(true);
-        }
     }//GEN-LAST:event_addArenaButtonActionPerformed
 
     /**
@@ -135,8 +131,6 @@ public class TablaArenas extends javax.swing.JFrame {
             }
         });
     }
-    
-    private AddArena addArena;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addArenaButton;
     private javax.swing.JButton backMainMenuButton;
