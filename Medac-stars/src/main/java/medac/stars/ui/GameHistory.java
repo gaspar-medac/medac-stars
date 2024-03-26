@@ -20,6 +20,9 @@ public class GameHistory extends JFrame {
         setSize(900, 500);
         setLocationRelativeTo(null);
         setVisible(true);
+
+        ImageIcon logo = new ImageIcon("./src/main/java/medac/stars/ui/assets/images/logo.png");
+        setIconImage(logo.getImage());
     }
 
     public static void main(String[] args) {
