@@ -21,6 +21,7 @@ public class GameHistory extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(900, 500);
         setLocationRelativeTo(null);
+        setResizable(false);
         setVisible(true);
 
         ImageIcon logo = new ImageIcon("./src/main/java/medac/stars/ui/assets/images/logo.png");
@@ -199,6 +200,7 @@ public class GameHistory extends JFrame {
         // Deshabilitamos la edición y el drag
         historyTable.setEnabled(false);
         historyTable.getTableHeader().setReorderingAllowed(false);
+        historyTable.getTableHeader().setResizingAllowed(false);
 
         // Alineamos las celdas al centro
         DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
@@ -209,10 +211,11 @@ public class GameHistory extends JFrame {
 
         Font montserratSemiBold = FontBuilder.getFont("Montserrat-SemiBold.ttf");
         historyTable.setFont(montserratSemiBold.deriveFont(12f));
+        historyTable.setForeground(new Color(33, 37, 41));
 
         JTableHeader header = historyTable.getTableHeader();
         header.setFont(montserratSemiBold.deriveFont(14f));
-
+        header.setForeground(new Color(33, 37, 41));
 
         historyTableScrollPane = new JScrollPane();
         historyTableScrollPane.getVerticalScrollBar().setPreferredSize(new Dimension(8, 0));
