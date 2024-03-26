@@ -11,7 +11,8 @@ public class GameHistory extends JFrame {
     private JPanel GameHistoryPanel;
     private JButton iniciarPartidaUnirseAButton;
     private JButton volverAlMenúPrincipalButton;
-    private JTable table1;
+    private JTable historyTable;
+    private JScrollPane historyTableScrollPane;
 
     public GameHistory() {
         add(GameHistoryPanel);
@@ -37,26 +38,133 @@ public class GameHistory extends JFrame {
                 "[Player1 - MedacStar1][Player2 - MedacStar2]",
                 "[Player3 - MedacStar3][Player4 - MedacStar4]",
                 "Team 1 win"
-            }
+            },
+                {
+                        "[Player1 - MedacStar1][Player2 - MedacStar2]",
+                        "[Player3 - MedacStar3][Player4 - MedacStar4]",
+                        "Team 1 win"
+                },
+                {
+                        "[Player1 - MedacStar1][Player2 - MedacStar2]",
+                        "[Player3 - MedacStar3][Player4 - MedacStar4]",
+                        "Team 1 win"
+                },
+                {
+                        "[Player1 - MedacStar1][Player2 - MedacStar2]",
+                        "[Player3 - MedacStar3][Player4 - MedacStar4]",
+                        "Team 1 win"
+                },
+                {
+                        "[Player1 - MedacStar1][Player2 - MedacStar2]",
+                        "[Player3 - MedacStar3][Player4 - MedacStar4]",
+                        "Team 1 win"
+                },
+                {
+                        "[Player1 - MedacStar1][Player2 - MedacStar2]",
+                        "[Player3 - MedacStar3][Player4 - MedacStar4]",
+                        "Team 1 win"
+                },
+                {
+                        "[Player1 - MedacStar1][Player2 - MedacStar2]",
+                        "[Player3 - MedacStar3][Player4 - MedacStar4]",
+                        "Team 1 win"
+                },
+                {
+                        "[Player1 - MedacStar1][Player2 - MedacStar2]",
+                        "[Player3 - MedacStar3][Player4 - MedacStar4]",
+                        "Team 1 win"
+                },
+                {
+                        "[Player1 - MedacStar1][Player2 - MedacStar2]",
+                        "[Player3 - MedacStar3][Player4 - MedacStar4]",
+                        "Team 1 win"
+                },
+                {
+                        "[Player1 - MedacStar1][Player2 - MedacStar2]",
+                        "[Player3 - MedacStar3][Player4 - MedacStar4]",
+                        "Team 1 win"
+                },
+                {
+                        "[Player1 - MedacStar1][Player2 - MedacStar2]",
+                        "[Player3 - MedacStar3][Player4 - MedacStar4]",
+                        "Team 1 win"
+                },
+
+                {
+                        "[Player1 - MedacStar1][Player2 - MedacStar2]",
+                        "[Player3 - MedacStar3][Player4 - MedacStar4]",
+                        "Team 1 win"
+                },
+                {
+                        "[Player1 - MedacStar1][Player2 - MedacStar2]",
+                        "[Player3 - MedacStar3][Player4 - MedacStar4]",
+                        "Team 1 win"
+                },
+                {
+                        "[Player1 - MedacStar1][Player2 - MedacStar2]",
+                        "[Player3 - MedacStar3][Player4 - MedacStar4]",
+                        "Team 1 win"
+                },
+                {
+                        "[Player1 - MedacStar1][Player2 - MedacStar2]",
+                        "[Player3 - MedacStar3][Player4 - MedacStar4]",
+                        "Team 1 win"
+                },
+                {
+                        "[Player1 - MedacStar1][Player2 - MedacStar2]",
+                        "[Player3 - MedacStar3][Player4 - MedacStar4]",
+                        "Team 1 win"
+                },
+                {
+                        "[Player1 - MedacStar1][Player2 - MedacStar2]",
+                        "[Player3 - MedacStar3][Player4 - MedacStar4]",
+                        "Team 1 win"
+                },
+                {
+                        "[Player1 - MedacStar1][Player2 - MedacStar2]",
+                        "[Player3 - MedacStar3][Player4 - MedacStar4]",
+                        "Team 1 win"
+                },
+                {
+                        "[Player1 - MedacStar1][Player2 - MedacStar2]",
+                        "[Player3 - MedacStar3][Player4 - MedacStar4]",
+                        "Team 1 win"
+                },
+                {
+                        "[Player1 - MedacStar1][Player2 - MedacStar2]",
+                        "[Player3 - MedacStar3][Player4 - MedacStar4]",
+                        "Team 1 win"
+                },
+                {
+                        "[Player1 - MedacStar1][Player2 - MedacStar2]",
+                        "[Player3 - MedacStar3][Player4 - MedacStar4]",
+                        "Team 1 win"
+                },
+                {
+                        "[Player1 - MedacStar1][Player2 - MedacStar2]",
+                        "[Player3 - MedacStar3][Player4 - MedacStar4]",
+                        "Team 1 win"
+                },
+
         };
 
-        table1 = new JTable(data, columnNames);
+        historyTable = new JTable(data, columnNames);
 
         // Deshabilitamos la edición y el drag
-        table1.setEnabled(false);
-        table1.getTableHeader().setReorderingAllowed(false);
+        historyTable.setEnabled(false);
+        historyTable.getTableHeader().setReorderingAllowed(false);
 
         // Alineamos las celdas al centro
         DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
         centerRenderer.setHorizontalAlignment(JLabel.CENTER);
-        for (int i = 0; i < table1.getColumnCount(); i++) {
-            table1.getColumnModel().getColumn(i).setCellRenderer(centerRenderer);
+        for (int i = 0; i < historyTable.getColumnCount(); i++) {
+            historyTable.getColumnModel().getColumn(i).setCellRenderer(centerRenderer);
         }
 
         Font montserratSemiBold = FontBuilder.getFont("Montserrat-SemiBold.ttf");
-        table1.setFont(montserratSemiBold.deriveFont(12f));
+        historyTable.setFont(montserratSemiBold.deriveFont(12f));
 
-        JTableHeader header = table1.getTableHeader();
+        JTableHeader header = historyTable.getTableHeader();
         header.setFont(montserratSemiBold.deriveFont(14f));
     }
 }
