@@ -175,11 +175,13 @@ public class AddArena extends javax.swing.JFrame {
     }//GEN-LAST:event_cbCuentaAtrasActionPerformed
 
     private void bGuardarArenaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bGuardarArenaActionPerformed
-        
-        Arena arena = new Arena(tfNuevoNombre.getName(), cbCuentaAtras.isSelected(), tfDescripcion.getText(), null , ERROR);
+
+        Arena arena = new Arena(tfNuevoNombre.getText(), cbCuentaAtras.isSelected(), tfDescripcion.getText(), null, ERROR);
         arenaSet.add(arena);
         JOptionPane.showMessageDialog(this, "La Arena se ha guardado con Exito!!");
         this.dispose();
+        tablaArenas = new TablaArenas();
+        tablaArenas.setVisible(true);
     }//GEN-LAST:event_bGuardarArenaActionPerformed
 
     private void bCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCancelarActionPerformed
@@ -200,7 +202,6 @@ public class AddArena extends javax.swing.JFrame {
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField2ActionPerformed
-
 
     /**
      * @param args the command line arguments
@@ -246,6 +247,9 @@ public class AddArena extends javax.swing.JFrame {
         jlimagenArena.setIcon(icono);
 
     }
+
+    
+   private TablaArenas tablaArenas;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bAnyadirImagen;
     private javax.swing.JButton bCancelar;

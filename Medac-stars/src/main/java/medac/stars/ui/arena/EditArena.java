@@ -7,6 +7,7 @@ package medac.stars.ui.arena;
 import java.io.File;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
+import medac.stars.controller.ManageData;
 
 /**
  *
@@ -65,6 +66,11 @@ public class EditArena extends javax.swing.JFrame {
         jLabel1.setText("Nombre");
 
         tfEditarNombre.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        tfEditarNombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfEditarNombreActionPerformed(evt);
+            }
+        });
 
         cbCuentaAtrasEditar.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
         cbCuentaAtrasEditar.setText("Cuenta atras");
@@ -186,6 +192,10 @@ public class EditArena extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_bCancelarEditarActionPerformed
 
+    private void tfEditarNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfEditarNombreActionPerformed
+        // TODO add your handling code here:        
+    }//GEN-LAST:event_tfEditarNombreActionPerformed
+    
     /**
      * @param args the command line arguments
      */

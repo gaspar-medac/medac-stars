@@ -117,18 +117,18 @@ public class TablaArenas extends javax.swing.JFrame {
         // Modificamos la columna de los botones para que aparezca el botón:
         tablaArena.getColumn("Editar").setCellRenderer(new ButtonRenderer());
         tablaArena.getColumn("Editar").setCellEditor(new ButtonEditor(new JCheckBox()));
-
     }
-
-
+    
+    
     private void addArenaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addArenaButtonActionPerformed
         // TODO add your handling code here:
         if (addArenaForm == null || !addArenaForm.isVisible()) {
             addArenaForm = new AddArena();
             addArenaForm.setVisible(true);
+            this.dispose();
         }
     }//GEN-LAST:event_addArenaButtonActionPerformed
-
+    
     /**
      * @param args the command line arguments
      */
