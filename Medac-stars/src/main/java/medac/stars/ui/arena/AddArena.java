@@ -13,6 +13,7 @@ import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 import static medac.stars.controller.ManageData.arenaSet;
 import medac.stars.model.Arena;
 
@@ -21,13 +22,17 @@ import medac.stars.model.Arena;
  * @author asier
  */
 public class AddArena extends javax.swing.JFrame {
+ 
 
     /**
      * Creates new form addArena
      */
     public AddArena() {
         initComponents();
-    }
+        TextPrompt placeholder0 = new TextPrompt("Dale un Nombre!!", tfNuevoNombre);
+        TextPrompt placeholder1 = new TextPrompt("Añade una descripción!!", tfDescripcion);
+        
+    }      
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -73,7 +78,11 @@ public class AddArena extends javax.swing.JFrame {
         jLabel1.setText("Nombre");
 
         tfNuevoNombre.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
-        tfNuevoNombre.setText("Dale un Nombre!!");
+        tfNuevoNombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfNuevoNombreActionPerformed(evt);
+            }
+        });
 
         cbCuentaAtras.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
         cbCuentaAtras.setText("Cuenta atras");
@@ -90,7 +99,11 @@ public class AddArena extends javax.swing.JFrame {
         jLabel3.setText("Descripción");
 
         tfDescripcion.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
-        tfDescripcion.setText("añade una descripción...");
+        tfDescripcion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfDescripcionActionPerformed(evt);
+            }
+        });
 
         bGuardarArena.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
         bGuardarArena.setText("Guardar arena");
@@ -107,10 +120,6 @@ public class AddArena extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel4)
-                .addGap(239, 239, 239))
             .addGroup(layout.createSequentialGroup()
                 .addGap(17, 17, 17)
                 .addComponent(bCancelar)
@@ -133,6 +142,10 @@ public class AddArena extends javax.swing.JFrame {
                             .addComponent(cbCuentaAtras)
                             .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(133, 133, 133))))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(243, 243, 243)
+                .addComponent(jLabel4)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -203,6 +216,14 @@ public class AddArena extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField2ActionPerformed
 
+    private void tfNuevoNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfNuevoNombreActionPerformed
+        
+    }//GEN-LAST:event_tfNuevoNombreActionPerformed
+
+    private void tfDescripcionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfDescripcionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfDescripcionActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -264,4 +285,5 @@ public class AddArena extends javax.swing.JFrame {
     private javax.swing.JTextField tfDescripcion;
     private javax.swing.JTextField tfNuevoNombre;
     // End of variables declaration//GEN-END:variables
+
 }
