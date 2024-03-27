@@ -4,6 +4,8 @@
  */
 package medac.stars.ui.arena;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author asier
@@ -110,7 +112,7 @@ public class MenuArena extends javax.swing.JFrame {
 
     private void bSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSalirActionPerformed
         this.dispose();
-        
+        JOptionPane.showMessageDialog(this, "Has cerrado el menu de Arena");     
     }//GEN-LAST:event_bSalirActionPerformed
 
     /**
