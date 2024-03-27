@@ -4,6 +4,10 @@
  */
 package medac.stars.ui.usuarios;
 
+import javax.swing.JOptionPane;
+import medac.stars.controller.ManageData;
+import medac.stars.model.User;
+
 /**
  *
  * @author Usuario
@@ -18,7 +22,6 @@ public class Usuario extends javax.swing.JFrame {
         TextPrompt usuario = new TextPrompt("Introduce el usuario", jTextoUsuario);
         TextPrompt email = new TextPrompt("Introduce el Email", jTextoEmail);
         TextPrompt contraseña = new TextPrompt("Introduce contraseña", jContraseña);
-
 
     }
 
@@ -145,8 +148,52 @@ public class Usuario extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextoUsuarioActionPerformed
 
+    public boolean validarCampos() {
+        String nombreUsuario = jTextoUsuario.getText();
+        String email = jTextoEmail.getText();
+        String contraseña = jContraseña.getText();
+        int tipoUsuario = bJugador.isSelected() ? 1 : 0;
+        
+    if(nombreUsuario.equals("") || email.equals("") || contraseña.equals("") || (tipoUsuario != 1 && tipoUsuario != 0)) {
+        return false;
+    }
+    
+    return true; 
+}
+    
     private void bEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bEntrarActionPerformed
-        // TODO add your handling code here:
+
+        // Aquí se guarda el usuario
+
+        String nombreUsuario = jTextoUsuario.getText();
+        String email = jTextoEmail.getText();
+        String contraseña = jContraseña.getText();
+        int tipoUsuario = bJugador.isSelected() ? 1 : 0;
+
+        if (!validarCampos()) {
+                System.err.println("campos no validos!");
+
+        } else {
+            // aqui check si existe o no el usuario
+            boolean existe = false;
+            for (User user : ManageData.userSet) {
+                if (user.getName().equals(nombreUsuario)) {
+                    existe = true;
+                }
+            }
+
+            if (existe) {
+                //error
+                System.err.println("Este usuario ya exsiste!");
+            } else {
+                User user = new User(nombreUsuario, contraseña, email, tipoUsuario);
+                ManageData.userSet.add(user);
+                JOptionPane.showMessageDialog(this, "Usuario guardado exitosamente.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+                this.dispose();
+            }
+        }
+
+
     }//GEN-LAST:event_bEntrarActionPerformed
 
     /**
