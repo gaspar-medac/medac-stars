@@ -1,0 +1,54 @@
+
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”¨¶äşÿÿÿÿ8ôÂ–ÿç1
+n	java:S117š"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÂÆï¼8õÂ–ÿç1
+n	java:S117ª"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÂÆï¼8öÂ–ÿç1
+E
+java:S16049"(Make this anonymous inner class a lambda(ßÜÔ­8öÂ–ÿç1
+E
+java:S1604J"(Make this anonymous inner class a lambda(Ê´Æ²8÷Â–ÿç1
+D
+java:S1604ã"(Make this anonymous inner class a lambda(¨í¡§úÿÿÿÿ
+r	java:S116ğ"WRename this field "jContraseÃ±a" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³Šìçùÿÿÿÿ
+r	java:S116ñ"\Rename this field "jContraseÃ±aLabel" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°‘©§
+m
+java:S1450ë"VRemove the "bEntrar" field and declare it as a local variable in the relevant methods.(÷âÂ
+r
+java:S1450ì"VRemove the "bGestor" field and declare it as a local variable in the relevant methods.(´ó–şÿÿÿÿ
+m
+java:S1450î"VRemove the "bVolver" field and declare it as a local variable in the relevant methods.(±ò‘”
+w
+java:S1450ï"[Remove the "buttonGroup1" field and declare it as a local variable in the relevant methods.(ïÔúØÿÿÿÿÿ
+w
+java:S1450ñ"`Remove the "jContraseÃ±aLabel" field and declare it as a local variable in the relevant methods.(°‘©§
+l
+java:S1450ò"URemove the "jEmail" field and declare it as a local variable in the relevant methods.(¡£Ìö
+r
+java:S1450õ"[Remove the "jTipoUsuario" field and declare it as a local variable in the relevant methods.(ÏÎÜ·
+s
+java:S1450ö"WRemove the "jUsuario" field and declare it as a local variable in the relevant methods.(Õ½ÿÿÿÿÿ
+N
+java:S1481",Remove this unused "usuario" local variable.(‡äğÆıÿÿÿÿ8„Ä–ÿç1
+G
+java:S1481"*Remove this unused "email" local variable.(»é²¢8„Ä–ÿç1
+R
+java:S1481"0Remove this unused "contraseÃ±a" local variable.(”¨¶äşÿÿÿÿ8…Ä–ÿç1
+M
+java:S1172“"*Remove this unused method parameter "evt".( İİíüÿÿÿÿ8 Ä–ÿç1
+U
+java:S1135”"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ8¢Ä–ÿç1
+M
+java:S1874š"/Remove this use of "getText"; it is deprecated.(ÂÆï¼8…Å–ÿç1
+d
+java:S1126"AReplace this if-then-else statement by a single return statement.(Âÿœÿÿÿÿÿ8†Å–ÿç1
+M
+java:S1172¤"*Remove this unused method parameter "evt".(ÜÑ ıøÿÿÿÿ8ŠÅ–ÿç1
+M
+java:S1874ª"/Remove this use of "getText"; it is deprecated.(ÂÆï¼8ŒÅ–ÿç1
+F
+java:S1197Ê"*Move the array designators [] to the type.(¡şÏÖøÿÿÿÿ
+\
+java:S2147Ù"ECombine this catch with the one at line 215, which has the same body.(¨¦Š½
+\
+java:S2147Û"ECombine this catch with the one at line 217, which has the same body.(ã€ 
+[
+java:S2147İ"ECombine this catch with the one at line 219, which has the same body.(ñÎ¯%
