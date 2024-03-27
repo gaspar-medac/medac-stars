@@ -4,6 +4,16 @@
  */
 package medac.stars.ui.arena;
 
+import java.awt.Image;
+import java.io.File;
+import java.io.IOException;
+import java.net.URL;
+import javax.imageio.ImageIO;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
+import static medac.stars.controller.ManageData.arenaSet;
 import medac.stars.model.Arena;
 
 /**
@@ -29,17 +39,17 @@ public class AddArena extends javax.swing.JFrame {
     private void initComponents() {
 
         bCancelar = new javax.swing.JButton();
-        pImagenArena = new javax.swing.JPanel();
         bAnyadirImagen = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         tfNuevoNombre = new javax.swing.JTextField();
         cbCuentaAtras = new javax.swing.JCheckBox();
-        tfNumObstaculos = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         tfDescripcion = new javax.swing.JTextField();
         bGuardarArena = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
+        jlimagenArena = new javax.swing.JLabel();
+        jSpinner1 = new javax.swing.JSpinner();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -51,19 +61,13 @@ public class AddArena extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout pImagenArenaLayout = new javax.swing.GroupLayout(pImagenArena);
-        pImagenArena.setLayout(pImagenArenaLayout);
-        pImagenArenaLayout.setHorizontalGroup(
-            pImagenArenaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        pImagenArenaLayout.setVerticalGroup(
-            pImagenArenaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 180, Short.MAX_VALUE)
-        );
-
         bAnyadirImagen.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
         bAnyadirImagen.setText("Nueva Imagen");
+        bAnyadirImagen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bAnyadirImagenActionPerformed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
         jLabel1.setText("Nombre");
@@ -76,14 +80,6 @@ public class AddArena extends javax.swing.JFrame {
         cbCuentaAtras.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbCuentaAtrasActionPerformed(evt);
-            }
-        });
-
-        jTextField2.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
-        jTextField2.setText("añade el numero de objetos...");
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
             }
         });
 
@@ -111,33 +107,32 @@ public class AddArena extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel4)
+                .addGap(239, 239, 239))
             .addGroup(layout.createSequentialGroup()
                 .addGap(17, 17, 17)
                 .addComponent(bCancelar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(bGuardarArena)
-                .addGap(28, 28, 28))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(122, Short.MAX_VALUE)
+                .addGap(6, 6, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(pImagenArena, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(bAnyadirImagen, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(bGuardarArena)
+                        .addGap(28, 28, 28))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(bAnyadirImagen, javax.swing.GroupLayout.DEFAULT_SIZE, 205, Short.MAX_VALUE)
+                            .addComponent(jlimagenArena, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(74, 74, 74)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jLabel1)
-                                .addComponent(jLabel2)
-                                .addComponent(tfNumObstaculos)
-                                .addComponent(jLabel3)
-                                .addComponent(tfDescripcion)
-                                .addComponent(tfNuevoNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(cbCuentaAtras))
-                        .addGap(133, 133, 133))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel4)
-                        .addGap(239, 239, 239))))
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel3)
+                            .addComponent(tfDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tfNuevoNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cbCuentaAtras)
+                            .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(133, 133, 133))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -147,9 +142,6 @@ public class AddArena extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(pImagenArena, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18))
-                    .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(tfNuevoNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -157,11 +149,14 @@ public class AddArena extends javax.swing.JFrame {
                         .addComponent(cbCuentaAtras)
                         .addGap(16, 16, 16)
                         .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tfNumObstaculos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                        .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel3))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jlimagenArena, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(bAnyadirImagen, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tfDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -176,18 +171,33 @@ public class AddArena extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void cbCuentaAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbCuentaAtrasActionPerformed
-        
+
     }//GEN-LAST:event_cbCuentaAtrasActionPerformed
 
     private void bGuardarArenaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bGuardarArenaActionPerformed
 
-        Arena arena = new Arena(tfNuevoNombre.getName(), cbCuentaAtras, tfDescripcion.getText(), bAnyadirImagen. , ERROR);
-        
+        Arena arena = new Arena(tfNuevoNombre.getText(), cbCuentaAtras.isSelected(), tfDescripcion.getText(), null, ERROR);
+        arenaSet.add(arena);
+        JOptionPane.showMessageDialog(this, "La Arena se ha guardado con Exito!!");
+        this.dispose();
+        tablaArenas = new TablaArenas();
+        tablaArenas.setVisible(true);
     }//GEN-LAST:event_bGuardarArenaActionPerformed
 
     private void bCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCancelarActionPerformed
-        // TODO add your handling code here:
+        this.dispose();
     }//GEN-LAST:event_bCancelarActionPerformed
+
+    private void bAnyadirImagenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAnyadirImagenActionPerformed
+        JFileChooser fileChooser = new JFileChooser();
+        fileChooser.setSelectedFile(new File(""));
+        int resultado = fileChooser.showOpenDialog(this);
+        if (resultado == JFileChooser.APPROVE_OPTION) {
+            String ruta = fileChooser.getSelectedFile().getAbsolutePath();
+            loadAndSetImage(fileChooser.getSelectedFile().getAbsolutePath());
+        }
+    }//GEN-LAST:event_bAnyadirImagenActionPerformed
+
 
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
         // TODO add your handling code here:
@@ -220,7 +230,7 @@ public class AddArena extends javax.swing.JFrame {
         }
         //</editor-fold>
         //</editor-fold>
-        
+
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -228,9 +238,18 @@ public class AddArena extends javax.swing.JFrame {
                 new AddArena().setVisible(true);
             }
         });
-        
+
     }
 
+    private void loadAndSetImage(String imgPath) {
+        ImageIcon icon = new ImageIcon(imgPath);
+        ImageIcon icono = new ImageIcon(icon.getImage().getScaledInstance(200, 200, 1));
+        jlimagenArena.setIcon(icono);
+
+    }
+
+    
+   private TablaArenas tablaArenas;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bAnyadirImagen;
     private javax.swing.JButton bCancelar;
@@ -240,9 +259,9 @@ public class AddArena extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JPanel pImagenArena;
+    private javax.swing.JSpinner jSpinner1;
+    private javax.swing.JLabel jlimagenArena;
     private javax.swing.JTextField tfDescripcion;
     private javax.swing.JTextField tfNuevoNombre;
-    private javax.swing.JTextField tfNumObstaculos;
     // End of variables declaration//GEN-END:variables
 }

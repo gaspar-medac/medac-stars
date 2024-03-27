@@ -15,7 +15,7 @@ class ButtonEditor extends DefaultCellEditor {
 
     protected JButton button;
     private String label;
-
+    private EditArena editArena;
     //aqui se puede indicar indice de la tabla, id del objeto medac star...
     private int numeroFila;
 
@@ -54,7 +54,9 @@ class ButtonEditor extends DefaultCellEditor {
     @Override
     public Object getCellEditorValue() {
         if (isPushed) {
+            editArena =  new EditArena();
             JOptionPane.showMessageDialog(button, label + ": pulsado: " + numeroFila);
+            editArena.setVisible(true);
         }
         isPushed = false;
         //devolvemos el label, pero podria ser el numero de fila
