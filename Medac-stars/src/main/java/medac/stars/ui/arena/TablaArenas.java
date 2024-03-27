@@ -4,6 +4,13 @@
  */
 package medac.stars.ui.arena;
 
+import java.util.Iterator;
+import javax.swing.JCheckBox;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
+import medac.stars.controller.ManageData;
+import medac.stars.model.Arena;
+
 /**
  *
  * @author vicen
@@ -15,6 +22,7 @@ public class TablaArenas extends javax.swing.JFrame {
      */
     public TablaArenas() {
         initComponents();
+        initMiTablaComponent();
     }
 
     /**
@@ -92,10 +100,35 @@ public class TablaArenas extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void initMiTablaComponent() {
+        Object[] nombreColumnas = new Object[]{"Nombre", "Editar"};
+        Object[][] celdas = new Object[ManageData.arenaSet.size()][2];
+        int i = 0;
+        Iterator<Arena> arenaIterator = ManageData.arenaSet.iterator();
+        while (arenaIterator.hasNext()) {
+            String nombreArena = arenaIterator.next().getName();
+            Object[] fila = new Object[]{nombreArena, "Editar"};
+            celdas[i]= fila;
+            i++;
+        }
+        // set the table values.
+        TableModel dm = new DefaultTableModel(celdas, nombreColumnas);
+        tablaArena.setModel(dm);
+        // Modificamos la columna de los botones para que aparezca el botón:
+        tablaArena.getColumn("Editar").setCellRenderer(new ButtonRenderer());
+        tablaArena.getColumn("Editar").setCellEditor(new ButtonEditor(new JCheckBox()));
+    }
+    
+    
     private void addArenaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addArenaButtonActionPerformed
         // TODO add your handling code here:
+        if (addArenaForm == null || !addArenaForm.isVisible()) {
+            addArenaForm = new AddArena();
+            addArenaForm.setVisible(true);
+            this.dispose();
+        }
     }//GEN-LAST:event_addArenaButtonActionPerformed
-
+    
     /**
      * @param args the command line arguments
      */
@@ -131,6 +164,8 @@ public class TablaArenas extends javax.swing.JFrame {
             }
         });
     }
+
+    private AddArena addArenaForm;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addArenaButton;
     private javax.swing.JButton backMainMenuButton;
