@@ -7,7 +7,6 @@ import java.awt.event.ActionListener;
 import javax.swing.DefaultCellEditor;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
-import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import medac.stars.controller.ManageData;
 import medac.stars.model.Arena;
@@ -17,15 +16,15 @@ class ButtonEditor extends DefaultCellEditor {
     protected JButton button;
     private String label;
     private EditArena editArena;
+    private TablaArenas tablaArenas;
     //aqui se puede indicar indice de la tabla, id del objeto medac star...
     private int numeroFila;
     // es pulsado
     private boolean isPushed;
 
-    public ButtonEditor(JCheckBox checkBox) {
+    public ButtonEditor(TablaArenas tablaArenas, JCheckBox checkBox) {
         super(checkBox);
-        
-
+        this.tablaArenas = tablaArenas;
         button = new JButton();
         button.setOpaque(true);
         button.addActionListener(new ActionListener() {
@@ -59,12 +58,12 @@ class ButtonEditor extends DefaultCellEditor {
             for (int i = 0; i < ManageData.arenaSet.size(); i++) {
                 if (numeroFila == i) {
                     Arena arena = ManageData.arenaSet.get(numeroFila);
-                    editArena = new EditArena(arena);
+                    editArena = new EditArena(tablaArenas, arena, numeroFila);
                     editArena.setVisible(true);
+                    tablaArenas.dispose();
                     break;
                 }
             }
-            JOptionPane.showMessageDialog(button, label + ": pulsado: " + numeroFila);
         }
         isPushed = false;
         //devolvemos el label, pero podria ser el numero de fila

@@ -4,7 +4,6 @@
  */
 package medac.stars.ui.arena;
 
-import java.util.Iterator;
 import javax.swing.JCheckBox;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
@@ -55,6 +54,11 @@ public class TablaArenas extends javax.swing.JFrame {
         backMainMenuButton.setFont(new java.awt.Font("Comic Sans MS", 0, 24)); // NOI18N
         backMainMenuButton.setForeground(new java.awt.Color(255, 255, 255));
         backMainMenuButton.setText("Volver al menu principal");
+        backMainMenuButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backMainMenuButtonActionPerformed(evt);
+            }
+        });
 
         tablaArena.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
         tablaArena.setModel(new javax.swing.table.DefaultTableModel(
@@ -100,14 +104,14 @@ public class TablaArenas extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void initMiTablaComponent() {
+    public void initMiTablaComponent() {
         Object[] nombreColumnas = new Object[]{"Nombre", "Editar"};
         Object[][] celdas = new Object[ManageData.arenaSet.size()][2];
         int i = 0;
-        for (Arena arena: ManageData.arenaSet) {
+        for (Arena arena : ManageData.arenaSet) {
             String nombreArena = arena.getName();
             Object[] fila = new Object[]{nombreArena, "Editar"};
-            celdas[i]= fila;
+            celdas[i] = fila;
             i++;
         }
         // set the table values.
@@ -115,19 +119,27 @@ public class TablaArenas extends javax.swing.JFrame {
         tablaArena.setModel(dm);
         // Modificamos la columna de los botones para que aparezca el botón:
         tablaArena.getColumn("Editar").setCellRenderer(new ButtonRenderer());
-        tablaArena.getColumn("Editar").setCellEditor(new ButtonEditor(new JCheckBox()));
+        tablaArena.getColumn("Editar").setCellEditor(new ButtonEditor(this, new JCheckBox()));
+
     }
-    
-    
+
+
     private void addArenaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addArenaButtonActionPerformed
         // TODO add your handling code here:
+        this.dispose();
         if (addArenaForm == null || !addArenaForm.isVisible()) {
-            addArenaForm = new AddArena();
+            addArenaForm = new AddArena(this);
             addArenaForm.setVisible(true);
-            this.dispose();
+
         }
     }//GEN-LAST:event_addArenaButtonActionPerformed
-    
+
+    private void backMainMenuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backMainMenuButtonActionPerformed
+        this.dispose();
+        MenuArena menuArena = new MenuArena();
+        menuArena.setVisible(true);
+    }//GEN-LAST:event_backMainMenuButtonActionPerformed
+
     /**
      * @param args the command line arguments
      */

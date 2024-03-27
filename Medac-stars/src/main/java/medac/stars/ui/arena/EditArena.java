@@ -7,7 +7,9 @@ package medac.stars.ui.arena;
 import java.io.File;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
 import medac.stars.controller.ManageData;
+import static medac.stars.controller.ManageData.arenaSet;
 import medac.stars.model.Arena;
 
 /**
@@ -21,14 +23,20 @@ public class EditArena extends javax.swing.JFrame {
      *
      * @param arena por parametro
      */
-    public EditArena(Arena arena) {
+    public EditArena(TablaArenas tablaArenas) {
+        initComponents();
+        this.tablaArenas = tablaArenas;
+    }
+
+    public EditArena(TablaArenas tablaArenas, Arena arena, int index) {
         initComponents();
         tfEditarNombre.setText(arena.getName());
         cbCuentaAtrasEditar.setSelected(arena.isCountdown());
         tfEditarDescripcion.setText(arena.getDescription());
         jSpinner1.setValue(arena.getBarriers());
         jlimagenArena.setText(arena.getImage());
-        
+        this.index = index;
+        this.tablaArenas = tablaArenas;
     }
 
     /**
@@ -74,6 +82,7 @@ public class EditArena extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
         jLabel1.setText("Nombre");
 
+        tfEditarNombre.setEditable(false);
         tfEditarNombre.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
         tfEditarNombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -183,6 +192,16 @@ public class EditArena extends javax.swing.JFrame {
     }//GEN-LAST:event_cbCuentaAtrasEditarActionPerformed
 
     private void bGuardarCambiosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bGuardarCambiosActionPerformed
+        Arena arena = new Arena(tfEditarNombre.getText(), cbCuentaAtrasEditar.isSelected(), tfEditarDescripcion.getText(), null, (int) jSpinner1.getValue());
+        for (int i = 0; i < arenaSet.size(); i++) {
+            if (i == index) {
+                arenaSet.set(index, arena);
+            }
+        }
+        JOptionPane.showMessageDialog(this, "Se ha guardado la modificacion");
+        this.dispose();
+        tablaArenas.initMiTablaComponent();
+        tablaArenas.setVisible(true);
 
     }//GEN-LAST:event_bGuardarCambiosActionPerformed
 
@@ -198,51 +217,13 @@ public class EditArena extends javax.swing.JFrame {
     }//GEN-LAST:event_bCambiarImagenActionPerformed
 
     private void bCancelarEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCancelarEditarActionPerformed
-        this.dispose();
+        this.dispose();;
+        tablaArenas.setVisible(true);
     }//GEN-LAST:event_bCancelarEditarActionPerformed
 
     private void tfEditarNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfEditarNombreActionPerformed
         // TODO add your handling code here:        
     }//GEN-LAST:event_tfEditarNombreActionPerformed
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(EditArena.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(EditArena.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(EditArena.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(EditArena.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-
-            }
-        });
-
-    }
 
     private void loadAndSetImage(String imgPath) {
         ImageIcon icon = new ImageIcon(imgPath);
@@ -250,6 +231,8 @@ public class EditArena extends javax.swing.JFrame {
         jlimagenArena.setIcon(icono);
 
     }
+    int index;
+    private TablaArenas tablaArenas;
     private Arena arena;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bCambiarImagen;

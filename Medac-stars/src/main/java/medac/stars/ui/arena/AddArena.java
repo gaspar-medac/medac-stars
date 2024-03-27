@@ -22,17 +22,16 @@ import medac.stars.model.Arena;
  * @author asier
  */
 public class AddArena extends javax.swing.JFrame {
- 
 
     /**
      * Creates new form addArena
      */
-    public AddArena() {
+    public AddArena(TablaArenas tablaArenas) {
         initComponents();
+        this.tablaArenas = tablaArenas;
         TextPrompt placeholder0 = new TextPrompt("Dale un Nombre!!", tfNuevoNombre);
         TextPrompt placeholder1 = new TextPrompt("Añade una descripción!!", tfDescripcion);
-        
-    }      
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -184,21 +183,26 @@ public class AddArena extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void cbCuentaAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbCuentaAtrasActionPerformed
-
+        
     }//GEN-LAST:event_cbCuentaAtrasActionPerformed
 
     private void bGuardarArenaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bGuardarArenaActionPerformed
 
-        Arena arena = new Arena(tfNuevoNombre.getText(), cbCuentaAtras.isSelected(), tfDescripcion.getText(), null, (int)jSpinner1.getValue());
+        Arena arena = new Arena(tfNuevoNombre.getText(), cbCuentaAtras.isSelected(), tfDescripcion.getText(), null, (int) jSpinner1.getValue());
         arenaSet.add(arena);
         JOptionPane.showMessageDialog(this, "La Arena se ha guardado con Exito!!");
         this.dispose();
-        tablaArenas = new TablaArenas();
-        tablaArenas.setVisible(true);
+        if (tablaArenas != null) {
+            tablaArenas.setVisible(true);
+            tablaArenas.initMiTablaComponent();
+        }
     }//GEN-LAST:event_bGuardarArenaActionPerformed
 
     private void bCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCancelarActionPerformed
         this.dispose();
+        if (tablaArenas != null) {
+            tablaArenas.setVisible(true);
+        }
     }//GEN-LAST:event_bCancelarActionPerformed
 
     private void bAnyadirImagenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAnyadirImagenActionPerformed
@@ -217,7 +221,7 @@ public class AddArena extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void tfNuevoNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfNuevoNombreActionPerformed
-        
+
     }//GEN-LAST:event_tfNuevoNombreActionPerformed
 
     private void tfDescripcionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfDescripcionActionPerformed
@@ -256,7 +260,7 @@ public class AddArena extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new AddArena().setVisible(true);
+                new AddArena(null).setVisible(true);
             }
         });
 
@@ -269,8 +273,7 @@ public class AddArena extends javax.swing.JFrame {
 
     }
 
-    
-   private TablaArenas tablaArenas;
+    TablaArenas tablaArenas;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bAnyadirImagen;
     private javax.swing.JButton bCancelar;
