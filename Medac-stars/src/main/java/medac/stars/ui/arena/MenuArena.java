@@ -37,6 +37,7 @@ public class MenuArena extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(null);
 
         bGestionArena.setText("Gestion Arena");
         bGestionArena.addActionListener(new java.awt.event.ActionListener() {
@@ -44,6 +45,8 @@ public class MenuArena extends javax.swing.JFrame {
                 bGestionArenaActionPerformed(evt);
             }
         });
+        getContentPane().add(bGestionArena);
+        bGestionArena.setBounds(15, 162, 112, 24);
 
         bSalir.setText("Salir");
         bSalir.addActionListener(new java.awt.event.ActionListener() {
@@ -51,14 +54,24 @@ public class MenuArena extends javax.swing.JFrame {
                 bSalirActionPerformed(evt);
             }
         });
+        getContentPane().add(bSalir);
+        bSalir.setBounds(15, 266, 72, 24);
 
         bChat.setText("Chat");
+        getContentPane().add(bChat);
+        bChat.setBounds(21, 198, 72, 24);
 
         bGestionMedacStars.setText("Gestion Medac Stars");
+        getContentPane().add(bGestionMedacStars);
+        bGestionMedacStars.setBounds(15, 120, 151, 24);
 
         bGestionUsuarios.setText("Gestion Usuarios");
+        getContentPane().add(bGestionUsuarios);
+        bGestionUsuarios.setBounds(15, 78, 129, 24);
 
         bLogout.setText("Logout");
+        getContentPane().add(bLogout);
+        bLogout.setBounds(312, 266, 72, 24);
 
         jLabel1.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(204, 204, 0));
