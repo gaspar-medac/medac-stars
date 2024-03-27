@@ -7,6 +7,7 @@ package medac.stars.ui.usuarios;
 import javax.swing.JOptionPane;
 import medac.stars.controller.ManageData;
 import medac.stars.model.User;
+import medac.stars.ui.usuarios.tablaGestionUsuarios.TablaGestionUsuarios;
 
 /**
  *
@@ -14,15 +15,26 @@ import medac.stars.model.User;
  */
 public class Usuario extends javax.swing.JFrame {
 
+    public User usuario;
+
     /**
      * Creates new form Usuario
      */
-    public Usuario() {
+    public Usuario(User usuario) {
+        this.usuario = usuario;
         initComponents();
-        TextPrompt usuario = new TextPrompt("Introduce el usuario", jTextoUsuario);
+        TextPrompt nombreUsuario = new TextPrompt("Introduce el usuario", jTextoUsuario);
         TextPrompt email = new TextPrompt("Introduce el Email", jTextoEmail);
         TextPrompt contraseña = new TextPrompt("Introduce contraseña", jContraseña);
 
+        if (usuario == null) {
+            //nuevo usuario
+            jContraseña.setText(usuario.getPassword());
+            jTextoUsuario.setText(usuario.getName());
+            jTextoEmail.setText(usuario.getEmail());
+        } else {
+            // editar 
+        }
     }
 
     /**
@@ -78,6 +90,11 @@ public class Usuario extends javax.swing.JFrame {
         });
 
         bVolver.setText("Volver");
+        bVolver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bVolverActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -153,48 +170,62 @@ public class Usuario extends javax.swing.JFrame {
         String email = jTextoEmail.getText();
         String contraseña = jContraseña.getText();
         int tipoUsuario = bJugador.isSelected() ? 1 : 0;
-        
-    if(nombreUsuario.equals("") || email.equals("") || contraseña.equals("") || (tipoUsuario != 1 && tipoUsuario != 0)) {
-        return false;
+
+        if (nombreUsuario.equals("") || email.equals("") || contraseña.equals("") || (tipoUsuario != 1 && tipoUsuario != 0)) {
+            return false;
+        }
+
+        return true;
     }
-    
-    return true; 
-}
-    
+
     private void bEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bEntrarActionPerformed
 
         // Aquí se guarda el usuario
-
         String nombreUsuario = jTextoUsuario.getText();
         String email = jTextoEmail.getText();
         String contraseña = jContraseña.getText();
         int tipoUsuario = bJugador.isSelected() ? 1 : 0;
 
         if (!validarCampos()) {
-                System.err.println("campos no validos!");
+            System.err.println("campos no validos!");
 
         } else {
-            // aqui check si existe o no el usuario
-            boolean existe = false;
-            for (User user : ManageData.userSet) {
-                if (user.getName().equals(nombreUsuario)) {
-                    existe = true;
-                }
-            }
 
-            if (existe) {
-                //error
-                System.err.println("Este usuario ya exsiste!");
+            if (usuario != null) {
+                // edición, porque el usuario se le pasó
+                usuario.setName(nombreUsuario);
+                usuario.setEmail(email);
+                usuario.setPassword(contraseña);
             } else {
-                User user = new User(nombreUsuario, contraseña, email, tipoUsuario);
-                ManageData.userSet.add(user);
-                JOptionPane.showMessageDialog(this, "Usuario guardado exitosamente.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
-                this.dispose();
+                // aqui check si existe o no el usuario
+                boolean existe = false;
+                for (User user : ManageData.userSet) {
+                    if (user.getName().equals(nombreUsuario)) {
+                        existe = true;
+                    }
+                }
+
+                if (existe) {
+                    //error
+                    System.err.println("Este usuario ya exsiste!");
+                } else {
+                    User user = new User(nombreUsuario, contraseña, email, tipoUsuario);
+                    ManageData.userSet.add(user);
+                    JOptionPane.showMessageDialog(this, "Usuario guardado exitosamente.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+                    this.dispose();
+                }
             }
         }
 
 
     }//GEN-LAST:event_bEntrarActionPerformed
+
+    private void bVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bVolverActionPerformed
+        // TODO add your handling code here:
+               java.awt.EventQueue.invokeLater(new Runnable(){
+               public void run(){new TablaGestionUsuarios().setVisible(true);}
+               });
+    }//GEN-LAST:event_bVolverActionPerformed
 
     /**
      * @param args the command line arguments
@@ -223,10 +254,15 @@ public class Usuario extends javax.swing.JFrame {
         }
         //</editor-fold>
 
+        User usuario = new User("a", "b", "c", 0);
+
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Usuario().setVisible(true);
+                //editar
+                new Usuario(usuario).setVisible(true);
+                //nuevo
+                new Usuario(null).setVisible(true);
             }
         });
     }
