@@ -104,9 +104,8 @@ public class TablaArenas extends javax.swing.JFrame {
         Object[] nombreColumnas = new Object[]{"Nombre", "Editar"};
         Object[][] celdas = new Object[ManageData.arenaSet.size()][2];
         int i = 0;
-        Iterator<Arena> arenaIterator = ManageData.arenaSet.iterator();
-        while (arenaIterator.hasNext()) {
-            String nombreArena = arenaIterator.next().getName();
+        for (Arena arena: ManageData.arenaSet) {
+            String nombreArena = arena.getName();
             Object[] fila = new Object[]{nombreArena, "Editar"};
             celdas[i]= fila;
             i++;

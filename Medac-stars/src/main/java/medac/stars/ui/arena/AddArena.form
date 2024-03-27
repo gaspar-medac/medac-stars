@@ -148,20 +148,6 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cbCuentaAtrasActionPerformed"/>
       </Events>
     </Component>
-<<<<<<< HEAD:Medac-stars/src/main/java/medac/stars/ui/arena/addArena.form
-    <Component class="javax.swing.JTextField" name="tfNumObstaculos">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Comic Sans MS" size="14" style="0"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="a&#xf1;ade el numero de objetos..."/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField2ActionPerformed"/>
-      </Events>
-    </Component>
-=======
->>>>>>> 97e2c1866d3e35b48125cbeb3d1567aa21958b93:Medac-stars/src/main/java/medac/stars/ui/arena/AddArena.form
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">

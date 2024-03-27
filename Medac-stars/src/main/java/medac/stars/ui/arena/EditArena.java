@@ -8,6 +8,7 @@ import java.io.File;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import medac.stars.controller.ManageData;
+import medac.stars.model.Arena;
 
 /**
  *
@@ -15,11 +16,17 @@ import medac.stars.controller.ManageData;
  */
 public class EditArena extends javax.swing.JFrame {
 
+    public EditArena() {
+
+        initComponents();
+    }
+
     /**
      * Creates new form addArena
      */
-    public EditArena() {
+    public EditArena(Arena arena) {
         initComponents();
+        this.arena = arena;
     }
 
     /**
@@ -66,6 +73,7 @@ public class EditArena extends javax.swing.JFrame {
         jLabel1.setText("Nombre");
 
         tfEditarNombre.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        tfEditarNombre.setText(arena.getName());
         tfEditarNombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfEditarNombreActionPerformed(evt);
@@ -170,22 +178,22 @@ public class EditArena extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void cbCuentaAtrasEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbCuentaAtrasEditarActionPerformed
-       
+
     }//GEN-LAST:event_cbCuentaAtrasEditarActionPerformed
 
     private void bGuardarCambiosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bGuardarCambiosActionPerformed
-        
+
     }//GEN-LAST:event_bGuardarCambiosActionPerformed
 
     private void bCambiarImagenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCambiarImagenActionPerformed
-                                           
+
         JFileChooser fileChooser = new JFileChooser();
         fileChooser.setSelectedFile(new File(""));
         int resultado = fileChooser.showOpenDialog(this);
         if (resultado == JFileChooser.APPROVE_OPTION) {
             String ruta = fileChooser.getSelectedFile().getAbsolutePath();
             loadAndSetImage(fileChooser.getSelectedFile().getAbsolutePath());
-        }          
+        }
     }//GEN-LAST:event_bCambiarImagenActionPerformed
 
     private void bCancelarEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCancelarEditarActionPerformed
@@ -195,7 +203,7 @@ public class EditArena extends javax.swing.JFrame {
     private void tfEditarNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfEditarNombreActionPerformed
         // TODO add your handling code here:        
     }//GEN-LAST:event_tfEditarNombreActionPerformed
-    
+
     /**
      * @param args the command line arguments
      */
@@ -229,17 +237,19 @@ public class EditArena extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new EditArena().setVisible(true);
+
             }
         });
 
     }
+
     private void loadAndSetImage(String imgPath) {
         ImageIcon icon = new ImageIcon(imgPath);
         ImageIcon icono = new ImageIcon(icon.getImage().getScaledInstance(200, 200, 1));
         jlimagenArena.setIcon(icono);
 
     }
+    private Arena arena;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bCambiarImagen;
     private javax.swing.JButton bCancelarEditar;

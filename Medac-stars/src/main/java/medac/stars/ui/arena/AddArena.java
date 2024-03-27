@@ -83,17 +83,6 @@ public class AddArena extends javax.swing.JFrame {
             }
         });
 
-<<<<<<< HEAD:Medac-stars/src/main/java/medac/stars/ui/arena/addArena.java
-        jTextField2.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
-        jTextField2.setText("añade el numero de objetos...");
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
-            }
-        });
-
-=======
->>>>>>> 97e2c1866d3e35b48125cbeb3d1567aa21958b93:Medac-stars/src/main/java/medac/stars/ui/arena/AddArena.java
         jLabel2.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
         jLabel2.setText("Numero de Obstáculos");
 
@@ -199,8 +188,6 @@ public class AddArena extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_bCancelarActionPerformed
 
-<<<<<<< HEAD:Medac-stars/src/main/java/medac/stars/ui/arena/addArena.java
-=======
     private void bAnyadirImagenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAnyadirImagenActionPerformed
         JFileChooser fileChooser = new JFileChooser();
         fileChooser.setSelectedFile(new File(""));
@@ -212,7 +199,6 @@ public class AddArena extends javax.swing.JFrame {
     }//GEN-LAST:event_bAnyadirImagenActionPerformed
 
 
->>>>>>> 97e2c1866d3e35b48125cbeb3d1567aa21958b93:Medac-stars/src/main/java/medac/stars/ui/arena/AddArena.java
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField2ActionPerformed
