@@ -1,5 +1,8 @@
 package medac.stars.ui.usuarios.tablaGestionUsuarios;
 
+import medac.stars.controller.ManageData;
+import medac.stars.model.User;
+
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
@@ -22,11 +25,15 @@ public class TablaGestionUsuarios extends JFrame{
     public void initMiTablaComponent() {
 
         Object[] nombreColumnas = new Object[]{"Nombre", "Editar"};
-        Object[][] celdas = new Object[][]{
-                {"MedacStar 1", "button1"},
-                {"MedacStar 2", "button2"},
-                {"MedacStar 3", "button3"}
-        };
+        Object[][] celdas = new Object[ManageData.userSet.size()][2];
+        int i =0;
+        for(User user:  ManageData.userSet)
+        {
+            Object[] fila = new Object[]{ user.getName(),"Editar"};
+            celdas[i] = fila;
+            i++;
+        }
+
         // set the table values.
         TableModel dm = new DefaultTableModel(celdas, nombreColumnas);
         miTabla.setModel(dm);

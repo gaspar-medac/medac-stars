@@ -1,17 +1,8 @@
 
 E
-<<<<<<< HEAD
-java:S1604"(Make this anonymous inner class a lambda(Èú†8Ã°Ãýç1
-t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ý™á´üÿÿÿÿ
+java:S1604"(Make this anonymous inner class a lambda(Èú†8­÷ïþç1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ý™á´üÿÿÿÿ8®÷ïþç1
 B
-java:S21297" Remove this "String" constructor(ú Î¹úÿÿÿÿ8±Ãýç1
+java:S2129:" Remove this "String" constructor(ú Î¹úÿÿÿÿ8Ñ÷ïþç1
 E
-java:S1185A"(Remove this method to simply inherit it.(Áž¦Ï8„±Ãýç1
-=======
-java:S1604"(Make this anonymous inner class a lambda(Èú†8úèüç1
-{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ý™á´üÿÿÿÿ8üèüç1
-B
-java:S2129;" Remove this "String" constructor(ú Î¹úÿÿÿÿ8œèüç1
-E
-java:S1185E"(Remove this method to simply inherit it.(Áž¦Ï8Ÿèüç1
->>>>>>> 6d78d3dedf467087e7511512afa1346233a4eca3
+java:S1185D"(Remove this method to simply inherit it.(Áž¦Ï8Ò÷ïþç1

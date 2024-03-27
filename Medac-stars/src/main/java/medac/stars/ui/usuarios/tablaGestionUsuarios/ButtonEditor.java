@@ -1,5 +1,7 @@
 package medac.stars.ui.usuarios.tablaGestionUsuarios;
 
+import medac.stars.controller.ManageData;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -48,7 +50,8 @@ class ButtonEditor extends DefaultCellEditor {
     @Override
     public Object getCellEditorValue() {
         if (isPushed) {
-            JOptionPane.showMessageDialog(button, label + ": pulsado: " + numeroFila);
+            JOptionPane.showMessageDialog(button, label + ": pulsado: " + ManageData.userSet.get(numeroFila).getName());
+
         }
         isPushed = false;
         //devolvemos el label, pero podria ser el numero de fila

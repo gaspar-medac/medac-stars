@@ -1,23 +1,11 @@
 
 d
-<<<<<<< HEAD
-java:S1192"GDefine a constant instead of duplicating this literal "Editar" 3 times.(×ä¤¦8í“Çıç1
-r	java:S117'"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(² öÀùÿÿÿÿ8¡ÍËıç1
-t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ı™á´üÿÿÿÿ
+java:S1192"GDefine a constant instead of duplicating this literal "Editar" 4 times.(×ä¤¦8üæëşç1
+r	java:S117."QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(² öÀùÿÿÿÿ8ıæëşç1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ı™á´üÿÿÿÿ8€çëşç1
 }
-java:S1450\"[Remove the "jScrollPane1" field and declare it as a local variable in the relevant methods.(¤á×ÿÿÿÿÿ8…”Çıç1
+java:S1450c"[Remove the "jScrollPane1" field and declare it as a local variable in the relevant methods.(¤á×ÿÿÿÿÿ8çëşç1
 k
-java:S3252"IUse static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE".(Õû»öşÿÿÿÿ8‚ŞÉıç1
+java:S3252"IUse static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE".(Õû»öşÿÿÿÿ8“çëşç1
 I
-java:S1068",Remove this unused "usuarios" private field.(°Û¦ö8òõ½ıç1
-=======
-java:S1192"GDefine a constant instead of duplicating this literal "Editar" 6 times.(×ä¤¦8áØ¿üç1
-r	java:S117]"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(² öÀùÿÿÿÿ8áØ¿üç1
-{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ı™á´üÿÿÿÿ8ãØ¿üç1
-}
-java:S1450Z"[Remove the "jScrollPane1" field and declare it as a local variable in the relevant methods.(¤á×ÿÿÿÿÿ8÷Ø¿üç1
-k
-java:S3252"IUse static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE".(Õû»öşÿÿÿÿ8üØ¿üç1
-I
-java:S1068	",Remove this unused "usuarios" private field.(°Û¦ö8ˆÙ¿üç1
->>>>>>> 6d78d3dedf467087e7511512afa1346233a4eca3
+java:S1068",Remove this unused "usuarios" private field.(°Û¦ö8çëşç1

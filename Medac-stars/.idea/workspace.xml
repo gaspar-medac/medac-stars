@@ -5,22 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2356958-5ef2-40a5-9612-11fb62fc4b12" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/medac/stars/ui/usuarios/tablaGestionUsuarios/ButtonEditor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/medac/stars/ui/usuarios/tablaGestionUsuarios/ButtonRenderer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/medac/stars/ui/usuarios/tablaGestionUsuarios/TablaGestionUsuarios.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/medac/stars/ui/usuarios/tablaGestionUsuarios/TablaGestionUsuarios.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/a/2afb4410f5a6593d89399c54fa255d41eefe858b" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/a/2afb4410f5a6593d89399c54fa255d41eefe858b" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/0/402ce04c74269d736ac7678e78f7402da74a9bda" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/0/402ce04c74269d736ac7678e78f7402da74a9bda" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/2/d2d8acb37bfa8be6de0d2e35bb30c0aef1a87ed7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/4/d4143f64d07062b95ebe44a701df765600cf017a" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/4/d4143f64d07062b95ebe44a701df765600cf017a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/4/e4fdbc5ff200b8f2dad0feb89a5f929584fa04b0" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/d/2/d2d8acb37bfa8be6de0d2e35bb30c0aef1a87ed7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/e/4/e4fdbc5ff200b8f2dad0feb89a5f929584fa04b0" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/medac/stars/ui/usuarios/TablaUsuarios.form" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/medac/stars/ui/usuarios/TablaUsuarios.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/medac/stars/controller/ManageData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/medac/stars/controller/ManageData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/medac/stars/ui/usuarios/tablaGestionUsuarios/ButtonEditor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/medac/stars/ui/usuarios/tablaGestionUsuarios/ButtonEditor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/medac/stars/ui/usuarios/tablaGestionUsuarios/TablaGestionUsuarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/medac/stars/ui/usuarios/tablaGestionUsuarios/TablaGestionUsuarios.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +55,26 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="TablaGestionUsuarios" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="medac.stars.ui.usuarios.tablaGestionUsuarios.TablaGestionUsuarios" />
+      <module name="Medac-stars" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="medac.stars.ui.usuarios.tablaGestionUsuarios.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.TablaGestionUsuarios" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -79,7 +91,7 @@
       <option name="presentableId" value="Default" />
       <updated>1711538713653</updated>
       <workItem from="1711538716201" duration="331000" />
-      <workItem from="1711539058741" duration="384000" />
+      <workItem from="1711539058741" duration="2642000" />
     </task>
     <servers />
   </component>
