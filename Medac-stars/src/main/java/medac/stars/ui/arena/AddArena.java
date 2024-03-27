@@ -176,7 +176,7 @@ public class AddArena extends javax.swing.JFrame {
 
     private void bGuardarArenaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bGuardarArenaActionPerformed
 
-        Arena arena = new Arena(tfNuevoNombre.getText(), cbCuentaAtras.isSelected(), tfDescripcion.getText(), null, ERROR);
+        Arena arena = new Arena(tfNuevoNombre.getText(), cbCuentaAtras.isSelected(), tfDescripcion.getText(), null, (int)jSpinner1.getValue());
         arenaSet.add(arena);
         JOptionPane.showMessageDialog(this, "La Arena se ha guardado con Exito!!");
         this.dispose();

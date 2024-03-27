@@ -16,17 +16,19 @@ import medac.stars.model.Arena;
  */
 public class EditArena extends javax.swing.JFrame {
 
-    public EditArena() {
-
-        initComponents();
-    }
-
     /**
      * Creates new form addArena
+     *
+     * @param arena por parametro
      */
     public EditArena(Arena arena) {
         initComponents();
-        this.arena = arena;
+        tfEditarNombre.setText(arena.getName());
+        cbCuentaAtrasEditar.setSelected(arena.isCountdown());
+        tfEditarDescripcion.setText(arena.getDescription());
+        jSpinner1.setValue(arena.getBarriers());
+        jlimagenArena.setText(arena.getImage());
+        
     }
 
     /**
@@ -73,7 +75,6 @@ public class EditArena extends javax.swing.JFrame {
         jLabel1.setText("Nombre");
 
         tfEditarNombre.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
-        tfEditarNombre.setText(arena.getName());
         tfEditarNombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfEditarNombreActionPerformed(evt);
