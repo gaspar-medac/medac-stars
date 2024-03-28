@@ -4,6 +4,8 @@
  */
 package medac.stars.model;
 
+import javax.swing.Icon;
+
 /**
  *
  * @author gaspar
@@ -13,10 +15,10 @@ public class Arena {
     String name;
     boolean countdown;
     String description;
-    String image;
+    Icon image;
     int barriers;
 
-    public Arena(String name, boolean countdown, String description, String image, int barriers) {
+    public Arena(String name, boolean countdown, String description, Icon image, int barriers) {
         this.name = name;
         this.countdown = countdown;
         this.description = description;
@@ -48,11 +50,11 @@ public class Arena {
         this.description = description;
     }
 
-    public String getImage() {
+    public Icon getImage() {
         return image;
     }
 
-    public void setImage(String image) {
+    public void setImage(Icon image) {
         this.image = image;
     }
 

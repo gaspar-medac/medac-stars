@@ -188,7 +188,7 @@ public class AddArena extends javax.swing.JFrame {
 
     private void bGuardarArenaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bGuardarArenaActionPerformed
 
-        Arena arena = new Arena(tfNuevoNombre.getText(), cbCuentaAtras.isSelected(), tfDescripcion.getText(), null, (int) jSpinner1.getValue());
+        Arena arena = new Arena(tfNuevoNombre.getText(), cbCuentaAtras.isSelected(), tfDescripcion.getText(), jlimagenArena.getIcon(), (int) jSpinner1.getValue());
         arenaSet.add(arena);
         JOptionPane.showMessageDialog(this, "La Arena se ha guardado con Exito!!");
         this.dispose();
@@ -207,11 +207,12 @@ public class AddArena extends javax.swing.JFrame {
 
     private void bAnyadirImagenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAnyadirImagenActionPerformed
         JFileChooser fileChooser = new JFileChooser();
+        String ruta;
         fileChooser.setSelectedFile(new File(""));
         int resultado = fileChooser.showOpenDialog(this);
         if (resultado == JFileChooser.APPROVE_OPTION) {
-            String ruta = fileChooser.getSelectedFile().getAbsolutePath();
-            loadAndSetImage(fileChooser.getSelectedFile().getAbsolutePath());
+            ruta = fileChooser.getSelectedFile().getAbsolutePath();
+            loadAndSetImage(ruta);
         }
     }//GEN-LAST:event_bAnyadirImagenActionPerformed
 
