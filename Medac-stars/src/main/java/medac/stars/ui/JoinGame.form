@@ -101,7 +101,10 @@
             <constraints>
               <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="10" fill="1" indent="1" use-parent-layout="false"/>
             </constraints>
-            <properties/>
+            <properties>
+              <background color="-16777216"/>
+              <foreground color="-1"/>
+            </properties>
           </component>
         </children>
       </grid>
@@ -162,7 +165,9 @@
         <children>
           <component id="4f0e2" class="javax.swing.JLabel" binding="player3Label">
             <constraints>
-              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="10" fill="0" indent="8" use-parent-layout="false"/>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="10" fill="0" indent="8" use-parent-layout="false">
+                <preferred-size width="198" height="17"/>
+              </grid>
             </constraints>
             <properties>
               <foreground color="-1"/>
@@ -172,7 +177,7 @@
           <component id="7bca1" class="javax.swing.JLabel" binding="slot3Label" custom-create="true">
             <constraints>
               <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="7" use-parent-layout="false">
-                <preferred-size width="87" height="17"/>
+                <preferred-size width="198" height="17"/>
               </grid>
             </constraints>
             <properties>
