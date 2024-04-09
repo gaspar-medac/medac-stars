@@ -27,7 +27,7 @@ public class Usuario extends javax.swing.JFrame {
         TextPrompt email = new TextPrompt("Introduce el Email", jTextoEmail);
         TextPrompt contraseña = new TextPrompt("Introduce contraseña", jContraseña);
 
-        if (usuario == null) {
+        if (usuario != null) {
             //nuevo usuario
             jContraseña.setText(usuario.getPassword());
             jTextoUsuario.setText(usuario.getName());
@@ -87,6 +87,7 @@ public class Usuario extends javax.swing.JFrame {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bEntrarActionPerformed(evt);
             }
+
         });
 
         bVolver.setText("Volver");

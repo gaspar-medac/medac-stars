@@ -1,41 +1,39 @@
 
 r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”¨¶äşÿÿÿÿ8ôÂ–ÿç1
-n	java:S117«"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÂÆï¼8õÂ–ÿç1
-n	java:S117º"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÂÆï¼8öÂ–ÿç1
+n	java:S117¬"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÂÆï¼8õÂ–ÿç1
+n	java:S117»"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÂÆï¼8öÂ–ÿç1
 E
 java:S1604E"(Make this anonymous inner class a lambda(ßÜÔ­8öÂ–ÿç1
 E
 java:S1604V"(Make this anonymous inner class a lambda(Ê´Æ²8÷Â–ÿç1
 E
-java:S1604]"(Make this anonymous inner class a lambda(«û¨º8Öª§Œì1
-D
-java:S1604á"(Make this anonymous inner class a lambda(¨í¡§úÿÿÿÿ
+java:S1604^"(Make this anonymous inner class a lambda(«û¨º8Öª§Œì1
 K
-java:S1604„"(Make this anonymous inner class a lambda(¨í¡§úÿÿÿÿ8Öª§Œì1
+java:S1604â"(Make this anonymous inner class a lambda(¨í¡§úÿÿÿÿ8Öª§Œì1
+K
+java:S1604…"(Make this anonymous inner class a lambda(¨í¡§úÿÿÿÿ8½›èì1
 o
 java:S1104"SMake usuario a static final constant or non-public and provide accessors if needed.(Ë¡’%8×ª§Œì1
 2
 java:S1700"Rename field "usuario"(Ë¡’%8Ùª§Œì1
-g
-java:S2259 "EA "NullPointerException" could be thrown; "usuario" is nullable here.(ùÏöˆúÿÿÿÿ8¡«§Œì1
-r	java:S116”"WRename this field "jContraseÃ±a" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³Šìçùÿÿÿÿ
-r	java:S116•"\Rename this field "jContraseÃ±aLabel" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°‘©§
+r	java:S116•"WRename this field "jContraseÃ±a" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³Šìçùÿÿÿÿ
+r	java:S116–"\Rename this field "jContraseÃ±aLabel" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°‘©§
 m
-java:S1450"VRemove the "bEntrar" field and declare it as a local variable in the relevant methods.(÷âÂ
+java:S1450"VRemove the "bEntrar" field and declare it as a local variable in the relevant methods.(÷âÂ
 r
-java:S1450"VRemove the "bGestor" field and declare it as a local variable in the relevant methods.(´ó–şÿÿÿÿ
+java:S1450‘"VRemove the "bGestor" field and declare it as a local variable in the relevant methods.(´ó–şÿÿÿÿ
 m
-java:S1450’"VRemove the "bVolver" field and declare it as a local variable in the relevant methods.(±ò‘”
+java:S1450“"VRemove the "bVolver" field and declare it as a local variable in the relevant methods.(±ò‘”
 w
-java:S1450“"[Remove the "buttonGroup1" field and declare it as a local variable in the relevant methods.(ïÔúØÿÿÿÿÿ
+java:S1450”"[Remove the "buttonGroup1" field and declare it as a local variable in the relevant methods.(ïÔúØÿÿÿÿÿ
 w
-java:S1450•"`Remove the "jContraseÃ±aLabel" field and declare it as a local variable in the relevant methods.(°‘©§
+java:S1450–"`Remove the "jContraseÃ±aLabel" field and declare it as a local variable in the relevant methods.(°‘©§
 l
-java:S1450–"URemove the "jEmail" field and declare it as a local variable in the relevant methods.(¡£Ìö
+java:S1450—"URemove the "jEmail" field and declare it as a local variable in the relevant methods.(¡£Ìö
 r
-java:S1450™"[Remove the "jTipoUsuario" field and declare it as a local variable in the relevant methods.(ÏÎÜ·
+java:S1450š"[Remove the "jTipoUsuario" field and declare it as a local variable in the relevant methods.(ÏÎÜ·
 s
-java:S1450š"WRemove the "jUsuario" field and declare it as a local variable in the relevant methods.(Õ½ÿÿÿÿÿ
+java:S1450›"WRemove the "jUsuario" field and declare it as a local variable in the relevant methods.(Õ½ÿÿÿÿÿ
 E
 java:S1948")Make "usuario" transient or serializable.(Ë¡’%8²«§Œì1
 O
@@ -45,28 +43,28 @@ java:S1481"*Remove this unused "email" local variable.(»é²¢8„Ä–ÿç1
 R
 java:S1481"0Remove this unused "contraseÃ±a" local variable.(”¨¶äşÿÿÿÿ8…Ä–ÿç1
 M
-java:S1172¤"*Remove this unused method parameter "evt".( İİíüÿÿÿÿ8ŠÅ–ÿç1
+java:S1172¥"*Remove this unused method parameter "evt".( İİíüÿÿÿÿ8ŠÅ–ÿç1
 U
-java:S1135¥"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ8¢Ä–ÿç1
+java:S1135¦"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ8¢Ä–ÿç1
 M
-java:S1874«"/Remove this use of "getText"; it is deprecated.(ÂÆï¼8…Å–ÿç1
+java:S1874¬"/Remove this use of "getText"; it is deprecated.(ÂÆï¼8…Å–ÿç1
 d
-java:S1126®"AReplace this if-then-else statement by a single return statement.(Âÿœÿÿÿÿÿ8†Å–ÿç1
+java:S1126¯"AReplace this if-then-else statement by a single return statement.(Âÿœÿÿÿÿÿ8†Å–ÿç1
 u
-java:S3776µ"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(ÜÑ ıøÿÿÿÿ8ì«§Œì1
+java:S3776¶"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(ÜÑ ıøÿÿÿÿ8ì«§Œì1
 M
-java:S1172µ"*Remove this unused method parameter "evt".(ÜÑ ıøÿÿÿÿ8î«§Œì1
+java:S1172¶"*Remove this unused method parameter "evt".(ÜÑ ıøÿÿÿÿ8î«§Œì1
 M
-java:S1874º"/Remove this use of "getText"; it is deprecated.(ÂÆï¼8ŒÅ–ÿç1
+java:S1874»"/Remove this use of "getText"; it is deprecated.(ÂÆï¼8ŒÅ–ÿç1
 H
-java:S1172ß"*Remove this unused method parameter "evt".(É³èĞ8õ«§Œì1
+java:S1172à"*Remove this unused method parameter "evt".(É³èĞ8õ«§Œì1
 U
-java:S1135à"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ8ö«§Œì1
+java:S1135á"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ8ö«§Œì1
 F
-java:S1197é"*Move the array designators [] to the type.(¡şÏÖøÿÿÿÿ
+java:S1197ê"*Move the array designators [] to the type.(¡şÏÖøÿÿÿÿ
 \
-java:S2147ø"ECombine this catch with the one at line 246, which has the same body.(¨¦Š½
+java:S2147ù"ECombine this catch with the one at line 247, which has the same body.(¨¦Š½
 \
-java:S2147ú"ECombine this catch with the one at line 248, which has the same body.(ã€ 
+java:S2147û"ECombine this catch with the one at line 249, which has the same body.(ã€ 
 [
-java:S2147ü"ECombine this catch with the one at line 250, which has the same body.(ñÎ¯%
+java:S2147ı"ECombine this catch with the one at line 251, which has the same body.(ñÎ¯%

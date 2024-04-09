@@ -7,11 +7,15 @@
     <list default="true" id="e2356958-5ef2-40a5-9612-11fb62fc4b12" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/a/0a637ef8683bc9ed99818dae1878bdb609e2fee4" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/a/0a637ef8683bc9ed99818dae1878bdb609e2fee4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/a/2afb4410f5a6593d89399c54fa255d41eefe858b" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/a/2afb4410f5a6593d89399c54fa255d41eefe858b" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/4/d4143f64d07062b95ebe44a701df765600cf017a" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/4/d4143f64d07062b95ebe44a701df765600cf017a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/0/402ce04c74269d736ac7678e78f7402da74a9bda" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/0/402ce04c74269d736ac7678e78f7402da74a9bda" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/medac/stars/controller/ManageData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/medac/stars/controller/ManageData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/medac/stars/ui/usuarios/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/medac/stars/ui/usuarios/Usuario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/medac/stars/ui/usuarios/tablaGestionUsuarios/ButtonEditor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/medac/stars/ui/usuarios/tablaGestionUsuarios/ButtonEditor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/medac/stars/ui/usuarios/tablaGestionUsuarios/ButtonRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/medac/stars/ui/usuarios/tablaGestionUsuarios/ButtonRenderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/medac/stars/ui/usuarios/tablaGestionUsuarios/TablaGestionUsuarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/medac/stars/ui/usuarios/tablaGestionUsuarios/TablaGestionUsuarios.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,27 +110,11 @@
       <updated>1711538713653</updated>
       <workItem from="1711538716201" duration="331000" />
       <workItem from="1711539058741" duration="5056000" />
-      <workItem from="1712644021299" duration="1055000" />
+      <workItem from="1712644021299" duration="5746000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/medac/stars/ui/usuarios/tablaGestionUsuarios/ButtonEditor.java</url>
-          <line>59</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/medac/stars/ui/usuarios/Usuario.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
