@@ -21,6 +21,8 @@ public class JoinGame extends JFrame {
     private JLabel arenaNameLabel;
     private JPanel JPanel1;
     private JComboBox comboBox1;
+    private JLabel player1Label;
+    private JLabel player3Label;
     private JPasswordField passwordField1;
 
 
@@ -48,6 +50,9 @@ public class JoinGame extends JFrame {
         slot4Label.setFont(montserratSemiBold.deriveFont(12f));
         arenaNameLabel.setFont(montserratSemiBold.deriveFont(12f));
         comboBox1.setFont(montserratSemiBold.deriveFont(12f));
+
+        player1Label.setVisible(false);
+        player3Label.setVisible(false);
 
 
         joinButton.addActionListener(new ActionListener() {
