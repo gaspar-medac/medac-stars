@@ -112,6 +112,7 @@ public class ChatInterfaz extends javax.swing.JFrame {
         messageField.setBorder(null);
         messageField.setBackground(Color.white);
         messageField.setForeground(new java.awt.Color(0, 102, 255));
+        messageField.setFont(new Font("Arial", Font.BOLD, 14));;
 
         jPanel3.add(messageField);
     }
@@ -124,6 +125,8 @@ public class ChatInterfaz extends javax.swing.JFrame {
         messageField.setBorder(null);
         messageField.setBackground(Color.white);
         messageField.setHorizontalAlignment(SwingConstants.RIGHT);
+        messageField.setFont(new Font("Arial", Font.ITALIC, 14));;
+
 
         jPanel3.add(messageField);
     }
