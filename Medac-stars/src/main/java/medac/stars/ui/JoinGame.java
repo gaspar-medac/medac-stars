@@ -27,6 +27,9 @@ public class JoinGame extends JFrame {
     private JComboBox comboBox1;
     private JButton joinButton3;
     private JComboBox comboBox3;
+    private JComboBox comboBox4;
+    private JLabel player2Label;
+    private JLabel player4Label;
     private JPasswordField passwordField1;
 
 
@@ -55,11 +58,14 @@ public class JoinGame extends JFrame {
         comboBox2.setFont(montserratSemiBold.deriveFont(12f));
 
         player1Label.setVisible(false);
+        player2Label.setVisible(false);
         player3Label.setVisible(false);
+        player4Label.setVisible(false);
 
         comboBox1.setVisible(false);
         comboBox2.setVisible(false);
         comboBox3.setVisible(false);
+        comboBox4.setVisible(false);
 
         joinButton.addActionListener(new ActionListener() {
             @Override
@@ -96,6 +102,18 @@ public class JoinGame extends JFrame {
                 comboBox3.addItem("medacstar1");
                 comboBox3.addItem("medacstar2");
                 comboBox3.addItem("medacstar3");
+            }
+        });
+        joinButton4.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                joinButton4.removeActionListener(this);
+                comboBox4.setVisible(true);
+                joinButton4.setVisible(false);
+                JPanel1.repaint();
+                comboBox4.addItem("medacstar1");
+                comboBox4.addItem("medacstar2");
+                comboBox4.addItem("medacstar3");
             }
         });
     }
