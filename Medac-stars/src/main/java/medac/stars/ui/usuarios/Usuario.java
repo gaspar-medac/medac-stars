@@ -59,7 +59,7 @@ public class Usuario extends javax.swing.JFrame {
         bEntrar = new javax.swing.JButton();
         bVolver = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jUsuario.setText("Usuario");
         jUsuario.setToolTipText("");
