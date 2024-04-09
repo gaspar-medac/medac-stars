@@ -16,7 +16,7 @@ public class TablaGestionUsuarios extends JFrame{
         initMiTablaComponent();
         add(mainPanel);
         setTitle("TestUI");
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setSize(700, 500);
         setLocationRelativeTo(null);
         setVisible(true);

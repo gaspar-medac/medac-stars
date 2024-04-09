@@ -23,9 +23,9 @@ public class ManageData {
     public static HashMap<User, Chat> chatHashMap = new HashMap<User, Chat>();
 
     static {
-        userSet.add(new User("nombre", "1", "", 0));
-        userSet.add(new User("Carlos", "1", "", 0));
-        userSet.add(new User("Cristian", "1", "", 0));
-        userSet.add(new User("Cristian2", "1", "", 0));
+        userSet.add(new User("nombre", "1", "nombre@gmail.com", 0));
+        userSet.add(new User("Carlos", "1", "carlos@gmail.com", 0));
+        userSet.add(new User("Cristian", "1", "cristian@gmail.com", 0));
+        userSet.add(new User("Cristian2", "1", "cristian2@gmail.com", 0));
     }
 }

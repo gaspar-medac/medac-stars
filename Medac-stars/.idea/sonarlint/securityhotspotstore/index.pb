@@ -19,3 +19,7 @@ Z
 *src/main/java/medac/stars/model/Arena.java,3\4\341f8359dc13d02424dc9689876bfc41aaee0502
 ^
 .src/main/java/medac/stars/model/MedacStar.java,a\1\a1e3988cd952ccdcf767814c52e9008f0ae7a24f
+\
+,src/main/java/medac/stars/model/Message.java,5\4\54dd91bc45b252e17d11a43f0caa637042cc7d89
+e
+5src/main/java/medac/stars/ui/usuarios/TextPrompt.java,5\c\5c768c9e4c3482b2163d013d6d4d0acefdaeb13f

@@ -87,6 +87,7 @@ public class Usuario extends javax.swing.JFrame {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bEntrarActionPerformed(evt);
             }
+
         });
 
         bVolver.setText("Volver");
