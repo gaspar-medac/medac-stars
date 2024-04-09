@@ -13,7 +13,7 @@ public class JoinGame extends JFrame {
     private JPanel JoinGamePanel;
     private JButton joinButton;
     private JButton joinButton2;
-    private JButton joinButton3;
+    private JButton joinButton4;
     private JButton cancelButton;
     private JLabel slot1Label;
     private JLabel slot2Label;
@@ -25,6 +25,8 @@ public class JoinGame extends JFrame {
     private JLabel player1Label;
     private JLabel player3Label;
     private JComboBox comboBox1;
+    private JButton joinButton3;
+    private JComboBox comboBox3;
     private JPasswordField passwordField1;
 
 
@@ -43,7 +45,7 @@ public class JoinGame extends JFrame {
         Font montserratSemiBold = FontBuilder.getFont("Montserrat-SemiBold.ttf");
         joinButton.setFont(montserratSemiBold.deriveFont(12f));
         joinButton2.setFont(montserratSemiBold.deriveFont(12f));
-        joinButton3.setFont(montserratSemiBold.deriveFont(12f));
+        joinButton4.setFont(montserratSemiBold.deriveFont(12f));
         cancelButton.setFont(montserratSemiBold.deriveFont(12f));
         slot1Label.setFont(montserratSemiBold.deriveFont(12f));
         slot2Label.setFont(montserratSemiBold.deriveFont(12f));
@@ -57,6 +59,7 @@ public class JoinGame extends JFrame {
 
         comboBox1.setVisible(false);
         comboBox2.setVisible(false);
+        comboBox3.setVisible(false);
 
         joinButton.addActionListener(new ActionListener() {
             @Override
@@ -81,6 +84,18 @@ public class JoinGame extends JFrame {
                 comboBox2.addItem("medacstar1");
                 comboBox2.addItem("medacstar2");
                 comboBox2.addItem("medacstar3");
+            }
+        });
+        joinButton3.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                joinButton3.removeActionListener(this);
+                comboBox3.setVisible(true);
+                joinButton3.setVisible(false);
+                JPanel1.repaint();
+                comboBox3.addItem("medacstar1");
+                comboBox3.addItem("medacstar2");
+                comboBox3.addItem("medacstar3");
             }
         });
     }
