@@ -48,7 +48,7 @@ public class ChatInterfaz extends javax.swing.JFrame {
         ManageData.chat.getMessages().add(new Message("No juego más contigo", usu2, usu1));
         ManageData.chat.getMessages().add(new Message("Comeme los huevos", usu1, usu2));
 
-        mostrarMensajes();
+        mostrarMensajes("");
         mostrarBotones();
     }
 
@@ -58,21 +58,18 @@ public class ChatInterfaz extends javax.swing.JFrame {
             jButton.setForeground(new java.awt.Color(102, 153, 255));
             jButton.setText(key);
             jButton.addActionListener(new java.awt.event.ActionListener() {
-                public void eventoDeBoton(java.awt.event.ActionEvent evt) {
-                    jButton1ActionPerformed(evt);
-                }
 
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     jPanel3.removeAll();
-                  //ArrayList<Message> messages = ManageData.chatHashMap.get("");
-                    mostrarMensajes();
+                    //ArrayList<Message> messages = ManageData.chatHashMap.get("");
+                    mostrarMensajes(e.getActionCommand());
                     JScrollBar verticalScrollBar = jScrollPane1.getVerticalScrollBar();
                     verticalScrollBar.setValue(verticalScrollBar.getMaximum());
                     jScrollPane1.revalidate();
                 }
             });
-            //jPanel2.add(jButton);
+            jPanel2.add(jButton);
         }
     }
 
@@ -101,7 +98,6 @@ public class ChatInterfaz extends javax.swing.JFrame {
         jPanel3.add(userField);
         userField.setFont(new Font("Arial", Font.ITALIC, 14));
 
-
     }
 
     public void mostrarMensajesRecibido(Message message) {
@@ -127,7 +123,6 @@ public class ChatInterfaz extends javax.swing.JFrame {
         messageField.setHorizontalAlignment(SwingConstants.RIGHT);
         messageField.setFont(new Font("Arial", Font.ITALIC, 14));;
 
-
         jPanel3.add(messageField);
     }
 
@@ -145,10 +140,19 @@ public class ChatInterfaz extends javax.swing.JFrame {
         jPanel3.add(Box.createRigidArea(new Dimension(0, 10)));
     }
 
-    private void mostrarMensajes() {
-        ArrayList<Message> messageList = ManageData.chat.getMessages();
-        for (Message message : messageList) {
-            mostrarMensaje(message);
+    private void mostrarMensajes(String key) {
+        if (key.isEmpty()) {
+            ArrayList<Message> messageList = ManageData.chat.getMessages();
+            for (Message message : messageList) {
+                mostrarMensaje(message);
+            }
+        } else {
+
+            ArrayList<Message> messageList = ManageData.chatHashMap.get(key).getMessages();
+            for (Message message : messageList) {
+                mostrarMensaje(message);
+            }
+            System.out.println(key);
         }
     }
 
@@ -313,7 +317,7 @@ public class ChatInterfaz extends javax.swing.JFrame {
         ManageData.chat.getMessages().add(new Message("klk?", usu2, usuarioLogeado));
         ManageData.chat.getMessages().add(new Message("klk?", usuarioLogeado, usu2));
         ManageData.chat.getMessages().add(new Message("klk?", usuarioLogeado, usu2));
-        mostrarMensajes();
+        mostrarMensajes("");
         JScrollBar verticalScrollBar = jScrollPane1.getVerticalScrollBar();
         verticalScrollBar.setValue(verticalScrollBar.getMaximum());
         jScrollPane1.revalidate();
@@ -344,7 +348,7 @@ public class ChatInterfaz extends javax.swing.JFrame {
         ManageData.chat.getMessages().add(new Message("A JUGAR YA!!", usu2, usuarioLogeado));
         ManageData.chat.getMessages().add(new Message("vooooy capullo", usuarioLogeado, usu2));
         ManageData.chat.getMessages().add(new Message("", usuarioLogeado, usu2));
-        mostrarMensajes();
+        mostrarMensajes("");
         JScrollBar verticalScrollBar = jScrollPane1.getVerticalScrollBar();
         verticalScrollBar.setValue(verticalScrollBar.getMaximum());
         jScrollPane1.revalidate();
@@ -358,7 +362,7 @@ public class ChatInterfaz extends javax.swing.JFrame {
         ManageData.chat.getMessages().add(new Message("activo?", usu2, usuarioLogeado));
         ManageData.chat.getMessages().add(new Message("uuuuaaa?", usuarioLogeado, usu2));
         ManageData.chat.getMessages().add(new Message("vamo a darle", usuarioLogeado, usu2));
-        mostrarMensajes();
+        mostrarMensajes("");
         JScrollBar verticalScrollBar = jScrollPane1.getVerticalScrollBar();
         verticalScrollBar.setValue(verticalScrollBar.getMaximum());// TODO add your handling code here:
         jScrollPane1.revalidate();
@@ -372,7 +376,7 @@ public class ChatInterfaz extends javax.swing.JFrame {
         ManageData.chat.getMessages().add(new Message("pvp?", usu2, usuarioLogeado));
         ManageData.chat.getMessages().add(new Message("qva tt", usuarioLogeado, usu2));
         ManageData.chat.getMessages().add(new Message("mañana", usuarioLogeado, usu2));
-        mostrarMensajes();
+        mostrarMensajes("");
         JScrollBar verticalScrollBar = jScrollPane1.getVerticalScrollBar();
         verticalScrollBar.setValue(verticalScrollBar.getMaximum());// TODO add your handling code here:
         jScrollPane1.revalidate();
