@@ -12,9 +12,6 @@ import javax.swing.text.*;
 
 
 public class TextPrompt extends JLabel implements FocusListener, DocumentListener {
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 
 	public enum Show {
@@ -27,11 +24,21 @@ public class TextPrompt extends JLabel implements FocusListener, DocumentListene
 	private Show show;
 	private boolean showPromptOnce;
 	private int focusLost;
-
+        
+        /**
+         * Constructor Vacio
+         * @param text
+         * @param component 
+         */
 	public TextPrompt(String text, JTextComponent component) {
 		this(text, component, Show.ALWAYS);
 	}
-
+        /**
+         * Constructor Sobrecargado
+         * @param text
+         * @param component
+         * @param show 
+         */
 	public TextPrompt(String text, JTextComponent component, Show show) {
 		this.component = component;
 		setShow(show);
@@ -53,15 +60,17 @@ public class TextPrompt extends JLabel implements FocusListener, DocumentListene
 		checkForPrompt();
 	}
 
-
+        /**
+         * establece el estilo de la fuente
+         * @param style 
+         */
 	public void cambiarEstilo(int style) {
 		setFont(getFont().deriveFont(style));
 	}
 
 	/**
-	 * Get the Show property
-	 *
-	 * @return the Show property.
+	 * Obtencion de la propiedad Show
+	 * @return
 	 */
 	public Show getShow() {
 		return show;
@@ -81,7 +90,9 @@ public class TextPrompt extends JLabel implements FocusListener, DocumentListene
 		this.showPromptOnce = showPromptOnce;
 	}
 
-	
+	/**
+         * Comprueba si hay un texto en el campo y desactiva la visibilidad del "placeholder", si no detecta texto activa la visibilidad del "placeholder"
+         */
 	private void checkForPrompt() {
 
 		if (document.getLength() > 0) {
@@ -107,7 +118,7 @@ public class TextPrompt extends JLabel implements FocusListener, DocumentListene
 		}
 	}
 
-	// Implement FocusListener
+	// Implementacion de los FocusListeners
 
 	public void focusGained(FocusEvent e) {
 		checkForPrompt();
@@ -118,7 +129,7 @@ public class TextPrompt extends JLabel implements FocusListener, DocumentListene
 		checkForPrompt();
 	}
 
-	// Implement DocumentListener
+	// Implementacion de los DocumentListeners
 
 	public void insertUpdate(DocumentEvent e) {
 		checkForPrompt();
