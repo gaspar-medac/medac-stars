@@ -112,7 +112,7 @@
           </component>
           <component id="6a5f9" class="javax.swing.JLabel">
             <constraints>
-              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="1" use-parent-layout="false"/>
             </constraints>
             <properties>
               <foreground color="-1"/>
@@ -131,15 +131,6 @@
         </properties>
         <border type="none"/>
         <children>
-          <component id="3d024" class="javax.swing.JLabel">
-            <constraints>
-              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="7" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <foreground color="-1"/>
-              <text value="Equipo 2"/>
-            </properties>
-          </component>
           <component id="4f0e2" class="javax.swing.JLabel">
             <constraints>
               <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="10" fill="0" indent="8" use-parent-layout="false"/>
@@ -181,6 +172,15 @@
               <rolloverEnabled value="false"/>
               <text value="Unirse"/>
               <verifyInputWhenFocusTarget value="false"/>
+            </properties>
+          </component>
+          <component id="3d024" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <foreground color="-1"/>
+              <text value="Equipo 2"/>
             </properties>
           </component>
         </children>
