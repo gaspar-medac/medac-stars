@@ -30,8 +30,6 @@ public class JoinGame extends JFrame {
     private JComboBox comboBox4;
     private JLabel player2Label;
     private JLabel player4Label;
-    private JPasswordField passwordField1;
-
 
     public JoinGame() {
         add(JoinGamePanel);
@@ -48,6 +46,7 @@ public class JoinGame extends JFrame {
         Font montserratSemiBold = FontBuilder.getFont("Montserrat-SemiBold.ttf");
         joinButton.setFont(montserratSemiBold.deriveFont(12f));
         joinButton2.setFont(montserratSemiBold.deriveFont(12f));
+        joinButton3.setFont(montserratSemiBold.deriveFont(12f));
         joinButton4.setFont(montserratSemiBold.deriveFont(12f));
         cancelButton.setFont(montserratSemiBold.deriveFont(12f));
         slot1Label.setFont(montserratSemiBold.deriveFont(12f));
@@ -55,7 +54,14 @@ public class JoinGame extends JFrame {
         slot3Label.setFont(montserratSemiBold.deriveFont(12f));
         slot4Label.setFont(montserratSemiBold.deriveFont(12f));
         arenaNameLabel.setFont(montserratSemiBold.deriveFont(12f));
+        comboBox1.setFont(montserratSemiBold.deriveFont(12f));
         comboBox2.setFont(montserratSemiBold.deriveFont(12f));
+        comboBox3.setFont(montserratSemiBold.deriveFont(12f));
+        comboBox4.setFont(montserratSemiBold.deriveFont(12f));
+        player1Label.setFont(montserratSemiBold.deriveFont(12f));
+        player2Label.setFont(montserratSemiBold.deriveFont(12f));
+        player3Label.setFont(montserratSemiBold.deriveFont(12f));
+        player4Label.setFont(montserratSemiBold.deriveFont(12f));
 
         player1Label.setVisible(false);
         player2Label.setVisible(false);
