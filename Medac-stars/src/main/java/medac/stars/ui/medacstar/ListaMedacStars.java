@@ -4,6 +4,11 @@
  */
 package medac.stars.ui.medacstar;
 
+import javax.swing.JCheckBox;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
+import static medac.stars.controller.ManageData.medacStarSet;
+
 /**
  *
  * @author samue
@@ -15,6 +20,8 @@ public class ListaMedacStars extends javax.swing.JFrame {
      */
     public ListaMedacStars() {
         initComponents();
+        initMiTablaComponent();
+       
     }
 
     /**
@@ -30,7 +37,7 @@ public class ListaMedacStars extends javax.swing.JFrame {
         jbAñadirMedacStar = new javax.swing.JButton();
         jbMenuPrincipal = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tMiTabla = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -54,8 +61,8 @@ public class ListaMedacStars extends javax.swing.JFrame {
             }
         });
 
-        jTable1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tMiTabla.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        tMiTabla.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {"1", "1"},
                 {"2", "2"},
@@ -68,8 +75,8 @@ public class ListaMedacStars extends javax.swing.JFrame {
                 "Medac Stars", "Editar"
             }
         ));
-        jTable1.setShowGrid(true);
-        jScrollPane1.setViewportView(jTable1);
+        tMiTabla.setShowGrid(true);
+        jScrollPane1.setViewportView(tMiTabla);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -127,6 +134,29 @@ public class ListaMedacStars extends javax.swing.JFrame {
          
     }//GEN-LAST:event_jbAñadirMedacStarActionPerformed
 
+    public void initMiTablaComponent() {
+
+        Object[] nombreColumnas = new Object[]{"Nombre", "Editar"};
+        
+        Object[][] celdas = new Object[medacStarSet.size()][2];
+        
+        
+        
+        for ( int i = 0; i < medacStarSet.size();i++) {
+            Object[] fila = new Object[]{medacStarSet.get(i).getName(), "Botton"};
+            celdas[i]=fila;
+            
+            
+        }
+        // set the table values.
+        TableModel dm = new DefaultTableModel(celdas, nombreColumnas);
+        tMiTabla.setModel(dm);
+        // Modificamos la columna de los botones para que aparezca el botón:
+        tMiTabla.getColumn("Editar").setCellRenderer(new ButtonRenderer());
+        tMiTabla.getColumn("Editar").setCellEditor(new ButtonEditor(new JCheckBox()));
+
+    }
+
     /**
      * @param args the command line arguments
      */
@@ -167,8 +197,8 @@ public class ListaMedacStars extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JButton jbAñadirMedacStar;
     private javax.swing.JButton jbMenuPrincipal;
+    private javax.swing.JTable tMiTabla;
     // End of variables declaration//GEN-END:variables
 }

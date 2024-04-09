@@ -29,6 +29,11 @@ public class EditarMedacStars extends javax.swing.JFrame {
         for(MedacStar elemento: medacStarSet) {
             System.out.println(elemento.getName());
         }
+        
+        if(medacStar!=null) {
+            tfName.setText(medacStar.getName());
+            tfStrength.setText(medacStar.getName());
+        }
     }
 
     /**
