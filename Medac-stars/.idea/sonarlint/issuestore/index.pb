@@ -7,3 +7,15 @@ d
 4src/main/java/medac/stars/controller/ManageData.java,3\0\30b02e9ef7e13819d842a344855656f578c6d275
 b
 2src/main/java/medac/stars/ui/usuarios/Usuario.java,0\a\0a637ef8683bc9ed99818dae1878bdb609e2fee4
+b
+2src/main/java/medac/stars/ui/usuarios/Usuario.form,b\8\b87cf26984da79720cb3bca6b60693f129503189
+Y
+)src/main/java/medac/stars/model/User.java,6\1\616c4436a10f32a71f3bdf2477171ebb8f6fb96b
+~
+Nsrc/main/java/medac/stars/ui/usuarios/tablaGestionUsuarios/ButtonRenderer.java,d\4\d4143f64d07062b95ebe44a701df765600cf017a
+„
+Tsrc/main/java/medac/stars/ui/usuarios/tablaGestionUsuarios/TablaGestionUsuarios.form,4\6\46b76acfdbba194de87c4a23ddfa468e9b18cdcc
+Z
+*src/main/java/medac/stars/model/Arena.java,3\4\341f8359dc13d02424dc9689876bfc41aaee0502
+^
+.src/main/java/medac/stars/model/MedacStar.java,a\1\a1e3988cd952ccdcf767814c52e9008f0ae7a24f
