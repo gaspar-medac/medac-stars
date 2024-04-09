@@ -20,14 +20,18 @@ public class EditArena extends javax.swing.JFrame {
 
     /**
      * Creates new form addArena
-     *
      * @param arena por parametro
      */
     public EditArena(TablaArenas tablaArenas) {
         initComponents();
         this.tablaArenas = tablaArenas;
     }
-
+    /**
+     * Contructor sobrecargador de EditArena
+     * @param tablaArenas
+     * @param arena
+     * @param index 
+     */
     public EditArena(TablaArenas tablaArenas, Arena arena, int index) {
         initComponents();
         tfEditarNombre.setText(arena.getName());
@@ -190,7 +194,12 @@ public class EditArena extends javax.swing.JFrame {
     private void cbCuentaAtrasEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbCuentaAtrasEditarActionPerformed
 
     }//GEN-LAST:event_cbCuentaAtrasEditarActionPerformed
-
+    /**
+     * Esta funcion va a realizar el guardado de los cambios de cuando editamos una Arena
+     * nos dejara editar todas sus caracteristicas y una vez pulsado el boton de guardado
+     * se guardaran los cambios
+     * @param evt 
+     */
     private void bGuardarCambiosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bGuardarCambiosActionPerformed
         Arena arena = new Arena(tfEditarNombre.getText(), cbCuentaAtrasEditar.isSelected(), tfEditarDescripcion.getText(), jlimagenArena.getIcon(), (int) jSpinner1.getValue());
         for (int i = 0; i < arenaSet.size(); i++) {
@@ -204,7 +213,12 @@ public class EditArena extends javax.swing.JFrame {
         tablaArenas.setVisible(true);
 
     }//GEN-LAST:event_bGuardarCambiosActionPerformed
-
+    /**
+     * Con esta funcion una vez clicamos el boton cambiar imagen nos abrira el explorador de archivos
+     * para poder seleccinar la ruta de donde elegiremos la imagen y la cambiaremos por la seleccionada
+     * anteriormente
+     * @param evt 
+     */
     private void bCambiarImagenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCambiarImagenActionPerformed
 
         JFileChooser fileChooser = new JFileChooser();
@@ -212,10 +226,14 @@ public class EditArena extends javax.swing.JFrame {
         int resultado = fileChooser.showOpenDialog(this);
         if (resultado == JFileChooser.APPROVE_OPTION) {
             String ruta = fileChooser.getSelectedFile().getAbsolutePath();
-            loadAndSetImage(fileChooser.getSelectedFile().getAbsolutePath());
+            loadAndSetImage(ruta);
         }
     }//GEN-LAST:event_bCambiarImagenActionPerformed
-
+    /**
+     * Esta funcion realiza que una vez seleccionado el boton cancelar editar cerrara la pestaña de editar arena
+     * y abrira acto seguido la pestaña de tablaArenas
+     * @param evt 
+     */
     private void bCancelarEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCancelarEditarActionPerformed
         this.dispose();;
         tablaArenas.setVisible(true);
@@ -224,13 +242,19 @@ public class EditArena extends javax.swing.JFrame {
     private void tfEditarNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfEditarNombreActionPerformed
         // TODO add your handling code here:        
     }//GEN-LAST:event_tfEditarNombreActionPerformed
-
+    /**
+     * Coge la ruta de la imagen, la escala y la añade como icono de la arena
+     * @param imgPath 
+     */
     private void loadAndSetImage(String imgPath) {
         ImageIcon icon = new ImageIcon(imgPath);
         ImageIcon icono = new ImageIcon(icon.getImage().getScaledInstance(200, 200, 1));
         jlimagenArena.setIcon(icono);
 
     }
+    /**
+     * Atributos creados para las distintas funciones
+     */
     int index;
     private TablaArenas tablaArenas;
     private Arena arena;

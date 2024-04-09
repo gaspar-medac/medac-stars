@@ -111,7 +111,11 @@ public class MenuArena extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    /**
+     * Esta funcion implementada en el boton de gestionar arena nos va a dirigir a la pantalla
+     * de gestionar arena y cerrara la pestaña del menu
+     * @param evt 
+     */
     private void bGestionArenaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bGestionArenaActionPerformed
         this.dispose();
         if(tablaArenas == null || !tablaArenas.isVisible()){
@@ -120,7 +124,11 @@ public class MenuArena extends javax.swing.JFrame {
         }
  
     }//GEN-LAST:event_bGestionArenaActionPerformed
-
+    /**
+     * Esta funcion realiza que al hacer click en el boton de salir se cierre la pestaña del menu
+     * y muestra por pantalla un mensaje emergente que nos dice que hemos cerrado el menu
+     * @param evt 
+     */
     private void bSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSalirActionPerformed
         this.dispose();
         JOptionPane.showMessageDialog(this, "Has cerrado el menu de Arena");     
@@ -160,6 +168,8 @@ public class MenuArena extends javax.swing.JFrame {
             }
         });
     }
+    //Creacion del atributo tablaArenas para ser usado en la funcion de gestionar arena y poder
+    //acceder a la gestion
     private TablaArenas tablaArenas;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bChat;
