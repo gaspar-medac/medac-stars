@@ -2,30 +2,45 @@ package medac.stars.ui.usuarios.tablaGestionUsuarios;
 
 import medac.stars.controller.ManageData;
 import medac.stars.model.User;
+import medac.stars.ui.usuarios.Usuario;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class TablaGestionUsuarios extends JFrame{
     private JTable usuarios;
     private JPanel mainPanel;
+    private JButton bAnyadir;
 
+    private User usuarioNuevo;
+
+    /**
+     * Constructor por defecto de TablaGestionUsuarios
+     */
     public TablaGestionUsuarios(){
         initComponents();
         initMiTablaComponent();
         add(mainPanel);
-        setTitle("TestUI");
-        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        setTitle("TestUI"); //Título de la ventana
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);//Establece como se van a cerrar las ventanas
         setSize(700, 500);
         setLocationRelativeTo(null);
         setVisible(true);
+
     }
 
+    /**
+     * Muestra la tabla dentro del frame
+     */
     public void initMiTablaComponent() {
 
-        Object[] nombreColumnas = new Object[]{"Nombre", "Editar"};
-        Object[][] celdas = new Object[ManageData.userSet.size()][2];
+
+        Object[] nombreColumnas = new Object[]{"Nombre", "Editar"};// Guarda las filas que se van a mostrar
+        Object[][] celdas = new Object[ManageData.userSet.size()][2]; //Guarda las columnas que se van a mostrar
+        //A través del bucle se imprimen en la tabla todos los datos existentes
         int i =0;
         for(User user:  ManageData.userSet)
         {
@@ -40,6 +55,8 @@ public class TablaGestionUsuarios extends JFrame{
         // Modificamos la columna de los botones para que aparezca el botón:
         miTabla.getColumn("Editar").setCellRenderer(new ButtonRenderer());
         miTabla.getColumn("Editar").setCellEditor(new ButtonEditor(new JCheckBox()));
+
+
 
     }
 

@@ -1,0 +1,11 @@
+
+g	java:S112#"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8êëª”ì1
+r	java:S117	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(² öÀùÿÿÿÿ8ìëª”ì1
+O
+java:S1199"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8íëª”ì1
+Z
+java:S1854"=Remove this useless assignment to local variable "zanahoria".(«½Š÷8ãÊ”ì1
+K
+java:S1481".Remove this unused "zanahoria" local variable.(«½Š÷8åÊ”ì1
+X
+java:S6437"6Revoke and change this password, as it is compromised.(Š‡Í¯úÿÿÿÿ8†ìª”ì1

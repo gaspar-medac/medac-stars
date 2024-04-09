@@ -60,6 +60,7 @@ class ButtonEditor extends DefaultCellEditor {
             java.awt.EventQueue.invokeLater(new Runnable() {
                 public void run() {
                     new Usuario(ManageData.userSet.get(numeroFila)).setVisible(true);
+
                 }
             });
 

@@ -1,0 +1,10 @@
+
+>
+java:S1604"(Make this anonymous inner class a lambda(Èú†
+C
+java:S1604;"(Make this anonymous inner class a lambda(¤©Òâüÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ý™á´üÿÿÿÿ
+;
+java:S2129E" Remove this "String" constructor(ú Î¹úÿÿÿÿ
+>
+java:S1185P"(Remove this method to simply inherit it.(Áž¦Ï
