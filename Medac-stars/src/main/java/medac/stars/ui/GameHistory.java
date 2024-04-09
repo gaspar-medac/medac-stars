@@ -1,5 +1,7 @@
 package medac.stars.ui;
 
+import medac.stars.controller.ManageData;
+import medac.stars.model.Team;
 import medac.stars.utils.FontBuilder;
 
 import javax.swing.*;
@@ -7,6 +9,7 @@ import javax.swing.plaf.basic.BasicScrollBarUI;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.JTableHeader;
 import java.awt.*;
+import java.util.ArrayList;
 
 public class GameHistory extends JFrame {
     private JPanel GameHistoryPanel;
@@ -35,166 +38,32 @@ public class GameHistory extends JFrame {
     private void createUIComponents() {
         String[] columnNames = {"Team 1", "Team 2", "Result"};
 
-        Object[][] data = {
-            {
-                "[Player1 - MedacStar1] [Player2 - MedacStar2]",
-                "[Player3 - MedacStar3] [Player4 - MedacStar4]",
-                "Team 1 win"
-            },
-                {
-                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
-                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
-                        "Team 1 win"
-                },
-                {
-                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
-                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
-                        "Team 1 win"
-                },
-                {
-                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
-                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
-                        "Team 1 win"
-                },
-                {
-                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
-                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
-                        "Team 1 win"
-                },
-                {
-                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
-                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
-                        "Team 1 win"
-                },
-                {
-                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
-                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
-                        "Team 1 win"
-                },
-                {
-                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
-                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
-                        "Team 1 win"
-                },
-                {
-                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
-                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
-                        "Team 1 win"
-                },
-                {
-                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
-                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
-                        "Team 1 win"
-                },
-                {
-                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
-                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
-                        "Team 1 win"
-                },
+        // Initialize an ArrayList to hold Object[] rows
+        ArrayList<Object[]> dataList = new ArrayList<>();
 
-                {
-                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
-                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
-                        "Team 1 win"
-                },
-                {
-                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
-                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
-                        "Team 1 win"
-                },
-                {
-                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
-                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
-                        "Team 1 win"
-                },
-                {
-                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
-                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
-                        "Team 1 win"
-                },
-                {
-                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
-                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
-                        "Team 1 win"
-                },
-                {
-                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
-                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
-                        "Team 1 win"
-                },
-                {
-                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
-                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
-                        "Team 1 win"
-                },
-                {
-                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
-                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
-                        "Team 1 win"
-                },
-                {
-                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
-                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
-                        "Team 1 win"
-                },
-                {
-                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
-                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
-                        "Team 1 win"
-                },
-                {
-                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
-                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
-                        "Team 1 win"
-                },
-                {
-                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
-                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
-                        "Team 1 win"
-                },
-                {
-                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
-                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
-                        "Team 1 win"
-                },
-                {
-                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
-                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
-                        "Team 1 win"
-                },
-                {
-                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
-                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
-                        "Team 1 win"
-                },
-                {
-                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
-                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
-                        "Team 1 win"
-                },
-                {
-                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
-                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
-                        "Team 1 win"
-                },
-                {
-                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
-                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
-                        "Team 1 win"
-                },
-                {
-                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
-                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
-                        "Team 1 win"
-                },
-                {
-                        "[Player1 - MedacStar1] [Player2 - MedacStar2]",
-                        "[Player3 - MedacStar3] [Player4 - MedacStar4]",
-                        "Team 1 win"
-                },
+        ManageData.gameList.forEach(game -> {
+            Team team1 = game.getTeam1();
+            Team team2 = game.getTeam2();
 
-        };
+            String team1String = String.format("[%s - %s] [%s - %s]",
+                    team1.getPlayer1().getName(), team1.getMedacStar1().getName(),
+                    team1.getPlayer2().getName(), team1.getMedacStar2().getName());
+            String team2String = String.format("[%s - %s] [%s - %s]",
+                    team2.getPlayer1().getName(), team2.getMedacStar1().getName(),
+                    team2.getPlayer2().getName(), team2.getMedacStar2().getName());
 
+            String result = switch (game.getResult()) {
+                case 0 -> "Team 1 win";
+                case 1 -> "Team 2 win";
+                default -> "Draw";
+            };
+
+            dataList.add(new Object[]{team1String, team2String, result});
+        });
+
+        Object[][] data = dataList.toArray(new Object[0][]);
+
+        // Create a JTable with all the dynamic data and column names
         historyTable = new JTable(data, columnNames);
 
         // Deshabilitamos la edición y el drag
@@ -222,7 +91,7 @@ public class GameHistory extends JFrame {
         historyTableScrollPane.getVerticalScrollBar().setUI(new BasicScrollBarUI() {
             @Override
             protected void configureScrollBarColors() {
-                this.thumbColor = new Color(168,168, 168);
+                this.thumbColor = new Color(168, 168, 168);
                 this.trackColor = new Color(0, 0, 0, 0);
             }
 
