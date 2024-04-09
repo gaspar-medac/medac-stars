@@ -30,6 +30,7 @@ public class JoinGame extends JFrame {
     private JComboBox comboBox4;
     private JLabel player2Label;
     private JLabel player4Label;
+    private boolean isUpdatingComponents = false;
 
     public JoinGame() {
         add(JoinGamePanel);
@@ -76,6 +77,7 @@ public class JoinGame extends JFrame {
         joinButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                isUpdatingComponents = true;
                 joinButton.removeActionListener(this);
                 comboBox1.setVisible(true);
                 joinButton.setVisible(false);
@@ -83,12 +85,14 @@ public class JoinGame extends JFrame {
                 comboBox1.addItem("medacstar1");
                 comboBox1.addItem("medacstar2");
                 comboBox1.addItem("medacstar3");
+                isUpdatingComponents = false;
             }
         });
 
         joinButton2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                isUpdatingComponents = true;
                 joinButton2.removeActionListener(this);
                 comboBox2.setVisible(true);
                 joinButton2.setVisible(false);
@@ -96,11 +100,13 @@ public class JoinGame extends JFrame {
                 comboBox2.addItem("medacstar1");
                 comboBox2.addItem("medacstar2");
                 comboBox2.addItem("medacstar3");
+                isUpdatingComponents = false;
             }
         });
         joinButton3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                isUpdatingComponents = true;
                 joinButton3.removeActionListener(this);
                 comboBox3.setVisible(true);
                 joinButton3.setVisible(false);
@@ -108,11 +114,13 @@ public class JoinGame extends JFrame {
                 comboBox3.addItem("medacstar1");
                 comboBox3.addItem("medacstar2");
                 comboBox3.addItem("medacstar3");
+                isUpdatingComponents = false;
             }
         });
         joinButton4.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                isUpdatingComponents = true;
                 joinButton4.removeActionListener(this);
                 comboBox4.setVisible(true);
                 joinButton4.setVisible(false);
@@ -120,6 +128,54 @@ public class JoinGame extends JFrame {
                 comboBox4.addItem("medacstar1");
                 comboBox4.addItem("medacstar2");
                 comboBox4.addItem("medacstar3");
+                isUpdatingComponents = false;
+            }
+        });
+        comboBox1.addActionListener(e -> {
+            if (isUpdatingComponents) {
+                return;
+            }
+
+            player1Label.setVisible(true);
+            player1Label.setText("<html>&nbsp;&nbsp;Jugador 1:<br>" + comboBox1.getSelectedItem() + "</html>");
+            comboBox1.setVisible(false);
+            JPanel1.repaint();
+        });
+
+        comboBox2.addActionListener(e -> {
+            if (isUpdatingComponents) {
+                return;
+            }
+
+            player2Label.setVisible(true);
+            player2Label.setText("<html>&nbsp;&nbsp;Jugador 2:<br>" + comboBox2.getSelectedItem() + "</html>");
+            comboBox2.setVisible(false);
+            JPanel1.repaint();
+        });
+        comboBox3.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (isUpdatingComponents) {
+                    return;
+                }
+
+                player3Label.setVisible(true);
+                player3Label.setText("<html>&nbsp;&nbsp;Jugador 3:<br>" + comboBox3.getSelectedItem() + "</html>");
+                comboBox3.setVisible(false);
+                JPanel1.repaint();
+            }
+        });
+        comboBox4.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (isUpdatingComponents) {
+                    return;
+                }
+
+                player4Label.setVisible(true);
+                player4Label.setText("<html>&nbsp;&nbsp;Jugador 4:<br>" + comboBox4.getSelectedItem() + "</html>");
+                comboBox4.setVisible(false);
+                JPanel1.repaint();
             }
         });
     }
