@@ -1,6 +1,7 @@
 package medac.stars.ui.usuarios.tablaGestionUsuarios;
 
 import medac.stars.controller.ManageData;
+import medac.stars.model.User;
 import medac.stars.ui.usuarios.Usuario;
 import javax.swing.JOptionPane;
 import javax.swing.*;
@@ -8,8 +9,8 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-
 class ButtonEditor extends DefaultCellEditor {
+
 
     protected JButton button;
     private String label;
@@ -53,9 +54,10 @@ class ButtonEditor extends DefaultCellEditor {
     public Object getCellEditorValue() {
         if (isPushed) {
             JOptionPane.showMessageDialog(button, label + ": pulsado: " + ManageData.userSet.get(numeroFila).getName());
+
             java.awt.EventQueue.invokeLater(new Runnable() {
                 public void run() {
-                    new Usuario().setVisible(true);
+                    new Usuario(ManageData.userSet.get(numeroFila)).setVisible(true);
                 }
 
             });
