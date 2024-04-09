@@ -21,9 +21,10 @@ public class JoinGame extends JFrame {
     private JLabel slot4Label;
     private JLabel arenaNameLabel;
     private JPanel JPanel1;
-    private JComboBox comboBox1;
+    private JComboBox comboBox2;
     private JLabel player1Label;
     private JLabel player3Label;
+    private JComboBox comboBox1;
     private JPasswordField passwordField1;
 
 
@@ -35,8 +36,6 @@ public class JoinGame extends JFrame {
         setLocationRelativeTo(null);
         setResizable(false);
         setVisible(true);
-        comboBox1.setVisible(false);
-
 
         ImageIcon logo = new ImageIcon("./src/main/java/medac/stars/ui/assets/images/logo.png");
         setIconImage(logo.getImage());
@@ -51,17 +50,20 @@ public class JoinGame extends JFrame {
         slot3Label.setFont(montserratSemiBold.deriveFont(12f));
         slot4Label.setFont(montserratSemiBold.deriveFont(12f));
         arenaNameLabel.setFont(montserratSemiBold.deriveFont(12f));
-        comboBox1.setFont(montserratSemiBold.deriveFont(12f));
+        comboBox2.setFont(montserratSemiBold.deriveFont(12f));
 
         player1Label.setVisible(false);
         player3Label.setVisible(false);
 
-        joinButton2.addActionListener(new ActionListener() {
+        comboBox1.setVisible(false);
+        comboBox2.setVisible(false);
+
+        joinButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                joinButton2.removeActionListener(this);
+                joinButton.removeActionListener(this);
                 comboBox1.setVisible(true);
-                joinButton2.setVisible(false);
+                joinButton.setVisible(false);
                 JPanel1.repaint();
                 comboBox1.addItem("medacstar1");
                 comboBox1.addItem("medacstar2");
@@ -69,6 +71,18 @@ public class JoinGame extends JFrame {
             }
         });
 
+        joinButton2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                joinButton2.removeActionListener(this);
+                comboBox2.setVisible(true);
+                joinButton2.setVisible(false);
+                JPanel1.repaint();
+                comboBox2.addItem("medacstar1");
+                comboBox2.addItem("medacstar2");
+                comboBox2.addItem("medacstar3");
+            }
+        });
     }
 
     public static void main(String[] args) {
@@ -76,7 +90,7 @@ public class JoinGame extends JFrame {
     }
 
     private void createUIComponents() {
-        comboBox1 = new JComboBox();
+        comboBox2 = new JComboBox();
         UIManager.put("ComboBox.selectionBackground", new Color(255, 255, 255));
         UIManager.put("ComboBox.selectionForeground", new Color(0, 0, 0));
 
