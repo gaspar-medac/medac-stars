@@ -13,6 +13,7 @@ public class JoinGame extends JFrame {
     private JPanel JoinGamePanel;
     private JButton joinButton;
     private JButton joinButton2;
+    private JButton joinButton3;
     private JButton cancelButton;
     private JLabel slot1Label;
     private JLabel slot2Label;
@@ -43,6 +44,7 @@ public class JoinGame extends JFrame {
         Font montserratSemiBold = FontBuilder.getFont("Montserrat-SemiBold.ttf");
         joinButton.setFont(montserratSemiBold.deriveFont(12f));
         joinButton2.setFont(montserratSemiBold.deriveFont(12f));
+        joinButton3.setFont(montserratSemiBold.deriveFont(12f));
         cancelButton.setFont(montserratSemiBold.deriveFont(12f));
         slot1Label.setFont(montserratSemiBold.deriveFont(12f));
         slot2Label.setFont(montserratSemiBold.deriveFont(12f));
@@ -54,13 +56,12 @@ public class JoinGame extends JFrame {
         player1Label.setVisible(false);
         player3Label.setVisible(false);
 
-
-        joinButton.addActionListener(new ActionListener() {
+        joinButton2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                joinButton.removeActionListener(this);
+                joinButton2.removeActionListener(this);
                 comboBox1.setVisible(true);
-                joinButton.setVisible(false);
+                joinButton2.setVisible(false);
                 JPanel1.repaint();
                 comboBox1.addItem("medacstar1");
                 comboBox1.addItem("medacstar2");
