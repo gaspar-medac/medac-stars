@@ -22,6 +22,11 @@ class ButtonEditor extends DefaultCellEditor {
     // es pulsado
     private boolean isPushed;
 
+    /**
+     * Constructor sobrecargado
+     * @param tablaArenas La tabla que recibe.
+     * @param checkBox El checkbox para la tabla que se convertirá en botón.
+     */
     public ButtonEditor(TablaArenas tablaArenas, JCheckBox checkBox) {
         super(checkBox);
         this.tablaArenas = tablaArenas;
@@ -35,6 +40,15 @@ class ButtonEditor extends DefaultCellEditor {
         });
     }
 
+    /**
+     * Función que recibe la celda de una tabla para editar dicho componente.
+     * @param table La tabla que recibe
+     * @param value El objeto a mostrar 
+     * @param isSelected Si la celda esta seleccionada o no
+     * @param row Linea de la tabla
+     * @param column Columna de la tabla
+     * @return El botón
+     */
     @Override
     public Component getTableCellEditorComponent(JTable table, Object value,
             boolean isSelected, int row, int column) {
@@ -52,6 +66,11 @@ class ButtonEditor extends DefaultCellEditor {
         return button;
     }
 
+    /**
+     * Funcion que obtiene el valor de cada celda de boton de la tabla, si se presiona uno, obtendra los valores del ManageData y creará el formulario de editar arena con sus valores.
+     * Ademas, la ventana de tablas, se ocultará.
+     * @return 
+     */
     @Override
     public Object getCellEditorValue() {
         if (isPushed) {
@@ -70,12 +89,20 @@ class ButtonEditor extends DefaultCellEditor {
         return new String(label);
     }
 
+    /**
+     * Funcion sobreescrita que marca que la celda ha terminado de ser editada.
+     * @return llamada al padre de la funcion.
+     */
     @Override
     public boolean stopCellEditing() {
         isPushed = false;
         return super.stopCellEditing();
     }
 
+    /**
+     * Funcion sobreescrita necesaria para que los listener sepan que se ha terminado la edicion.
+     * 
+     */
     @Override
     protected void fireEditingStopped() {
         super.fireEditingStopped();
