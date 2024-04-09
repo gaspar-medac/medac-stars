@@ -24,11 +24,14 @@ import medac.stars.model.Arena;
 public class AddArena extends javax.swing.JFrame {
 
     /**
-     * Creates new form addArena
+     * Crea un nuevo formulario Arena
      */
     public AddArena(TablaArenas tablaArenas) {
         initComponents();
         this.tablaArenas = tablaArenas;
+        /**
+         * Place holder de los textfields "tfNuevoNombre" y "tfDescripcion"
+         */
         TextPrompt placeholder0 = new TextPrompt("Dale un Nombre!!", tfNuevoNombre);
         TextPrompt placeholder1 = new TextPrompt("Añade una descripción!!", tfDescripcion);
     }
@@ -185,7 +188,13 @@ public class AddArena extends javax.swing.JFrame {
     private void cbCuentaAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbCuentaAtrasActionPerformed
         
     }//GEN-LAST:event_cbCuentaAtrasActionPerformed
-
+    /**
+     * Funcionalidad del boton de "guardar Arena": 
+     * Guarda la arena y la almacena en tablaArenas
+     * una vez guardado muestra que se ha guardado con exito con un cartel 
+     * posteriormente se cierran las dos ventanas y vuelve a la tabla
+     * @param evt 
+     */
     private void bGuardarArenaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bGuardarArenaActionPerformed
 
         Arena arena = new Arena(tfNuevoNombre.getText(), cbCuentaAtras.isSelected(), tfDescripcion.getText(), jlimagenArena.getIcon(), (int) jSpinner1.getValue());
@@ -197,14 +206,24 @@ public class AddArena extends javax.swing.JFrame {
             tablaArenas.initMiTablaComponent();
         }
     }//GEN-LAST:event_bGuardarArenaActionPerformed
-
+    /**
+     * Funcionalidad del boton "Cancelar":
+     * cierra la ventana una vez pulsado
+     * posteriormente se vuelve a la ventana de tablaArenas
+     * @param evt 
+     */
     private void bCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCancelarActionPerformed
         this.dispose();
         if (tablaArenas != null) {
             tablaArenas.setVisible(true);
         }
     }//GEN-LAST:event_bCancelarActionPerformed
-
+    /**
+     * Funcionaldiad del boton "Nueva Imagen":
+     * una vez clicado abre el explorador de archivos donde podremos selecionar cualquier imagen
+     * una vez selecionadas coge la ruta de la imagen y la establece mediante el metodo LoadAndSetImage
+     * @param evt 
+     */
     private void bAnyadirImagenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAnyadirImagenActionPerformed
         JFileChooser fileChooser = new JFileChooser();
         String ruta;
@@ -220,7 +239,7 @@ public class AddArena extends javax.swing.JFrame {
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField2ActionPerformed
-
+ 
     private void tfNuevoNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfNuevoNombreActionPerformed
 
     }//GEN-LAST:event_tfNuevoNombreActionPerformed
@@ -266,7 +285,11 @@ public class AddArena extends javax.swing.JFrame {
         });
 
     }
-
+    /**
+     * Funcionalidad del Metodo "LoadAndSetImage:
+     * coge la ruta de la imagen, la escala y la establece como icono
+     * @param imgPath 
+     */
     private void loadAndSetImage(String imgPath) {
         ImageIcon icon = new ImageIcon(imgPath);
         ImageIcon icono = new ImageIcon(icon.getImage().getScaledInstance(200, 200, 1));
