@@ -20,5 +20,12 @@ public class ManageData {
     public static Set<Arena> arenaSet = new HashSet<Arena>();
     public static Set<MedacStar> medacStarSet = new HashSet<MedacStar>();
     public static ArrayList<Game> gameList = new ArrayList<Game>();
-    public static HashMap<User, Chat> chatHashMap = new HashMap<User, Chat>();    
+    public static HashMap<User, Chat> chatHashMap = new HashMap<User, Chat>();   
+    
+    static {
+        medacStarSet.add(new MedacStar("1", 10, 10, "prueba", ""));
+        medacStarSet.add(new MedacStar("1", 10, 10, "prueba", ""));
+        medacStarSet.add(new MedacStar("1", 10, 10, "prueba", ""));
+        medacStarSet.add(new MedacStar("1", 10, 10, "prueba", ""));
+    }
 }
