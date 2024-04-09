@@ -1,5 +1,6 @@
 package medac.stars.ui;
 
+import medac.stars.controller.ManageData;
 import medac.stars.utils.FontBuilder;
 
 import javax.swing.*;
@@ -34,6 +35,18 @@ public class StartGame extends JFrame {
         iniciarButton.setFont(montserratSemiBold.deriveFont(12f));
         chooseArenaLabel.setFont(montserratSemiBold.deriveFont(12f));
         chooseMEDACStarLabel.setFont(montserratSemiBold.deriveFont(12f));
+
+        // Add arenas to the combo box (We first remove all items)
+        chooseArenaComboBox.removeAllItems();
+        ManageData.arenaSet.forEach(arena -> {
+            chooseArenaComboBox.addItem(arena.getName());
+        });
+
+        // Add medac stars to the combo box (We first remove all items)
+        chooseMEDACStarComboBox.removeAllItems();
+        ManageData.medacStarSet.forEach(medacStar -> {
+            chooseMEDACStarComboBox.addItem(medacStar.getName());
+        });
     }
 
     public static void main(String[] args) {

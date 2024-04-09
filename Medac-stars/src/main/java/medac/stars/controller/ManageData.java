@@ -16,9 +16,9 @@ import medac.stars.model.User;
  */
 public class ManageData {
 
-    public static Set<User> userSet = new HashSet<User>();
-    public static Set<Arena> arenaSet = new HashSet<Arena>();
-    public static Set<MedacStar> medacStarSet = new HashSet<MedacStar>();
-    public static ArrayList<Game> gameList = new ArrayList<Game>();
-    public static HashMap<User, Chat> chatHashMap = new HashMap<User, Chat>();    
+    public static Set<User> userSet = new HashSet<>();
+    public static Set<Arena> arenaSet = new HashSet<>();
+    public static Set<MedacStar> medacStarSet = new HashSet<>();
+    public static ArrayList<Game> gameList = new ArrayList<>();
+    public static HashMap<User, Chat> chatHashMap = new HashMap<>();
 }

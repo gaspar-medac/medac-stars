@@ -53,7 +53,6 @@ public class JoinGame extends JFrame {
         joinButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
                 joinButton.removeActionListener(this);
                 comboBox1.setVisible(true);
                 joinButton.setVisible(false);
