@@ -94,16 +94,16 @@ public class ChatInterfaz extends javax.swing.JFrame {
         userField.setEditable(false);
         userField.setMaximumSize(new Dimension(Integer.MAX_VALUE, userField.getPreferredSize().height));
         userField.setBorder(null);
-        userField.setForeground(new java.awt.Color(0, 102, 255));
+        userField.setForeground(new java.awt.Color(212, 175, 55));
         userField.setHorizontalAlignment(SwingConstants.RIGHT);
-        userField.setFont(new Font("Arial", Font.BOLD, 14));
+        userField.setFont(new Font("Arial", Font.ITALIC, 14));
         pChat.add(userField);
 
     }
 
     public void mostrarReceptor(Message message) {
         JTextField userField = new JTextField(message.getEmisor().getName());
-        userField.setForeground(new java.awt.Color(255, 153, 153));
+        userField.setForeground(new java.awt.Color(184, 41, 40));
         userField.setVisible(true);
         userField.setBackground(Color.WHITE);
         userField.setEditable(false);
@@ -121,7 +121,7 @@ public class ChatInterfaz extends javax.swing.JFrame {
         messageField.setVisible(true);
         messageField.setBorder(null);
         messageField.setBackground(Color.white);
-        messageField.setForeground(new java.awt.Color(0, 102, 255));
+        messageField.setForeground(new java.awt.Color(0, 0, 0));
         messageField.setFont(new Font("Arial", Font.BOLD, 14));;
 
         pChat.add(messageField);
@@ -135,7 +135,7 @@ public class ChatInterfaz extends javax.swing.JFrame {
         messageField.setBorder(null);
         messageField.setBackground(Color.white);
         messageField.setHorizontalAlignment(SwingConstants.RIGHT);
-        messageField.setFont(new Font("Arial", Font.ITALIC, 14));;
+        messageField.setFont(new Font("Arial", Font.BOLD, 14));
 
         pChat.add(messageField);
     }
