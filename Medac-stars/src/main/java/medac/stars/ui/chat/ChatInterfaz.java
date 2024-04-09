@@ -6,6 +6,7 @@ package medac.stars.ui.chat;
 
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.event.ActionEvent;
 import java.util.ArrayList;
 import javax.swing.Box;
 import javax.swing.JButton;
@@ -47,6 +48,31 @@ public class ChatInterfaz extends javax.swing.JFrame {
         ManageData.chat.getMessages().add(new Message("Comeme los huevos", usu1, usu2));
 
         mostrarMensajes();
+        mostrarBotones();
+    }
+
+    public void mostrarBotones() {
+        for (String key : ManageData.chatHashMap.keySet()) {
+            JButton jButton = new javax.swing.JButton();
+            jButton.setForeground(new java.awt.Color(102, 153, 255));
+            jButton.setText(key);
+            jButton.addActionListener(new java.awt.event.ActionListener() {
+                public void eventoDeBoton(java.awt.event.ActionEvent evt) {
+                    jButton1ActionPerformed(evt);
+                }
+
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    jPanel3.removeAll();
+//                    ArrayList<String> messages = ManageData.chatHashMap.get("");
+               mostrarMensajes();
+                    JScrollBar verticalScrollBar = jScrollPane1.getVerticalScrollBar();
+                    verticalScrollBar.setValue(verticalScrollBar.getMaximum());
+                    jScrollPane1.revalidate();
+                }
+            });
+            jPanel2.add(jButton);
+        }
     }
 
     public void mostrarEmisor(Message message) {
@@ -135,6 +161,7 @@ public class ChatInterfaz extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jPanel3 = new javax.swing.JPanel();
         jButton6 = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
         jPanel2 = new javax.swing.JPanel();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
@@ -200,6 +227,7 @@ public class ChatInterfaz extends javax.swing.JFrame {
         jButton6.setText("jButton6");
 
         jPanel2.setBackground(new java.awt.Color(0, 102, 153));
+        jPanel2.setLayout(new java.awt.GridLayout(0, 1, 30, 40));
 
         jButton2.setBackground(new java.awt.Color(204, 204, 204));
         jButton2.setText("jButton2");
@@ -209,6 +237,7 @@ public class ChatInterfaz extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
+        jPanel2.add(jButton2);
 
         jButton3.setBackground(new java.awt.Color(204, 204, 204));
         jButton3.setText("jButton3");
@@ -217,6 +246,7 @@ public class ChatInterfaz extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
+        jPanel2.add(jButton3);
 
         jButton4.setBackground(new java.awt.Color(204, 204, 204));
         jButton4.setText("jButton4");
@@ -225,6 +255,7 @@ public class ChatInterfaz extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
+        jPanel2.add(jButton4);
 
         jButton5.setBackground(new java.awt.Color(204, 204, 204));
         jButton5.setText("jButton5");
@@ -233,33 +264,9 @@ public class ChatInterfaz extends javax.swing.JFrame {
                 jButton5ActionPerformed(evt);
             }
         });
+        jPanel2.add(jButton5);
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(63, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3)
-                    .addComponent(jButton4)
-                    .addComponent(jButton5))
-                .addGap(60, 60, 60))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(31, 31, 31)
-                .addComponent(jButton2)
-                .addGap(61, 61, 61)
-                .addComponent(jButton3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton4)
-                .addGap(65, 65, 65)
-                .addComponent(jButton5)
-                .addGap(48, 48, 48))
-        );
+        jScrollPane2.setViewportView(jPanel2);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -271,9 +278,9 @@ public class ChatInterfaz extends javax.swing.JFrame {
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 265, Short.MAX_VALUE)
+                        .addGap(140, 140, 140)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 125, Short.MAX_VALUE)
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(161, 161, 161))
         );
@@ -284,7 +291,7 @@ public class ChatInterfaz extends javax.swing.JFrame {
                 .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane2)
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(355, Short.MAX_VALUE))
         );
@@ -416,6 +423,7 @@ public class ChatInterfaz extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 
