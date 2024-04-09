@@ -6,6 +6,7 @@ package medac.stars.ui.chat;
 
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.util.ArrayList;
 import javax.swing.Box;
@@ -64,14 +65,14 @@ public class ChatInterfaz extends javax.swing.JFrame {
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     jPanel3.removeAll();
-//                    ArrayList<String> messages = ManageData.chatHashMap.get("");
-               mostrarMensajes();
+                  //ArrayList<Message> messages = ManageData.chatHashMap.get("");
+                    mostrarMensajes();
                     JScrollBar verticalScrollBar = jScrollPane1.getVerticalScrollBar();
                     verticalScrollBar.setValue(verticalScrollBar.getMaximum());
                     jScrollPane1.revalidate();
                 }
             });
-            jPanel2.add(jButton);
+            //jPanel2.add(jButton);
         }
     }
 
@@ -84,6 +85,7 @@ public class ChatInterfaz extends javax.swing.JFrame {
         userField.setBorder(null);
         userField.setForeground(new java.awt.Color(0, 102, 255));
         userField.setHorizontalAlignment(SwingConstants.RIGHT);
+        userField.setFont(new Font("Arial", Font.BOLD, 14));
         jPanel3.add(userField);
 
     }
@@ -97,6 +99,8 @@ public class ChatInterfaz extends javax.swing.JFrame {
         userField.setMaximumSize(new Dimension(Integer.MAX_VALUE, userField.getPreferredSize().height));
         userField.setBorder(null);
         jPanel3.add(userField);
+        userField.setFont(new Font("Arial", Font.ITALIC, 14));
+
 
     }
 
@@ -327,6 +331,7 @@ public class ChatInterfaz extends javax.swing.JFrame {
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
+
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
