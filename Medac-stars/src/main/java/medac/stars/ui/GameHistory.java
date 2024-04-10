@@ -8,110 +8,124 @@ import medac.stars.utils.FontBuilder;
 import javax.swing.*;
 import javax.swing.plaf.basic.BasicScrollBarUI;
 import javax.swing.table.DefaultTableCellRenderer;
-import javax.swing.table.JTableHeader;
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.List;
 
 public class GameHistory extends JFrame {
-    private JPanel GameHistoryPanel;
+    private static final String LOGO_PATH = "./src/main/java/medac/stars/ui/assets/images/logo.png";
+    private static final Font TABLE_FONT = FontBuilder.getFont("Montserrat-SemiBold.ttf").deriveFont(12f);
+    private static final Font HEADER_FONT = TABLE_FONT.deriveFont(14f);
+    private static final Color FOREGROUND_COLOR = new Color(33, 37, 41);
+    private static final Dimension SCROLL_BAR_DIMENSION = new Dimension(8, 0);
+    private static final Color SCROLL_THUMB_COLOR = new Color(168, 168, 168);
+    private static final Color SCROLL_TRACK_COLOR = new Color(0, 0, 0, 0);
+
+    private JPanel gameHistoryPanel;
     private JButton startJoinGameButton;
     private JButton returnMainMenuButton;
     private JTable historyTable;
     private JScrollPane historyTableScrollPane;
 
     public GameHistory() {
-        add(GameHistoryPanel);
+        initializeFrame();
+        initializeComponents();
+        addListeners();
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(GameHistory::new);
+    }
+
+    private void initializeFrame() {
+        add(gameHistoryPanel);
         setTitle("MEDAC Stars - Game History");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(900, 500);
         setLocationRelativeTo(null);
         setResizable(false);
+        setIconImage(new ImageIcon(LOGO_PATH).getImage());
         setVisible(true);
-
-        ImageIcon logo = new ImageIcon("./src/main/java/medac/stars/ui/assets/images/logo.png");
-        setIconImage(logo.getImage());
-
-        startJoinGameButton.addActionListener(e -> {
-            boolean pendingGame = ManageData.gameList.stream().anyMatch(game -> game.getResult() == -1);
-            if (pendingGame) {
-                Game game = ManageData.gameList.stream().filter(g -> g.getResult() == -1).findFirst().get();
-                new JoinGame(game);
-            } else new StartGame();
-        });
     }
 
-    public static void main(String[] args) {
-        new GameHistory();
+    private void initializeComponents() {
+        createUIComponents();
+    }
+
+    private void addListeners() {
+        startJoinGameButton.addActionListener(e -> {
+            ManageData.gameList.stream().filter(game -> game.getResult() == -1).findFirst().ifPresentOrElse(game -> new JoinGame(), StartGame::new);
+        });
     }
 
     private void createUIComponents() {
         String[] columnNames = {"Team 1", "Team 2", "Result"};
-
-        // Initialize an ArrayList to hold Object[] rows
-        ArrayList<Object[]> dataList = new ArrayList<>();
-
-        ManageData.gameList.forEach(game -> {
-            Team team1 = game.getTeam1();
-            Team team2 = game.getTeam2();
-
-            String team1String = String.format("[%s - %s] [%s - %s]", team1.getPlayer1().getName(), team1.getMedacStar1().getName(), team1.getPlayer2().getName(), team1.getMedacStar2().getName());
-            String team2String = String.format("[%s - %s] [%s - %s]", team2.getPlayer1().getName(), team2.getMedacStar1().getName(), team2.getPlayer2().getName(), team2.getMedacStar2().getName());
-
-            String result = switch (game.getResult()) {
-                case 0 -> "Team 1 win";
-                case 1 -> "Team 2 win";
-                default -> "Draw";
-            };
-
-            dataList.add(new Object[]{team1String, team2String, result});
-        });
-
+        List<Object[]> dataList = buildDataList();
         Object[][] data = dataList.toArray(new Object[0][]);
 
-        // Create a JTable with all the dynamic data and column names
         historyTable = new JTable(data, columnNames);
+        configureTable();
+        historyTableScrollPane = new JScrollPane(historyTable);
+        customizeScrollBar();
+    }
 
-        // Deshabilitamos la edición y el drag
+    private List<Object[]> buildDataList() {
+        List<Object[]> dataList = new ArrayList<>();
+        ManageData.gameList.forEach(game -> dataList.add(new Object[]{formatTeamString(game.getTeam1()), formatTeamString(game.getTeam2()), getResultString(game)}));
+        return dataList;
+    }
+
+    private String formatTeamString(Team team) {
+        return String.format("[%s - %s] [%s - %s]", team.getPlayer1().getName(), team.getMedacStar1().getName(), team.getPlayer2().getName(), team.getMedacStar2().getName());
+    }
+
+    private String getResultString(Game game) {
+        return switch (game.getResult()) {
+            case 0 -> "Team 1 win";
+            case 1 -> "Team 2 win";
+            default -> "Draw";
+        };
+    }
+
+    private void configureTable() {
         historyTable.setEnabled(false);
         historyTable.getTableHeader().setReorderingAllowed(false);
         historyTable.getTableHeader().setResizingAllowed(false);
+        alignTableCellsCenter(historyTable);
+        historyTable.setFont(TABLE_FONT);
+        historyTable.setForeground(FOREGROUND_COLOR);
+        historyTable.getTableHeader().setFont(HEADER_FONT);
+        historyTable.getTableHeader().setForeground(FOREGROUND_COLOR);
+    }
 
-        // Alineamos las celdas al centro
+    private void alignTableCellsCenter(JTable table) {
         DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
         centerRenderer.setHorizontalAlignment(JLabel.CENTER);
-        for (int i = 0; i < historyTable.getColumnCount(); i++) {
-            historyTable.getColumnModel().getColumn(i).setCellRenderer(centerRenderer);
+        for (int i = 0; i < table.getColumnCount(); i++) {
+            table.getColumnModel().getColumn(i).setCellRenderer(centerRenderer);
         }
+    }
 
-        Font montserratSemiBold = FontBuilder.getFont("Montserrat-SemiBold.ttf");
-        historyTable.setFont(montserratSemiBold.deriveFont(12f));
-        historyTable.setForeground(new Color(33, 37, 41));
-
-        JTableHeader header = historyTable.getTableHeader();
-        header.setFont(montserratSemiBold.deriveFont(14f));
-        header.setForeground(new Color(33, 37, 41));
-
-        historyTableScrollPane = new JScrollPane();
-        historyTableScrollPane.getVerticalScrollBar().setPreferredSize(new Dimension(8, 0));
+    private void customizeScrollBar() {
+        historyTableScrollPane.getVerticalScrollBar().setPreferredSize(SCROLL_BAR_DIMENSION);
         historyTableScrollPane.getVerticalScrollBar().setUI(new BasicScrollBarUI() {
             @Override
             protected void configureScrollBarColors() {
-                this.thumbColor = new Color(168, 168, 168);
-                this.trackColor = new Color(0, 0, 0, 0);
+                this.thumbColor = SCROLL_THUMB_COLOR;
+                this.trackColor = SCROLL_TRACK_COLOR;
             }
 
             @Override
             protected JButton createDecreaseButton(int orientation) {
-                return new JButton() {
-                    @Override
-                    public Dimension getPreferredSize() {
-                        return new Dimension(0, 0);
-                    }
-                };
+                return createZeroSizeButton();
             }
 
             @Override
             protected JButton createIncreaseButton(int orientation) {
+                return createZeroSizeButton();
+            }
+
+            private JButton createZeroSizeButton() {
                 return new JButton() {
                     @Override
                     public Dimension getPreferredSize() {
