@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2356958-5ef2-40a5-9612-11fb62fc4b12" name="Changes" comment="" />
+    <list default="true" id="e2356958-5ef2-40a5-9612-11fb62fc4b12" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/a/0a637ef8683bc9ed99818dae1878bdb609e2fee4" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/a/0a637ef8683bc9ed99818dae1878bdb609e2fee4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/medac/stars/ui/usuarios/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/medac/stars/ui/usuarios/Usuario.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -126,7 +129,7 @@
       <workItem from="1712650059487" duration="1267000" />
       <workItem from="1712657776950" duration="3653000" />
       <workItem from="1712730487492" duration="3561000" />
-      <workItem from="1712734336371" duration="773000" />
+      <workItem from="1712734336371" duration="1897000" />
     </task>
     <servers />
   </component>

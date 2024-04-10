@@ -12,7 +12,7 @@ import medac.stars.ui.usuarios.tablaGestionUsuarios.TablaGestionUsuarios;
 
 /**
  *
- * @author Usuario
+ * @author Carlos
  */
 public class Usuario extends javax.swing.JFrame {
 
@@ -229,8 +229,6 @@ public class Usuario extends javax.swing.JFrame {
                 }
             }
         }
-
-
     }//GEN-LAST:event_bEntrarActionPerformed
 
     private void bVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bVolverActionPerformed
