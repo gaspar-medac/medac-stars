@@ -1,5 +1,6 @@
 package medac.stars.ui;
 
+import medac.stars.model.Game;
 import medac.stars.utils.FontBuilder;
 import medac.stars.utils.ImagePanel;
 
@@ -32,7 +33,7 @@ public class JoinGame extends JFrame {
     private JLabel player4Label;
     private boolean isUpdatingComponents = false;
 
-    public JoinGame() {
+    public JoinGame(Game game) {
         add(JoinGamePanel);
         setTitle("MEDAC Stars - Join Game");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -178,10 +179,6 @@ public class JoinGame extends JFrame {
                 JPanel1.repaint();
             }
         });
-    }
-
-    public static void main(String[] args) {
-        new JoinGame();
     }
 
     private void createUIComponents() {
