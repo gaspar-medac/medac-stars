@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2356958-5ef2-40a5-9612-11fb62fc4b12" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/a/0a637ef8683bc9ed99818dae1878bdb609e2fee4" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/a/0a637ef8683bc9ed99818dae1878bdb609e2fee4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/medac/stars/ui/usuarios/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/medac/stars/ui/usuarios/Usuario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TEMA17BD/src/ConexionMySQL.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TEMA17BD/src/FrameTable.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TEMA17BD/src/FrameTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TEMA17BD/.idea/sonarlint/issuestore/9/2/924f089edb4af5ee45c8a9d1129cd28e2b368138" beforeDir="false" afterPath="$PROJECT_DIR$/../TEMA17BD/.idea/sonarlint/issuestore/9/2/924f089edb4af5ee45c8a9d1129cd28e2b368138" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TEMA17BD/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../TEMA17BD/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TEMA17BD/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../TEMA17BD/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TEMA17BD/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TEMA17BD/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +135,8 @@
       <workItem from="1712650059487" duration="1267000" />
       <workItem from="1712657776950" duration="3653000" />
       <workItem from="1712730487492" duration="3561000" />
-      <workItem from="1712734336371" duration="1897000" />
+      <workItem from="1712734336371" duration="2579000" />
+      <workItem from="1712744601529" duration="1433000" />
     </task>
     <servers />
   </component>
@@ -157,7 +164,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/medac/stars/ui/usuarios/PanelPrincipalGestor/PanelPrincipalGestor.java</url>
-          <line>28</line>
+          <line>31</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
