@@ -18,8 +18,10 @@ public class Usuario extends javax.swing.JFrame {
     public User usuario;
 
     /**
-     * Creates new form Usuario
+     * Creates new form Usuario, éste se iniciará si no se le pasan parámetros y los campos
+     * estarán vacíos
      */
+
     public Usuario(User usuario) {
         this.usuario = usuario;
         initComponents();
@@ -28,12 +30,12 @@ public class Usuario extends javax.swing.JFrame {
         TextPrompt contraseña = new TextPrompt("Introduce contraseña", jContraseña);
 
         if (usuario != null) {
-            //nuevo usuario
-            jContraseña.setText(usuario.getPassword());
-            jTextoUsuario.setText(usuario.getName());
-            jTextoEmail.setText(usuario.getEmail());
+                //nuevo usuario
+                jContraseña.setText(usuario.getPassword());
+                jTextoUsuario.setText(usuario.getName());
+                jTextoEmail.setText(usuario.getEmail());
         } else {
-            // editar 
+            //Editar
         }
     }
 
