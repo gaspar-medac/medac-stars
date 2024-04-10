@@ -18,8 +18,10 @@ public class Usuario extends javax.swing.JFrame {
     public User usuario;
 
     /**
-     * Creates new form Usuario
+     * Creates new form Usuario, éste se iniciará si no se le pasan parámetros y los campos
+     * estarán vacíos
      */
+
     public Usuario(User usuario) {
         this.usuario = usuario;
         initComponents();
@@ -38,7 +40,7 @@ public class Usuario extends javax.swing.JFrame {
                 bGestor.setEnabled(true);
             }
         } else {
-            // editar 
+            //Editar
         }
         jLabel1.setVisible(false);
     }
