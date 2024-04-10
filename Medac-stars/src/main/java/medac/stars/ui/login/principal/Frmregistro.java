@@ -52,9 +52,9 @@ public static Frmlogin fr;
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("REGISTRAR USUARIO");
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(204, 255, 255));
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setBackground(new java.awt.Color(204, 204, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Registro de Usuarios"));
 
         txtapellido.setBorder(javax.swing.BorderFactory.createTitledBorder("Apellidos"));
@@ -67,6 +67,11 @@ public static Frmlogin fr;
 
         combo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar", "Gestor", "Comercial" }));
         combo.setBorder(javax.swing.BorderFactory.createTitledBorder("Tipo de Usuario"));
+        combo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comboActionPerformed(evt);
+            }
+        });
 
         jButton1.setText("REGISTRAR USUARIO");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -170,6 +175,10 @@ public static Frmlogin fr;
         }
         JOptionPane.showMessageDialog(this, mensaje, "Acceso", JOptionPane.INFORMATION_MESSAGE);
     }        fr.setVisible(true);    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void comboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comboActionPerformed
 
 
     public static void main(String args[]) {

@@ -12,17 +12,17 @@ import medac.stars.model.User;
 
 /**
  *
- * @author gaspar
- */
+ 
+@author gaspar*/
 public class ManageData {
 
     public static ArrayList<User> userSet = new ArrayList<User>();
     public static Set<Arena> arenaSet = new HashSet<Arena>();
     public static Set<MedacStar> medacStarSet = new HashSet<MedacStar>();
     public static ArrayList<Game> gameList = new ArrayList<Game>();
-    public static HashMap<User, Chat> chatHashMap = new HashMap<User, Chat>();    
-    
-    
+    public static HashMap<User, Chat> chatHashMap = new HashMap<User, Chat>();
+
+
     static {
         userSet.add(new User("Usuario1", "1", "", 0));
         userSet.add(new User("Usuario2", "2", "", 0));
