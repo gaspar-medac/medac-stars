@@ -17,7 +17,7 @@ public class Game {
      * 1: team2 win
      * 2: draw //optional
      */
-    private int result;
+    private int result = -1;
 
     public Game(Team team1, Team team2) {
         this.team1 = team1;
