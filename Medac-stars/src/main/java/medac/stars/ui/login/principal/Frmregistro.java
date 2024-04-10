@@ -7,6 +7,7 @@ package medac.stars.ui.login.principal;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 import medac.stars.ui.*;
 import static medac.stars.ui.login.principal.Frminicio.fr;
 
@@ -147,8 +148,28 @@ public static Frmlogin fr;
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-fr=new Frmlogin(null,true);
-        fr.setVisible(true);    }//GEN-LAST:event_jButton1ActionPerformed
+  String nombre = jTextField3.getText().trim();
+    String apellido = txtapellido.getText().trim();
+    String email = txtemail.getText().trim();
+    String password = new String(jPasswordField1.getPassword()).trim();
+    String tipoUsuario = (String) combo.getSelectedItem();
+
+    // Verificar si algún campo está vacío
+    if (nombre.isEmpty() || apellido.isEmpty() || email.isEmpty() || password.isEmpty() || tipoUsuario.equals("Seleccionar")) {
+        JOptionPane.showMessageDialog(this, "Todos los campos son obligatorios", "Error", JOptionPane.ERROR_MESSAGE);
+    } else {
+        // Si todos los campos están rellenados, mostrar mensaje según el tipo de usuario
+        String mensaje = "";
+        switch (tipoUsuario) {
+            case "Gestor":
+                mensaje = "Ahora accederíamos a gestores";
+                break;
+            case "Comercial":
+                mensaje = "Ahora accederíamos a comerciales";
+                break;
+        }
+        JOptionPane.showMessageDialog(this, mensaje, "Acceso", JOptionPane.INFORMATION_MESSAGE);
+    }        fr.setVisible(true);    }//GEN-LAST:event_jButton1ActionPerformed
 
 
     public static void main(String args[]) {
