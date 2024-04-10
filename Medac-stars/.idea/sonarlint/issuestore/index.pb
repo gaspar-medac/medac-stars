@@ -23,14 +23,6 @@ Z
 ,src/main/java/medac/stars/model/Message.java,5\4\54dd91bc45b252e17d11a43f0caa637042cc7d89
 e
 5src/main/java/medac/stars/ui/usuarios/TextPrompt.java,5\c\5c768c9e4c3482b2163d013d6d4d0acefdaeb13f
-n
->src/main/java/medac/stars/ui/usuarios/MainPanel/MainPanel.java,f\b\fb6c1f004901198eed3ad05131775a5a2e7c3312
-n
->src/main/java/medac/stars/ui/usuarios/MainPanel/MainPanel.form,b\d\bdaf1cb3905a66e89c348cb70eec35bcd8efd556
-y
-Isrc/main/java/medac/stars/ui/usuarios/MainPanel/PanelPrincipalGestor.java,7\3\73030df65b05a6fc65e7c2c1733aadb06a27936d
-y
-Isrc/main/java/medac/stars/ui/usuarios/MainPanel/PanelPrincipalGestor.form,d\c\dc462eba73a7e8da3811405bb16326e4c865f66a
 [
 +src/main/java/medac/stars/ui/MainFrame.form,5\7\576966542849fa1f50030300aba93ca359eeba86
 [

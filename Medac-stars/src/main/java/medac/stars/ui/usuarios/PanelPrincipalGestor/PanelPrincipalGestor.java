@@ -2,6 +2,7 @@ package medac.stars.ui.usuarios.PanelPrincipalGestor;
 
 import medac.stars.model.User;
 import medac.stars.ui.usuarios.Usuario;
+import medac.stars.ui.usuarios.tablaGestionUsuarios.TablaGestionUsuarios;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -25,7 +26,13 @@ public class PanelPrincipalGestor extends JFrame{
         bAnyadirUsuario.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-               new Usuario(usuario);
+               new Usuario(null).setVisible(true);
+            }
+        });
+        bEditarUsuarios.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new TablaGestionUsuarios().setVisible(true);
             }
         });
     }

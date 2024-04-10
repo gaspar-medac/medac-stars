@@ -2,18 +2,14 @@ package medac.stars.ui.usuarios.tablaGestionUsuarios;
 
 import medac.stars.controller.ManageData;
 import medac.stars.model.User;
-import medac.stars.ui.usuarios.Usuario;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class TablaGestionUsuarios extends JFrame{
     private JTable usuarios;
     private JPanel mainPanel;
-    private JButton bAnyadir;
 
     private User usuarioNuevo;
 
@@ -61,6 +57,7 @@ public class TablaGestionUsuarios extends JFrame{
     }
 
     public static void main(String[] Args){
+        new TablaGestionUsuarios();
     }
 
     /**

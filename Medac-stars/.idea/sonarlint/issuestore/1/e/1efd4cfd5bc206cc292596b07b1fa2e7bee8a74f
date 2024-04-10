@@ -1,11 +1,13 @@
 
-r	java:S117""QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(² öÀùÿÿÿÿ8¿Äùµì1
+r	java:S117)"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(² öÀùÿÿÿÿ8¿Äùµì1
 J
-java:S1604"(Make this anonymous inner class a lambda(±ë™øÿÿÿÿ8Æ¯ûµì1
+java:S1604"(Make this anonymous inner class a lambda(±ë™øÿÿÿÿ8Æ¯ûµì1
+E
+java:S1604 "(Make this anonymous inner class a lambda(‰¶Œã8ôÇ½·ì1
 {	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(­ÁËüÿÿÿÿÿ8ÀÄùµì1
 K
-java:S1948")Make "usuario" transient or serializable.(Åà¬“úÿÿÿÿ8ëµ·¶ì1
+java:S1948")Make "usuario" transient or serializable.(Åà¬“úÿÿÿÿ8ëµ·¶ì1
 i
-java:S3252"LUse static access with "javax.swing.WindowConstants" for "DISPOSE_ON_CLOSE".(ÊêÌó8ÉÄùµì1
-U
-java:S1068"3Remove this unused "bEditarUsuarios" private field.(ªÌõûÿÿÿÿ8ËÄùµì1
+java:S3252"LUse static access with "javax.swing.WindowConstants" for "DISPOSE_ON_CLOSE".(ÊêÌó8ÉÄùµì1
+M
+java:S1068"+Remove this unused "usuario" private field.(Åà¬“úÿÿÿÿ8Ñé¸·ì1
