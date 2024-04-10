@@ -241,6 +241,7 @@ public class Usuario extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new TablaGestionUsuarios().setVisible(true);
+                dispose();
             }
         });
     }//GEN-LAST:event_bVolverActionPerformed
@@ -281,7 +282,7 @@ public class Usuario extends javax.swing.JFrame {
                 //editar
                 new Usuario(usuario).setVisible(true);
                 //nuevo
-                /// new Usuario(null).setVisible(true);
+                new Usuario(null).setVisible(true);
             }
         });
     }
