@@ -32,9 +32,15 @@ public class Usuario extends javax.swing.JFrame {
             jContraseña.setText(usuario.getPassword());
             jTextoUsuario.setText(usuario.getName());
             jTextoEmail.setText(usuario.getEmail());
+            if (usuario.getType() == 0) {
+                bJugador.setEnabled(true);
+            } else {
+                bGestor.setEnabled(true);
+            }
         } else {
             // editar 
         }
+        jLabel1.setVisible(false);
     }
 
     /**
@@ -58,6 +64,7 @@ public class Usuario extends javax.swing.JFrame {
         jContraseña = new javax.swing.JPasswordField();
         bEntrar = new javax.swing.JButton();
         bVolver = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -87,7 +94,6 @@ public class Usuario extends javax.swing.JFrame {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bEntrarActionPerformed(evt);
             }
-
         });
 
         bVolver.setText("Volver");
@@ -97,10 +103,19 @@ public class Usuario extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel1.setText("Los datos introducidos no son correctos.");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(bVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(bEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(111, 111, 111))
             .addGroup(layout.createSequentialGroup()
                 .addGap(36, 36, 36)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -118,19 +133,14 @@ public class Usuario extends javax.swing.JFrame {
                             .addComponent(jContraseñaLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jTipoUsuario, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(bJugador, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(bGestor, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jContraseña, javax.swing.GroupLayout.DEFAULT_SIZE, 214, Short.MAX_VALUE)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap(55, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addComponent(bVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(bEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(111, 111, 111))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -152,7 +162,9 @@ public class Usuario extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jContraseñaLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(bVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -189,6 +201,7 @@ public class Usuario extends javax.swing.JFrame {
 
         if (!validarCampos()) {
             System.err.println("campos no validos!");
+            jLabel1.setVisible(true);
 
         } else {
 
@@ -198,6 +211,7 @@ public class Usuario extends javax.swing.JFrame {
                 usuario.setEmail(email);
                 usuario.setPassword(contraseña);
             } else {
+                jLabel1.setVisible(false);
                 // aqui check si existe o no el usuario
                 boolean existe = false;
                 for (User user : ManageData.userSet) {
@@ -209,6 +223,7 @@ public class Usuario extends javax.swing.JFrame {
                 if (existe) {
                     //error
                     System.err.println("Este usuario ya exsiste!");
+
                 } else {
                     User user = new User(nombreUsuario, contraseña, email, tipoUsuario);
                     ManageData.userSet.add(user);
@@ -223,9 +238,11 @@ public class Usuario extends javax.swing.JFrame {
 
     private void bVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bVolverActionPerformed
         // TODO add your handling code here:
-               java.awt.EventQueue.invokeLater(new Runnable(){
-               public void run(){new TablaGestionUsuarios().setVisible(true);}
-               });
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new TablaGestionUsuarios().setVisible(true);
+            }
+        });
     }//GEN-LAST:event_bVolverActionPerformed
 
     /**
@@ -257,13 +274,14 @@ public class Usuario extends javax.swing.JFrame {
 
         User usuario = new User("a", "b", "c", 0);
 
+
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 //editar
                 new Usuario(usuario).setVisible(true);
                 //nuevo
-                new Usuario(null).setVisible(true);
+                /// new Usuario(null).setVisible(true);
             }
         });
     }
@@ -277,6 +295,7 @@ public class Usuario extends javax.swing.JFrame {
     private javax.swing.JPasswordField jContraseña;
     private javax.swing.JLabel jContraseñaLabel;
     private javax.swing.JLabel jEmail;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JTextField jTextoEmail;
     private javax.swing.JTextField jTextoUsuario;
     private javax.swing.JLabel jTipoUsuario;
