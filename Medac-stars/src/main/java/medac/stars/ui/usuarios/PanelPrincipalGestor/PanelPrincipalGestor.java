@@ -27,12 +27,14 @@ public class PanelPrincipalGestor extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                new Usuario(null).setVisible(true);
+               dispose();
             }
         });
         bEditarUsuarios.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 new TablaGestionUsuarios().setVisible(true);
+                dispose();
             }
         });
     }

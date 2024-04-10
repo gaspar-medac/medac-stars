@@ -9,7 +9,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
-
 class ButtonEditor extends DefaultCellEditor {
 
 
@@ -56,13 +55,15 @@ class ButtonEditor extends DefaultCellEditor {
         if (isPushed) {
             JOptionPane.showMessageDialog(button, label + ": pulsado: " + ManageData.userSet.get(numeroFila).getName());
 
-
             java.awt.EventQueue.invokeLater(new Runnable() {
                 public void run() {
                     new Usuario(ManageData.userSet.get(numeroFila)).setVisible(true);
 
+
                 }
+
             });
+
 
         }
         isPushed = false;

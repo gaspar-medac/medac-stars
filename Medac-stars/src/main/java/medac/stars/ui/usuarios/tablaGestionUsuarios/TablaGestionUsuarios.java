@@ -53,10 +53,9 @@ public class TablaGestionUsuarios extends JFrame{
         miTabla.getColumn("Editar").setCellEditor(new ButtonEditor(new JCheckBox()));
 
 
-
     }
 
-    public static void main(String[] Args){
+    public void main(String[] Args){
         new TablaGestionUsuarios();
     }
 
