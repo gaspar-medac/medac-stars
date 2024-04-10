@@ -11,7 +11,7 @@ public class StartGame extends JFrame {
     private JComboBox chooseArenaComboBox;
     private JComboBox chooseMEDACStarComboBox;
     private JButton cancelarButton;
-    private JButton iniciarButton;
+    private JButton startButton;
     private JLabel chooseArenaLabel;
     private JLabel chooseMEDACStarLabel;
 
@@ -32,7 +32,7 @@ public class StartGame extends JFrame {
         chooseMEDACStarComboBox.setFont(montserratSemiBold.deriveFont(12f));
 
         cancelarButton.setFont(montserratSemiBold.deriveFont(12f));
-        iniciarButton.setFont(montserratSemiBold.deriveFont(12f));
+        startButton.setFont(montserratSemiBold.deriveFont(12f));
         chooseArenaLabel.setFont(montserratSemiBold.deriveFont(12f));
         chooseMEDACStarLabel.setFont(montserratSemiBold.deriveFont(12f));
 
@@ -46,6 +46,21 @@ public class StartGame extends JFrame {
         chooseMEDACStarComboBox.removeAllItems();
         ManageData.medacStarSet.forEach(medacStar -> {
             chooseMEDACStarComboBox.addItem(medacStar.getName());
+        });
+
+        cancelarButton.addActionListener(e -> {
+            // Close the window
+            dispose();
+        });
+
+        startButton.addActionListener(e -> {
+            if (chooseArenaComboBox.getSelectedIndex() == -1 || chooseMEDACStarComboBox.getSelectedIndex() == -1) {
+                JOptionPane.showMessageDialog(null, "Please select an arena and a MEDAC Star to start the game.", "MEDAC Stars - Start Game", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+
+            System.out.println("Starting game with arena: " + chooseArenaComboBox.getSelectedItem() + " and MEDAC Star: " + chooseMEDACStarComboBox.getSelectedItem());
+
         });
     }
 
