@@ -18,7 +18,7 @@ public class StartGame extends JFrame {
     public StartGame() {
         add(StartGamePanel);
         setTitle("MEDAC Stars - Start Game");
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setSize(350, 350);
         setLocationRelativeTo(null);
         setResizable(false);
