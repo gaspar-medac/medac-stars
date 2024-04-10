@@ -61,7 +61,6 @@ public class TablaGestionUsuarios extends JFrame{
     }
 
     public static void main(String[] Args){
-        new TablaGestionUsuarios();
     }
 
     /**
