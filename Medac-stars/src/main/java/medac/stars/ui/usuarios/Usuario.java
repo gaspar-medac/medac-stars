@@ -30,10 +30,15 @@ public class Usuario extends javax.swing.JFrame {
         TextPrompt contraseña = new TextPrompt("Introduce contraseña", jContraseña);
 
         if (usuario != null) {
-                //nuevo usuario
-                jContraseña.setText(usuario.getPassword());
-                jTextoUsuario.setText(usuario.getName());
-                jTextoEmail.setText(usuario.getEmail());
+            //nuevo usuario
+            jContraseña.setText(usuario.getPassword());
+            jTextoUsuario.setText(usuario.getName());
+            jTextoEmail.setText(usuario.getEmail());
+            if (usuario.getType() == 0) {
+                bJugador.setEnabled(true);
+            } else {
+                bGestor.setEnabled(true);
+            }
         } else {
             //Editar
         }
@@ -225,9 +230,12 @@ public class Usuario extends javax.swing.JFrame {
 
     private void bVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bVolverActionPerformed
         // TODO add your handling code here:
-               java.awt.EventQueue.invokeLater(new Runnable(){
-               public void run(){new TablaGestionUsuarios().setVisible(true);}
-               });
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new TablaGestionUsuarios().setVisible(true);
+                dispose();
+            }
+        });
     }//GEN-LAST:event_bVolverActionPerformed
 
     /**
