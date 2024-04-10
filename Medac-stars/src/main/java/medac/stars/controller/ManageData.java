@@ -26,7 +26,7 @@ public class ManageData {
     static {
         userSet.add(new User("Usuario1", "1", "", 0));
         userSet.add(new User("Usuario2", "2", "", 0));
-        userSet.add(new User("Usuario3", "3", "", 0));
-        userSet.add(new User("Usuario4", "4", "", 0));
+        userSet.add(new User("Gestor1", "1", "", 1));
+        userSet.add(new User("Gestor2", "2", "", 1));
     }
 }
