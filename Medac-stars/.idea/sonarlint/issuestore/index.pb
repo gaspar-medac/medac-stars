@@ -23,3 +23,7 @@ Z
 ,src/main/java/medac/stars/model/Message.java,5\4\54dd91bc45b252e17d11a43f0caa637042cc7d89
 e
 5src/main/java/medac/stars/ui/usuarios/TextPrompt.java,5\c\5c768c9e4c3482b2163d013d6d4d0acefdaeb13f
+…
+Usrc/main/java/medac/stars/ui/usuarios/tablaGestionUsuarios/ButtonRendererAnyadir.java,a\c\ac368b1f6fb504155d5b0c259f873eab8824aaf2
+ƒ
+Ssrc/main/java/medac/stars/ui/usuarios/tablaGestionUsuarios/ButtonEditorAnyadir.java,5\f\5f49d06a77c0c49ec391fc1a3825622cbbe4790d

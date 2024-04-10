@@ -1,11 +1,22 @@
 
 d
-java:S1192"GDefine a constant instead of duplicating this literal "Editar" 4 times.(×ä¤¦8ÎõÆì1
-r	java:S117."QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(² öÀùÿÿÿÿ8ÏõÆì1
-{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ı™á´üÿÿÿÿ8ĞõÆì1
+java:S1192)"GDefine a constant instead of duplicating this literal "Editar" 4 times.(‡¼Üà8á±¿–ì1
+r	java:S117?"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(² öÀùÿÿÿÿ8ä±¿–ì1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ı™á´üÿÿÿÿ8æ±¿–ì1
 }
-java:S1450c"[Remove the "jScrollPane1" field and declare it as a local variable in the relevant methods.(¤á×ÿÿÿÿÿ8ŞõÆì1
+java:S1450t"[Remove the "jScrollPane1" field and declare it as a local variable in the relevant methods.(¤á×ÿÿÿÿÿ8û±¿–ì1
+P
+java:S1948".Make "usuarioNuevo" transient or serializable.(õ¼Á×ÿÿÿÿÿ8ü±¿–ì1
 i
-java:S3252"LUse static access with "javax.swing.WindowConstants" for "DISPOSE_ON_CLOSE".(Òœ Ğ8âõÆì1
+java:S3252"LUse static access with "javax.swing.WindowConstants" for "DISPOSE_ON_CLOSE".(ÊêÌó8ş±¿–ì1
+X
+java:S1128"<Remove this unused import 'medac.stars.ui.usuarios.Usuario'.(¡Ûí8Œ¾é–ì1
+T
+java:S1128
+"7Remove this unused import 'java.awt.event.ActionEvent'.(Úù“‘8ôøì–ì1
+W
+java:S1128":Remove this unused import 'java.awt.event.ActionListener'.(Ìä¹8ôøì–ì1
 I
-java:S1068",Remove this unused "usuarios" private field.(°Û¦ö8êõÆì1
+java:S1068",Remove this unused "bAnyadir" private field.(çÄ÷8ôøì–ì1
+R
+java:S1068"0Remove this unused "usuarioNuevo" private field.(õ¼Á×ÿÿÿÿÿ8Œ¾é–ì1

@@ -5,16 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2356958-5ef2-40a5-9612-11fb62fc4b12" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/a/0a637ef8683bc9ed99818dae1878bdb609e2fee4" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/a/0a637ef8683bc9ed99818dae1878bdb609e2fee4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TEMA17BD/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TEMA17BD/.idea/libraries/mysql_connector_j_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TEMA17BD/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TEMA17BD/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TEMA17BD/.idea/sonarlint/issuestore/9/2/924f089edb4af5ee45c8a9d1129cd28e2b368138" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TEMA17BD/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TEMA17BD/.idea/sonarlint/securityhotspotstore/9/2/924f089edb4af5ee45c8a9d1129cd28e2b368138" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TEMA17BD/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TEMA17BD/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TEMA17BD/TEMA17BD.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/a/2afb4410f5a6593d89399c54fa255d41eefe858b" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/a/2afb4410f5a6593d89399c54fa255d41eefe858b" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/0/402ce04c74269d736ac7678e78f7402da74a9bda" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/0/402ce04c74269d736ac7678e78f7402da74a9bda" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/medac/stars/controller/ManageData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/medac/stars/controller/ManageData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/medac/stars/ui/usuarios/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/medac/stars/ui/usuarios/Usuario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/medac/stars/ui/usuarios/tablaGestionUsuarios/ButtonEditor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/medac/stars/ui/usuarios/tablaGestionUsuarios/ButtonEditor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/medac/stars/ui/usuarios/tablaGestionUsuarios/ButtonRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/medac/stars/ui/usuarios/tablaGestionUsuarios/ButtonRenderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/medac/stars/ui/usuarios/tablaGestionUsuarios/TablaGestionUsuarios.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/medac/stars/ui/usuarios/tablaGestionUsuarios/TablaGestionUsuarios.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/medac/stars/ui/usuarios/tablaGestionUsuarios/TablaGestionUsuarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/medac/stars/ui/usuarios/tablaGestionUsuarios/TablaGestionUsuarios.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,22 +50,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.TablaGestionUsuarios.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Usuario.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;usuarios&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.TablaGestionUsuarios.executor": "Run",
+    "Application.Usuario.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "usuarios",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="medac.stars.ui.usuarios.tablaGestionUsuarios" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.TablaGestionUsuarios">
     <configuration name="TablaGestionUsuarios" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="medac.stars.ui.usuarios.tablaGestionUsuarios.TablaGestionUsuarios" />
@@ -110,11 +126,24 @@
       <updated>1711538713653</updated>
       <workItem from="1711538716201" duration="331000" />
       <workItem from="1711539058741" duration="5056000" />
-      <workItem from="1712644021299" duration="5746000" />
+      <workItem from="1712644021299" duration="6014000" />
+      <workItem from="1712650059487" duration="1267000" />
+      <workItem from="1712657776950" duration="3325000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
