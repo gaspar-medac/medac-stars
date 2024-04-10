@@ -28,7 +28,7 @@ public class Usuario extends javax.swing.JFrame {
         initComponents();
         
         /**
-         * 
+         * Asignamos el texto del placeholder
          */
         TextPrompt nombreUsuario = new TextPrompt("Introduce el usuario", jTextoUsuario);
         TextPrompt email = new TextPrompt("Introduce el Email", jTextoEmail);
@@ -179,11 +179,19 @@ public class Usuario extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextoUsuarioActionPerformed
 
     public boolean validarCampos() {
+        
+        /**
+         * Valores por defecto
+         */
         String nombreUsuario = jTextoUsuario.getText();
         String email = jTextoEmail.getText();
         String contraseña = jContraseña.getText();
         int tipoUsuario = bJugador.isSelected() ? 1 : 0;
 
+        /**
+         * Condiciones para la validación de que el cuestionario está bien rellenado
+         */
+        
         if (nombreUsuario.equals("") || email.equals("") || contraseña.equals("") || (tipoUsuario != 1 && tipoUsuario != 0)) {
             return false;
         }
@@ -222,6 +230,7 @@ public class Usuario extends javax.swing.JFrame {
                     //error
                     System.err.println("Este usuario ya exsiste!");
                 } else {
+                    //Éxito
                     User user = new User(nombreUsuario, contraseña, email, tipoUsuario);
                     ManageData.userSet.add(user);
                     JOptionPane.showMessageDialog(this, "Usuario guardado exitosamente.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
@@ -233,6 +242,7 @@ public class Usuario extends javax.swing.JFrame {
 
     }//GEN-LAST:event_bEntrarActionPerformed
 
+    //funcionalidad del botón volver
     private void bVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bVolverActionPerformed
         // TODO add your handling code here:
         java.awt.EventQueue.invokeLater(new Runnable() {
