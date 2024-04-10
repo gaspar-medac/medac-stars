@@ -1,6 +1,7 @@
 package medac.stars.ui;
 
 import medac.stars.controller.ManageData;
+import medac.stars.model.Game;
 import medac.stars.model.Team;
 import medac.stars.utils.FontBuilder;
 
@@ -13,8 +14,8 @@ import java.util.ArrayList;
 
 public class GameHistory extends JFrame {
     private JPanel GameHistoryPanel;
-    private JButton iniciarPartidaUnirseAButton;
-    private JButton volverAlMenúPrincipalButton;
+    private JButton startJoinGameButton;
+    private JButton returnMainMenuButton;
     private JTable historyTable;
     private JScrollPane historyTableScrollPane;
 
@@ -29,6 +30,14 @@ public class GameHistory extends JFrame {
 
         ImageIcon logo = new ImageIcon("./src/main/java/medac/stars/ui/assets/images/logo.png");
         setIconImage(logo.getImage());
+
+        startJoinGameButton.addActionListener(e -> {
+            boolean pendingGame = ManageData.gameList.stream().anyMatch(game -> game.getResult() == -1);
+            if (pendingGame) {
+                Game game = ManageData.gameList.stream().filter(g -> g.getResult() == -1).findFirst().get();
+                new JoinGame(game);
+            } else new StartGame();
+        });
     }
 
     public static void main(String[] args) {
@@ -45,12 +54,8 @@ public class GameHistory extends JFrame {
             Team team1 = game.getTeam1();
             Team team2 = game.getTeam2();
 
-            String team1String = String.format("[%s - %s] [%s - %s]",
-                    team1.getPlayer1().getName(), team1.getMedacStar1().getName(),
-                    team1.getPlayer2().getName(), team1.getMedacStar2().getName());
-            String team2String = String.format("[%s - %s] [%s - %s]",
-                    team2.getPlayer1().getName(), team2.getMedacStar1().getName(),
-                    team2.getPlayer2().getName(), team2.getMedacStar2().getName());
+            String team1String = String.format("[%s - %s] [%s - %s]", team1.getPlayer1().getName(), team1.getMedacStar1().getName(), team1.getPlayer2().getName(), team1.getMedacStar2().getName());
+            String team2String = String.format("[%s - %s] [%s - %s]", team2.getPlayer1().getName(), team2.getMedacStar1().getName(), team2.getPlayer2().getName(), team2.getMedacStar2().getName());
 
             String result = switch (game.getResult()) {
                 case 0 -> "Team 1 win";
