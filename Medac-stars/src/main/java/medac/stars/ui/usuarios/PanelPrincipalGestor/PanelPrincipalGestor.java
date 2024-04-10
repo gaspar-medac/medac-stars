@@ -8,6 +8,9 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * @author Cristian
+ */
 public class PanelPrincipalGestor extends JFrame{
     private JButton bAnyadirUsuario;
     private JButton bEditarUsuarios;

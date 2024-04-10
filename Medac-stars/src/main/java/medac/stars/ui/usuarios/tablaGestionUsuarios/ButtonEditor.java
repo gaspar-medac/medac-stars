@@ -8,7 +8,9 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-
+/**
+ * @author Cristian
+ */
 class ButtonEditor extends DefaultCellEditor {
 
 

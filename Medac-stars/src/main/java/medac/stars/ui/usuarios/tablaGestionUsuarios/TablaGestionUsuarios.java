@@ -7,6 +7,9 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 
+/**
+ * @author Cristian
+ */
 public class TablaGestionUsuarios extends JFrame{
     private JTable usuarios;
     private JPanel mainPanel;
