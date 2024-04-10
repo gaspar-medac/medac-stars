@@ -7,6 +7,7 @@ package medac.stars.ui.usuarios;
 import javax.swing.JOptionPane;
 import medac.stars.controller.ManageData;
 import medac.stars.model.User;
+import medac.stars.ui.usuarios.PanelPrincipalGestor.PanelPrincipalGestor;
 import medac.stars.ui.usuarios.tablaGestionUsuarios.TablaGestionUsuarios;
 
 /**
@@ -25,6 +26,10 @@ public class Usuario extends javax.swing.JFrame {
     public Usuario(User usuario) {
         this.usuario = usuario;
         initComponents();
+        
+        /**
+         * 
+         */
         TextPrompt nombreUsuario = new TextPrompt("Introduce el usuario", jTextoUsuario);
         TextPrompt email = new TextPrompt("Introduce el Email", jTextoEmail);
         TextPrompt contraseña = new TextPrompt("Introduce contraseña", jContraseña);
@@ -242,7 +247,7 @@ public class Usuario extends javax.swing.JFrame {
         // TODO add your handling code here:
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TablaGestionUsuarios().setVisible(true);
+                new PanelPrincipalGestor().setVisible(true);
                 dispose();
             }
         });
