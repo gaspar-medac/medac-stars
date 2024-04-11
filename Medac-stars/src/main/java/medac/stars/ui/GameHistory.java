@@ -9,6 +9,8 @@ import javax.swing.*;
 import javax.swing.plaf.basic.BasicScrollBarUI;
 import javax.swing.table.DefaultTableCellRenderer;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -55,6 +57,10 @@ public class GameHistory extends JFrame {
     private void addListeners() {
         startJoinGameButton.addActionListener(e -> {
             ManageData.gameList.stream().filter(game -> game.getResult() == -1).findFirst().ifPresentOrElse(game -> new JoinGame(), StartGame::new);
+        });
+
+        returnMainMenuButton.addActionListener(e -> {
+            System.out.println("Return to main menu");
         });
     }
 
