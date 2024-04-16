@@ -55,6 +55,7 @@ public class GameHistory extends JFrame {
     }
 
     private void addListeners() {
+        // Add action listeners to buttons
         startJoinGameButton.addActionListener(e -> {
             ManageData.gameList.stream().filter(game -> game.getResult() == -1).findFirst().ifPresentOrElse(game -> new JoinGame(), StartGame::new);
         });
@@ -65,6 +66,7 @@ public class GameHistory extends JFrame {
     }
 
     private void createUIComponents() {
+        // Create table model
         String[] columnNames = {"Team 1", "Team 2", "Result"};
         List<Object[]> dataList = buildDataList();
         Object[][] data = dataList.toArray(new Object[0][]);
@@ -76,16 +78,19 @@ public class GameHistory extends JFrame {
     }
 
     private List<Object[]> buildDataList() {
+        // Build data list for the table
         List<Object[]> dataList = new ArrayList<>();
         ManageData.gameList.forEach(game -> dataList.add(new Object[]{formatTeamString(game.getTeam1()), formatTeamString(game.getTeam2()), getResultString(game)}));
         return dataList;
     }
 
     private String formatTeamString(Team team) {
+        // Format team string for table
         return String.format("[%s - %s] [%s - %s]", team.getPlayer1().getName(), team.getMedacStar1().getName(), team.getPlayer2().getName(), team.getMedacStar2().getName());
     }
 
     private String getResultString(Game game) {
+        // Get result string for table
         return switch (game.getResult()) {
             case 0 -> "Team 1 win";
             case 1 -> "Team 2 win";
@@ -94,6 +99,7 @@ public class GameHistory extends JFrame {
     }
 
     private void configureTable() {
+        // Configure table appearance
         historyTable.setEnabled(false);
         historyTable.getTableHeader().setReorderingAllowed(false);
         historyTable.getTableHeader().setResizingAllowed(false);
@@ -105,6 +111,7 @@ public class GameHistory extends JFrame {
     }
 
     private void alignTableCellsCenter(JTable table) {
+        // Align table cells to center
         DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
         centerRenderer.setHorizontalAlignment(JLabel.CENTER);
         for (int i = 0; i < table.getColumnCount(); i++) {
@@ -113,6 +120,7 @@ public class GameHistory extends JFrame {
     }
 
     private void customizeScrollBar() {
+        // Customize scroll bar appearance
         historyTableScrollPane.getVerticalScrollBar().setPreferredSize(SCROLL_BAR_DIMENSION);
         historyTableScrollPane.getVerticalScrollBar().setUI(new BasicScrollBarUI() {
             @Override

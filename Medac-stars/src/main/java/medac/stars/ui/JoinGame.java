@@ -41,9 +41,11 @@ public class JoinGame extends JFrame {
         setResizable(false);
         setVisible(true);
 
+        // Set frame icon
         ImageIcon logo = new ImageIcon("./src/main/java/medac/stars/ui/assets/images/logo.png");
         setIconImage(logo.getImage());
 
+        // Set fonts for components
         Font montserratSemiBold = FontBuilder.getFont("Montserrat-SemiBold.ttf");
         joinButton.setFont(montserratSemiBold.deriveFont(12f));
         joinButton2.setFont(montserratSemiBold.deriveFont(12f));
@@ -64,6 +66,7 @@ public class JoinGame extends JFrame {
         player3Label.setFont(montserratSemiBold.deriveFont(12f));
         player4Label.setFont(montserratSemiBold.deriveFont(12f));
 
+        // Set initial visibility of labels and combo boxes
         player1Label.setVisible(false);
         player2Label.setVisible(false);
         player3Label.setVisible(false);
@@ -182,6 +185,8 @@ public class JoinGame extends JFrame {
 
     private void createUIComponents() {
         comboBox2 = new JComboBox();
+
+        // Customize combo box selection background and foreground colors
         UIManager.put("ComboBox.selectionBackground", new Color(255, 255, 255));
         UIManager.put("ComboBox.selectionForeground", new Color(0, 0, 0));
 
