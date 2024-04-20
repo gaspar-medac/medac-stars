@@ -4,20 +4,22 @@
  */
 package medac.stars.ui.login.principal;
 
-import static medac.stars.ui.login.principal.Frmlogin.fr;
+import medac.stars.ui.arena.TablaArenas;
+import medac.stars.ui.chat.ChatInterfaz;
+import medac.stars.ui.medacstar.ListaMedacStars;
+import medac.stars.ui.usuarios.PanelPrincipalGestor.PanelPrincipalGestor;
 
 /**
  *
  * @author adggu
  */
-public class FrmPantallaPrincipalGestor extends javax.swing.JDialog {
+public class FrmPantallaPrincipalGestor extends javax.swing.JFrame {
 
     /**
      * Creates new form FrmPantallaPrincipal
      */
     
-    public FrmPantallaPrincipalGestor(java.awt.Frame parent, boolean modal) {
-        super(parent, modal);
+    public FrmPantallaPrincipalGestor() {
         initComponents();
         
     }
@@ -47,10 +49,25 @@ public class FrmPantallaPrincipalGestor extends javax.swing.JDialog {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
         txtgestionMedacStars.setText("Gestion Medac Stars");
+        txtgestionMedacStars.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtgestionMedacStarsActionPerformed(evt);
+            }
+        });
 
         txtarena.setText("Gestion Arena");
+        txtarena.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtarenaActionPerformed(evt);
+            }
+        });
 
         txtchat.setText("Chat");
+        txtchat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtchatActionPerformed(evt);
+            }
+        });
 
         txtsalir.setText("Salir");
         txtsalir.addActionListener(new java.awt.event.ActionListener() {
@@ -73,6 +90,11 @@ public class FrmPantallaPrincipalGestor extends javax.swing.JDialog {
         jLabel2.setText("Aquí tienes todas las opciones que puedes realizar");
 
         txtgestionusuarios.setText("Gestion Usuarios");
+        txtgestionusuarios.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtgestionusuariosActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -153,6 +175,30 @@ public class FrmPantallaPrincipalGestor extends javax.swing.JDialog {
         
     }//GEN-LAST:event_txtlogoutActionPerformed
 
+    private void txtgestionusuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtgestionusuariosActionPerformed
+        // TODO add your handling code here:
+        PanelPrincipalGestor ppg = new PanelPrincipalGestor();
+        ppg.setVisible(true);
+    }//GEN-LAST:event_txtgestionusuariosActionPerformed
+
+    private void txtgestionMedacStarsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtgestionMedacStarsActionPerformed
+        // TODO add your handling code here:
+        ListaMedacStars lms = new ListaMedacStars();
+        lms.setVisible(true);
+    }//GEN-LAST:event_txtgestionMedacStarsActionPerformed
+
+    private void txtarenaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtarenaActionPerformed
+        // TODO add your handling code here:
+        TablaArenas ta = new TablaArenas();
+        ta.setVisible(true);
+    }//GEN-LAST:event_txtarenaActionPerformed
+
+    private void txtchatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtchatActionPerformed
+        // TODO add your handling code here:
+        ChatInterfaz cj = new ChatInterfaz();
+        cj.setVisible(true);
+    }//GEN-LAST:event_txtchatActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -186,7 +232,7 @@ public class FrmPantallaPrincipalGestor extends javax.swing.JDialog {
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                FrmPantallaPrincipalGestor dialog = new FrmPantallaPrincipalGestor(new javax.swing.JFrame(), true);
+                FrmPantallaPrincipalGestor dialog = new FrmPantallaPrincipalGestor();
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {

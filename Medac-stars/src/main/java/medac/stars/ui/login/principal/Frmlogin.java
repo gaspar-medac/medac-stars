@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import medac.stars.controller.ManageData;
 import medac.stars.model.User;
+import medac.stars.ui.usuarios.Usuario;
 
 /**
  *
@@ -21,7 +22,7 @@ public class Frmlogin extends javax.swing.JDialog {
     /**
      * Creates new form frmlogin
      */
-    public static Frmregistro fr;
+    public static Usuario fr;
 
     public Frmlogin(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
@@ -174,8 +175,9 @@ public class Frmlogin extends javax.swing.JDialog {
 
     private void txtregistrarseActionPerformed(java.awt.event.ActionEvent evt) {                                               
         // boton registro
-        fr = new Frmregistro(null, true);
+        fr = new Usuario(null);
         fr.setVisible(true);
+        this.dispose();
     }                                              
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
@@ -261,7 +263,7 @@ public class Frmlogin extends javax.swing.JDialog {
         frmUsuario.setVisible(true);
     } else if (nombreUsuario.equals("Gestor1") && passwordIngresada.equals("1")) {
         // Abrir la ventana FrmPantallaPrincipalGestor
-        FrmPantallaPrincipalGestor frmGestor = new FrmPantallaPrincipalGestor(null, true);
+        FrmPantallaPrincipalGestor frmGestor = new FrmPantallaPrincipalGestor();
         frmGestor.setVisible(true);
     } else {
         // Si las credenciales no son correctas, mostrar un mensaje de error

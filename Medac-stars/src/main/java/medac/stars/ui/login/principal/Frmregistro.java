@@ -4,19 +4,14 @@
  */
 package medac.stars.ui.login.principal;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import javax.swing.JButton;
 import javax.swing.JOptionPane;
-import medac.stars.ui.*;
-import static medac.stars.ui.login.principal.Frminicio.fr;
 
 /**
  *
  * @author adggu
  */
 
-
+@Deprecated
 public class Frmregistro extends javax.swing.JDialog {
 public static Frmlogin fr;
  

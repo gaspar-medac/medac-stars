@@ -115,16 +115,25 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Gestion Medac Stars"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtgestionMedacStarsActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="txtarena">
           <Properties>
             <Property name="text" type="java.lang.String" value="Gestion Arena"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtarenaActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="txtchat">
           <Properties>
             <Property name="text" type="java.lang.String" value="Chat"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtchatActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="txtsalir">
           <Properties>
@@ -162,6 +171,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Gestion Usuarios"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtgestionusuariosActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

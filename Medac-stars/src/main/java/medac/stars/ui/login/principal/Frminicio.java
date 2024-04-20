@@ -4,20 +4,17 @@
  */
 package medac.stars.ui.login.principal;
 
-import static medac.stars.ui.login.principal.Frmlogin.fr;
-
 /**
  *
  * @author adggu
  */
-public class Frminicio extends javax.swing.JDialog {
+public class Frminicio extends javax.swing.JFrame {
 
     /**
      * Creates new form Frminicio
      */
     public static Frmlogin fr;
     public Frminicio(java.awt.Frame parent, boolean modal) {
-        super(parent, modal);
         initComponents();
         setLocationRelativeTo(null);
     }
@@ -92,6 +89,7 @@ public class Frminicio extends javax.swing.JDialog {
     private void txtloginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtloginActionPerformed
         fr=new Frmlogin(null,true);
         fr.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_txtloginActionPerformed
 
     private void txtsalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtsalirActionPerformed

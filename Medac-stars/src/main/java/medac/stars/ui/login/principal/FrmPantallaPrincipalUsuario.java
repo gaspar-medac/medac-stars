@@ -4,22 +4,27 @@
  */
 package medac.stars.ui.login.principal;
 
+import medac.stars.model.MedacStar;
+import medac.stars.ui.GameHistory;
+import medac.stars.ui.StartGame;
+import medac.stars.ui.chat.ChatInterfaz;
+import medac.stars.ui.chat.ChatJugadores;
 import static medac.stars.ui.login.principal.Frmlogin.fr;
+import medac.stars.ui.medacstar.GestionMedacStars;
+import medac.stars.ui.medacstar.MenuInicialGestionMedacStars;
 
 /**
  *
  * @author adggu
  */
-public class FrmPantallaPrincipalUsuario extends javax.swing.JDialog {
+public class FrmPantallaPrincipalUsuario extends javax.swing.JFrame {
 
     /**
      * Creates new form FrmPantallaPrincipal
      */
-    
     public FrmPantallaPrincipalUsuario(java.awt.Frame parent, boolean modal) {
-        super(parent, modal);
         initComponents();
-        
+
     }
 
     /**
@@ -46,6 +51,11 @@ public class FrmPantallaPrincipalUsuario extends javax.swing.JDialog {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
         txtverMedacStars.setText("Ver Medac Stars");
+        txtverMedacStars.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtverMedacStarsActionPerformed(evt);
+            }
+        });
 
         txtjugar.setText("Jugar");
         txtjugar.addActionListener(new java.awt.event.ActionListener() {
@@ -55,6 +65,11 @@ public class FrmPantallaPrincipalUsuario extends javax.swing.JDialog {
         });
 
         txtchat.setText("Chat");
+        txtchat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtchatActionPerformed(evt);
+            }
+        });
 
         txtsalir.setText("Salir");
         txtsalir.addActionListener(new java.awt.event.ActionListener() {
@@ -147,12 +162,26 @@ public class FrmPantallaPrincipalUsuario extends javax.swing.JDialog {
 
     private void txtlogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtlogoutActionPerformed
         // boton de logout
-        
+
     }//GEN-LAST:event_txtlogoutActionPerformed
 
     private void txtjugarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtjugarActionPerformed
         // TODO add your handling code here:
+        GameHistory gh = new GameHistory();
+        gh.setVisible(true);
     }//GEN-LAST:event_txtjugarActionPerformed
+
+    private void txtchatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtchatActionPerformed
+        // TODO add your handling code here:
+        ChatInterfaz cj = new ChatInterfaz();
+        cj.setVisible(true);
+    }//GEN-LAST:event_txtchatActionPerformed
+
+    private void txtverMedacStarsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtverMedacStarsActionPerformed
+        // TODO add your handling code here:
+        MenuInicialGestionMedacStars mgs = new MenuInicialGestionMedacStars();
+        mgs.setVisible(true);
+    }//GEN-LAST:event_txtverMedacStarsActionPerformed
 
     /**
      * @param args the command line arguments
