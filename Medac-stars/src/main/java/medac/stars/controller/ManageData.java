@@ -1,5 +1,6 @@
 package medac.stars.controller;
 
+import java.awt.List;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -13,8 +14,8 @@ import medac.stars.model.User;
 
 /**
  *
- 
-@author gaspar*/
+ * @author gaspar
+ */
 public class ManageData {
 
     public static ArrayList<User> userSet = new ArrayList<User>();
@@ -98,4 +99,10 @@ public class ManageData {
 
     }
 
+    static {
+        medacStarSet.add(new MedacStar("Julio", 1, 2, "prueba1", ""));
+        medacStarSet.add(new MedacStar("Alberta", 10, 5, "prueba2", ""));
+        medacStarSet.add(new MedacStar("Ortencia", 7, 10, "prueba3", ""));
+        medacStarSet.add(new MedacStar("Pechugas Laru", 100, 10, "prueba4", ""));
+    }
 }
