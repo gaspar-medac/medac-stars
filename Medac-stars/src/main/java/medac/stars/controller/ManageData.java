@@ -12,12 +12,12 @@ import medac.stars.model.User;
 
 /**
  *
- * @author gaspar
- */
+ 
+@author gaspar*/
 public class ManageData {
 
-    public static Set<User> userSet = new HashSet<User>();
-    public static ArrayList<Arena> arenaSet = new ArrayList<Arena>();
+    public static ArrayList<User> userSet = new ArrayList<User>();
+    public static Set<Arena> arenaSet = new HashSet<Arena>();
     public static Set<MedacStar> medacStarSet = new HashSet<MedacStar>();
     public static ArrayList<Game> gameList = new ArrayList<Game>();
     public static HashMap<User, Chat> chatHashMap = new HashMap<User, Chat>();    
@@ -37,5 +37,12 @@ public class ManageData {
         arenaSet.add(new Arena("arena12", false, "bla", null, 10));
 
         
+    }
+
+    static {
+        userSet.add(new User("Usuario1", "1", "", 0));
+        userSet.add(new User("Usuario2", "2", "", 0));
+        userSet.add(new User("Gestor1", "1", "", 1));
+        userSet.add(new User("Gestor2", "2", "", 1));
     }
 }
