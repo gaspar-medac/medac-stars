@@ -18,8 +18,8 @@ import medac.stars.model.User;
 public class ManageData {
 
     public static ArrayList<User> userSet = new ArrayList<User>();
-    public static Set<Arena> arenaSet = new HashSet<Arena>();
-    public static Set<MedacStar> medacStarSet = new HashSet<MedacStar>();
+    public static ArrayList<Arena> arenaSet = new ArrayList<Arena>();
+    public static ArrayList<MedacStar> medacStarSet = new ArrayList<MedacStar>();
     public static ArrayList<Game> gameList = new ArrayList<Game>();
     static {
         arenaSet.add(new Arena("arena1", false, "bla", null, 10));
