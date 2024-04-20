@@ -105,4 +105,11 @@ public class ManageData {
         medacStarSet.add(new MedacStar("Ortencia", 7, 10, "prueba3", ""));
         medacStarSet.add(new MedacStar("Pechugas Laru", 100, 10, "prueba4", ""));
     }
+
+    static {
+        userSet.add(new User("nombre", "1", "nombre@gmail.com", 0));
+        userSet.add(new User("Carlos", "1", "carlos@gmail.com", 0));
+        userSet.add(new User("Cristian", "1", "cristian@gmail.com", 0));
+        userSet.add(new User("Cristian2", "1", "cristian2@gmail.com", 0));
+    }
 }
