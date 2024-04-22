@@ -23,6 +23,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
-        <exec.mainClass>medac.stars.ui.login.principal.Frminicio</exec.mainClass>
+        <exec.mainClass>medac.stars.ui.login.Frminicio</exec.mainClass>
     </properties>
 </project>

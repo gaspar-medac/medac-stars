@@ -1,4 +1,4 @@
-package medac.stars.ui;
+package medac.stars.ui.play;
 
 import medac.stars.controller.ManageData;
 import medac.stars.utils.FontBuilder;

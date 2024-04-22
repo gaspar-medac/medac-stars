@@ -8,7 +8,7 @@ import javax.swing.JCheckBox;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import static medac.stars.controller.ManageData.medacStarSet;
-import medac.stars.ui.login.principal.FrmPantallaPrincipalGestor;
+import medac.stars.ui.login.FrmPantallaPrincipalGestor;
 
 /**
  *

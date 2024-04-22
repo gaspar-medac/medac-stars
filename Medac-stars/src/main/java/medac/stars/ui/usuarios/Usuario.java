@@ -7,8 +7,8 @@ package medac.stars.ui.usuarios;
 import javax.swing.JOptionPane;
 import medac.stars.controller.ManageData;
 import medac.stars.model.User;
-import medac.stars.ui.login.principal.FrmPantallaPrincipalGestor;
-import medac.stars.ui.login.principal.FrmPantallaPrincipalUsuario;
+import medac.stars.ui.login.FrmPantallaPrincipalGestor;
+import medac.stars.ui.login.FrmPantallaPrincipalUsuario;
 import medac.stars.ui.usuarios.PanelPrincipalGestor.PanelPrincipalGestor;
 
 /**
@@ -231,7 +231,7 @@ public class Usuario extends javax.swing.JFrame {
                         FrmPantallaPrincipalGestor fpg = new FrmPantallaPrincipalGestor();
                         fpg.setVisible(true);
                     } else {
-                        FrmPantallaPrincipalUsuario fpu = new FrmPantallaPrincipalUsuario(null, true);
+                        FrmPantallaPrincipalUsuario fpu = new FrmPantallaPrincipalUsuario();
                         fpu.setVisible(true);
                     }
                     this.dispose();

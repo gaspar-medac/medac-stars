@@ -9,7 +9,7 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import medac.stars.controller.ManageData;
 import medac.stars.model.Arena;
-import medac.stars.ui.login.principal.FrmPantallaPrincipalGestor;
+import medac.stars.ui.login.FrmPantallaPrincipalGestor;
 
 /**
  *

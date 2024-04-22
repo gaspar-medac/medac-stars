@@ -2,15 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JDialog.java to edit this template
  */
-package medac.stars.ui.login.principal;
+package medac.stars.ui.login;
 
-import medac.stars.model.MedacStar;
-import medac.stars.ui.GameHistory;
-import medac.stars.ui.StartGame;
+import medac.stars.ui.play.GameHistory;
 import medac.stars.ui.chat.ChatInterfaz;
-import medac.stars.ui.chat.ChatJugadores;
-import static medac.stars.ui.login.principal.Frmlogin.fr;
-import medac.stars.ui.medacstar.GestionMedacStars;
 import medac.stars.ui.medacstar.MenuInicialGestionMedacStars;
 
 /**
@@ -22,7 +17,7 @@ public class FrmPantallaPrincipalUsuario extends javax.swing.JFrame {
     /**
      * Creates new form FrmPantallaPrincipal
      */
-    public FrmPantallaPrincipalUsuario(java.awt.Frame parent, boolean modal) {
+    public FrmPantallaPrincipalUsuario() {
         initComponents();
 
     }
@@ -214,7 +209,7 @@ public class FrmPantallaPrincipalUsuario extends javax.swing.JFrame {
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                FrmPantallaPrincipalUsuario dialog = new FrmPantallaPrincipalUsuario(new javax.swing.JFrame(), true);
+                FrmPantallaPrincipalUsuario dialog = new FrmPantallaPrincipalUsuario();
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {

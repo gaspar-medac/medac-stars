@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JDialog.java to edit this template
  */
-package medac.stars.ui.login.principal;
+package medac.stars.ui.login;
 
 import medac.stars.ui.arena.TablaArenas;
 import medac.stars.ui.chat.ChatInterfaz;

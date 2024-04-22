@@ -1,16 +1,15 @@
-package medac.stars.ui;
+package medac.stars.ui.play;
 
 import medac.stars.controller.ManageData;
 import medac.stars.model.Game;
 import medac.stars.model.Team;
+import medac.stars.ui.login.FrmPantallaPrincipalUsuario;
 import medac.stars.utils.FontBuilder;
 
 import javax.swing.*;
 import javax.swing.plaf.basic.BasicScrollBarUI;
 import javax.swing.table.DefaultTableCellRenderer;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -61,7 +60,8 @@ public class GameHistory extends JFrame {
         });
 
         returnMainMenuButton.addActionListener(e -> {
-            System.out.println("Return to main menu");
+            FrmPantallaPrincipalUsuario usuario = new FrmPantallaPrincipalUsuario();
+            usuario.setVisible(true);
         });
     }
 
