@@ -4,6 +4,7 @@
  */
 package medac.stars.ui.login;
 
+import medac.stars.ui.medacstar.ListaMedacStars;
 import medac.stars.ui.play.GameHistory;
 import medac.stars.ui.chat.ChatInterfaz;
 import medac.stars.ui.medacstar.MenuInicialGestionMedacStars;
@@ -174,7 +175,7 @@ public class FrmPantallaPrincipalUsuario extends javax.swing.JFrame {
 
     private void txtverMedacStarsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtverMedacStarsActionPerformed
         // TODO add your handling code here:
-        MenuInicialGestionMedacStars mgs = new MenuInicialGestionMedacStars();
+        ListaMedacStars mgs = new ListaMedacStars();
         mgs.setVisible(true);
     }//GEN-LAST:event_txtverMedacStarsActionPerformed
 
