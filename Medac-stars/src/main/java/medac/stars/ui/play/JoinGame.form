@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="medac.stars.ui.play.JoinGame">
+  <grid id="27dc6" binding="JoinGamePanel" custom-create="true" layout-manager="GridLayoutManager" row-count="1" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="1441" height="400"/>
+    </constraints>
+    <properties>
+      <opaque value="true"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <grid id="ada78" binding="JPanel1" layout-manager="GridLayoutManager" row-count="3" column-count="7" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <opaque value="false"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="97143" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="7" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="2" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <foreground color="-1"/>
+              <text value="Equipo 1"/>
+            </properties>
+          </component>
+          <component id="1da0f" class="javax.swing.JLabel" binding="player1Label">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="10" fill="0" indent="2" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <foreground color="-1"/>
+              <text value="Jugador 1"/>
+            </properties>
+          </component>
+          <component id="f32ba" class="javax.swing.JLabel" binding="slot1Label" custom-create="true">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="2" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="86f15" class="javax.swing.JButton" binding="joinButton2">
+            <constraints>
+              <grid row="1" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="10" fill="0" indent="3" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-16777216"/>
+              <borderPainted value="false"/>
+              <contentAreaFilled value="true"/>
+              <defaultCapable value="true"/>
+              <focusPainted value="false"/>
+              <focusable value="false"/>
+              <foreground color="-1"/>
+              <requestFocusEnabled value="false"/>
+              <rolloverEnabled value="false"/>
+              <text value="Unirse"/>
+              <verifyInputWhenFocusTarget value="false"/>
+            </properties>
+          </component>
+          <component id="25921" class="javax.swing.JLabel" binding="slot2Label" custom-create="true">
+            <constraints>
+              <grid row="2" column="4" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="1" fill="0" indent="2" use-parent-layout="false">
+                <preferred-size width="145" height="17"/>
+              </grid>
+            </constraints>
+            <properties>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="a7d4d" class="javax.swing.JComboBox" binding="comboBox2">
+            <constraints>
+              <grid row="1" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="10" fill="0" indent="1" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-16383998"/>
+              <editable value="false"/>
+              <foreground color="-1378818"/>
+            </properties>
+          </component>
+          <component id="a0e52" class="javax.swing.JButton" binding="joinButton">
+            <constraints>
+              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="2" fill="1" indent="2" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-16777216"/>
+              <borderPainted value="false"/>
+              <focusPainted value="false"/>
+              <focusable value="false"/>
+              <foreground color="-1"/>
+              <text value="Unirse"/>
+            </properties>
+          </component>
+          <component id="4070" class="javax.swing.JComboBox" binding="comboBox1">
+            <constraints>
+              <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="2" fill="0" indent="1" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-16777216"/>
+              <foreground color="-1"/>
+            </properties>
+          </component>
+          <component id="8e2ba" class="javax.swing.JLabel" binding="player2Label">
+            <constraints>
+              <grid row="1" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="10" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <alignmentX value="0.0"/>
+              <alignmentY value="0.5"/>
+              <background color="-1"/>
+              <foreground color="-1"/>
+              <text value="Jugador 2"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="9eb63" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <opaque value="false"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="ed0a0" class="javax.swing.JButton" binding="cancelButton">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="1" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-16777216"/>
+              <borderPainted value="false"/>
+              <focusPainted value="false"/>
+              <focusable value="false"/>
+              <foreground color="-1"/>
+              <requestFocusEnabled value="false"/>
+              <rolloverEnabled value="false"/>
+              <text value="CANCELAR"/>
+              <verifyInputWhenFocusTarget value="false"/>
+            </properties>
+          </component>
+          <component id="c0269" class="javax.swing.JLabel" binding="arenaNameLabel" custom-create="true">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="2" fill="0" indent="1" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="6a5f9" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="1" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <foreground color="-1"/>
+              <text value="Nombre Arena"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="42ee5" layout-manager="GridLayoutManager" row-count="3" column-count="6" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <opaque value="false"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="7bca1" class="javax.swing.JLabel" binding="slot3Label" custom-create="true">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="7" use-parent-layout="false">
+                <preferred-size width="87" height="17"/>
+              </grid>
+            </constraints>
+            <properties>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="e5f85" class="javax.swing.JLabel" binding="slot4Label" custom-create="true">
+            <constraints>
+              <grid row="2" column="3" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="3d024" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="3" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <foreground color="-1"/>
+              <text value="Equipo 2"/>
+            </properties>
+          </component>
+          <component id="5048b" class="javax.swing.JButton" binding="joinButton3">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="2" fill="0" indent="7" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-16777216"/>
+              <borderPainted value="false"/>
+              <focusPainted value="false"/>
+              <focusable value="false"/>
+              <foreground color="-1"/>
+              <requestFocusEnabled value="false"/>
+              <rolloverEnabled value="false"/>
+              <text value="Unirse"/>
+              <verifyInputWhenFocusTarget value="false"/>
+            </properties>
+          </component>
+          <component id="7cd21" class="javax.swing.JLabel" binding="player3Label">
+            <constraints>
+              <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="10" fill="0" indent="5" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <foreground color="-1"/>
+              <text value="Jugador 3"/>
+            </properties>
+          </component>
+          <component id="26987" class="javax.swing.JComboBox" binding="comboBox3" default-binding="true">
+            <constraints>
+              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="6" fill="0" indent="3" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-16777216"/>
+              <foreground color="-1"/>
+            </properties>
+          </component>
+          <component id="ac237" class="javax.swing.JButton" binding="joinButton4">
+            <constraints>
+              <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="2" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-16777216"/>
+              <borderPainted value="false"/>
+              <focusPainted value="false"/>
+              <focusable value="false"/>
+              <foreground color="-1"/>
+              <requestFocusEnabled value="false"/>
+              <rolloverEnabled value="false"/>
+              <text value="Unirse"/>
+              <verifyInputWhenFocusTarget value="false"/>
+            </properties>
+          </component>
+          <component id="49ce" class="javax.swing.JComboBox" binding="comboBox4" default-binding="true">
+            <constraints>
+              <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="2" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-16777216"/>
+              <foreground color="-1"/>
+            </properties>
+          </component>
+          <component id="95cfc" class="javax.swing.JLabel" binding="player4Label">
+            <constraints>
+              <grid row="1" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="10" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <foreground color="-1"/>
+              <text value="Jugador 4"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="1f62e" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="1" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children/>
+      </grid>
+    </children>
+  </grid>
+</form>

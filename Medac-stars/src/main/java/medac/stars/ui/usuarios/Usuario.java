@@ -7,8 +7,9 @@ package medac.stars.ui.usuarios;
 import javax.swing.JOptionPane;
 import medac.stars.controller.ManageData;
 import medac.stars.model.User;
+import medac.stars.ui.login.FrmPantallaPrincipalGestor;
+import medac.stars.ui.login.FrmPantallaPrincipalUsuario;
 import medac.stars.ui.usuarios.PanelPrincipalGestor.PanelPrincipalGestor;
-import medac.stars.ui.usuarios.tablaGestionUsuarios.TablaGestionUsuarios;
 
 /**
  *
@@ -225,6 +226,14 @@ public class Usuario extends javax.swing.JFrame {
                     User user = new User(nombreUsuario, contraseña, email, tipoUsuario);
                     ManageData.userSet.add(user);
                     JOptionPane.showMessageDialog(this, "Usuario guardado exitosamente.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+                    
+                    if(user.getType()==0 ) {
+                        FrmPantallaPrincipalGestor fpg = new FrmPantallaPrincipalGestor();
+                        fpg.setVisible(true);
+                    } else {
+                        FrmPantallaPrincipalUsuario fpu = new FrmPantallaPrincipalUsuario();
+                        fpu.setVisible(true);
+                    }
                     this.dispose();
                 }
             }

@@ -9,6 +9,7 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import medac.stars.controller.ManageData;
 import medac.stars.model.Arena;
+import medac.stars.ui.login.FrmPantallaPrincipalGestor;
 
 /**
  *
@@ -38,7 +39,7 @@ public class TablaArenas extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         tablaArena = new javax.swing.JTable();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         addArenaButton.setBackground(new java.awt.Color(0, 0, 0));
         addArenaButton.setFont(new java.awt.Font("Comic Sans MS", 0, 24)); // NOI18N
@@ -144,8 +145,8 @@ public class TablaArenas extends javax.swing.JFrame {
      */
     private void backMainMenuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backMainMenuButtonActionPerformed
         this.dispose();
-        MenuArena menuArena = new MenuArena();
-        menuArena.setVisible(true);
+        FrmPantallaPrincipalGestor fppg = new FrmPantallaPrincipalGestor();
+        fppg.setVisible(true);
     }//GEN-LAST:event_backMainMenuButtonActionPerformed
 
     /**

@@ -4,10 +4,7 @@
  */
 package medac.stars.ui.medacstar;
 
-/**
- *
- * @author samue
- */
+@Deprecated
 public class MenuInicialGestionMedacStars extends javax.swing.JFrame {
 
     /**

@@ -10,6 +10,7 @@ import javax.swing.JOptionPane;
  *
  * @author asier
  */
+@Deprecated
 public class MenuArena extends javax.swing.JFrame {
 
     /**
