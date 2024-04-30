@@ -1,13 +1,6 @@
-
-
-/**
- *
- * @author Monkeyelgrande
- */
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
-import javax.swing.border.*;
 import javax.swing.event.*;
 import javax.swing.text.*;
 
@@ -21,9 +14,6 @@ import javax.swing.text.*;
  * class construction.
  */
 public class TextPrompt extends JLabel implements FocusListener, DocumentListener {
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 
 	public enum Show {
@@ -32,110 +22,83 @@ public class TextPrompt extends JLabel implements FocusListener, DocumentListene
 
 	private JTextComponent component;
 	private Document document;
-
 	private Show show;
 	private boolean showPromptOnce;
 	private int focusLost;
 
+	/**
+	 * Constructor with default show setting.
+	 *
+	 * @param text      the text to display as a prompt
+	 * @param component the JTextComponent to hold the prompt
+	 */
 	public TextPrompt(String text, JTextComponent component) {
 		this(text, component, Show.ALWAYS);
 	}
 
+	/**
+	 * Constructor with custom show setting.
+	 *
+	 * @param text      the text to display as a prompt
+	 * @param component the JTextComponent to hold the prompt
+	 * @param show      when to show the prompt
+	 */
 	public TextPrompt(String text, JTextComponent component, Show show) {
 		this.component = component;
-		setShow(show);
+		this.show = show;
 		document = component.getDocument();
 
 		setText(text);
 		setFont(component.getFont());
-                
-//		setForeground(component.getForeground());
 		setForeground(Color.gray);
-//		setBorder(new EmptyBorder(component.getInsets()));
 		setHorizontalAlignment(JLabel.LEADING);
 
-		component.addFocusListener(this);
-		document.addDocumentListener(this);
-
-		component.setLayout(new BorderLayout());
-		component.add(this);
+		// Add this label as a listener to the component and document.
+		addListeners();
+		// Configure the component to hold the prompt label.
+		configureComponent();
+		// Initial check to determine the prompt visibility.
 		checkForPrompt();
 	}
 
 	/**
-	 * Convenience method to change the alpha value of the current foreground
-	 * Color to the specifice value.
-	 *
-	 * @param alpha
-	 *            value in the range of 0 - 1.0.
+	 * Adds this object as both FocusListener and DocumentListener to the
+	 * component and its document.
 	 */
-	public void changeAlpha(float alpha) {
-		changeAlpha((int) (alpha * 255));
+	private void addListeners() {
+		component.addFocusListener(this);
+		document.addDocumentListener(this);
 	}
 
 	/**
-	 * Convenience method to change the alpha value of the current foreground
-	 * Color to the specifice value.
-	 *
-	 * @param alpha
-	 *            value in the range of 0 - 255.
+	 * Configures the layout and adds the prompt label to the component.
 	 */
-	
+	private void configureComponent() {
+		component.setLayout(new BorderLayout());
+		component.add(this);
+	}
 
 	/**
-	 * Convenience method to change the style of the current Font. The style
-	 * values are found in the Font class. Common values might be: Font.BOLD,
-	 * Font.ITALIC and Font.BOLD + Font.ITALIC.
-	 *
-	 * @param style
-	 *            value representing the the new style of the Font.
+	 * Change the style of the current Font.
+	 * 
+	 * @param style value representing the new style of the Font.
 	 */
 	public void changeStyle(int style) {
 		setFont(getFont().deriveFont(style));
 	}
 
-	/**
-	 * Get the Show property
-	 *
-	 * @return the Show property.
-	 */
 	public Show getShow() {
 		return show;
 	}
 
-	/**
-	 * Set the prompt Show property to control when the promt is shown. Valid
-	 * values are:
-	 *
-	 * Show.AWLAYS (default) - always show the prompt Show.Focus_GAINED - show
-	 * the prompt when the component gains focus (and hide the prompt when focus
-	 * is lost) Show.Focus_LOST - show the prompt when the component loses focus
-	 * (and hide the prompt when focus is gained)
-	 *
-	 * @param show
-	 *            a valid Show enum
-	 */
 	public void setShow(Show show) {
 		this.show = show;
 	}
 
-	/**
-	 * Get the showPromptOnce property
-	 *
-	 * @return the showPromptOnce property.
-	 */
 	public boolean getShowPromptOnce() {
 		return showPromptOnce;
 	}
 
-	/**
-	 * Show the prompt once. Once the component has gained/lost focus once, the
-	 * prompt will not be shown again.
-	 *
-	 * @param showPromptOnce
-	 *            when true the prompt will only be shown once, otherwise it
-	 *            will be shown repeatedly.
-	 */
 	public void setShowPromptOnce(boolean showPromptOnce) {
 		this.showPromptOnce = showPromptOnce;
 	}
@@ -145,38 +108,15 @@ public class TextPrompt extends JLabel implements FocusListener, DocumentListene
 	 * change on updates to the Document and on focus changes.
 	 */
 	private void checkForPrompt() {
-		// Text has been entered, remove the prompt
+		boolean hasText = document.getLength() > 0;
+		boolean shouldShow = show == Show.ALWAYS ||
+				(show == Show.FOCUS_GAINED && component.hasFocus()) ||
+				(show == Show.FOCUS_LOST && !component.hasFocus());
 
-		if (document.getLength() > 0) {
-			setVisible(false);
-			return;
-		}
-
-		// Prompt has already been shown once, remove it
-
-		if (showPromptOnce && focusLost > 0) {
-			setVisible(false);
-			return;
-		}
-
-		// Check the Show property and component focus to determine if the
-		// prompt should be displayed.
-
-		if (component.hasFocus()) {
-			if (show == Show.ALWAYS || show == Show.FOCUS_GAINED)
-				setVisible(true);
-			else
-				setVisible(false);
-		} else {
-			if (show == Show.ALWAYS || show == Show.FOCUS_LOST)
-				setVisible(true);
-			else
-				setVisible(false);
-		}
+		setVisible(!hasText && (!showPromptOnce || focusLost == 0) && shouldShow);
 	}
 
 	// Implement FocusListener
-
 	public void focusGained(FocusEvent e) {
 		checkForPrompt();
 	}
@@ -187,7 +127,6 @@ public class TextPrompt extends JLabel implements FocusListener, DocumentListene
 	}
 
 	// Implement DocumentListener
-
 	public void insertUpdate(DocumentEvent e) {
 		checkForPrompt();
 	}
@@ -197,5 +136,6 @@ public class TextPrompt extends JLabel implements FocusListener, DocumentListene
 	}
 
 	public void changedUpdate(DocumentEvent e) {
+		// Update not needed on attribute change
 	}
 }

@@ -8,6 +8,7 @@ import javax.swing.JCheckBox;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import static medac.stars.controller.ManageData.medacStarSet;
+import medac.stars.ui.login.FrmPantallaPrincipalGestor;
 
 /**
  *
@@ -119,16 +120,15 @@ public class ListaMedacStars extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbMenuPrincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbMenuPrincipalActionPerformed
-        // TODO add your handling code here:
-        MenuInicialGestionMedacStars newframe = new MenuInicialGestionMedacStars();
-        
+
+        FrmPantallaPrincipalGestor newframe = new FrmPantallaPrincipalGestor();
         newframe.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jbMenuPrincipalActionPerformed
 
     private void jbAñadirMedacStarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAñadirMedacStarActionPerformed
         // TODO add your handling code here:
-        GestiónMedacStars newframe = new GestiónMedacStars(null);
+        GestionMedacStars newframe = new GestionMedacStars(null);
         
         newframe.setVisible(true);
          

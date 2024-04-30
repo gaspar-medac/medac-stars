@@ -58,7 +58,7 @@ public class AddArena extends javax.swing.JFrame {
         jlimagenArena = new javax.swing.JLabel();
         jSpinner1 = new javax.swing.JSpinner();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         bCancelar.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
         bCancelar.setText("Cancelar");

@@ -19,20 +19,15 @@ import medac.stars.model.MedacStar;
  *
  * @author samue
  */
-public class EditarMedacStars extends javax.swing.JFrame {
+public class GestionMedacStars extends javax.swing.JFrame {
 
     /**
      * Creates new form GestiónMedacStars
      */
-    public EditarMedacStars(MedacStar medacStar) {
+    public GestionMedacStars(MedacStar medacStar) {
         initComponents();
         for(MedacStar elemento: medacStarSet) {
             System.out.println(elemento.getName());
-        }
-        
-        if(medacStar!=null) {
-            tfName.setText(medacStar.getName());
-            tfStrength.setText(medacStar.getName());
         }
     }
 
@@ -370,13 +365,13 @@ public class EditarMedacStars extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(EditarMedacStars.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GestionMedacStars.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(EditarMedacStars.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GestionMedacStars.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(EditarMedacStars.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GestionMedacStars.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(EditarMedacStars.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GestionMedacStars.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
@@ -386,7 +381,7 @@ public class EditarMedacStars extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new EditarMedacStars(null).setVisible(true);
+                new GestionMedacStars(null).setVisible(true);
             }
         });
 
