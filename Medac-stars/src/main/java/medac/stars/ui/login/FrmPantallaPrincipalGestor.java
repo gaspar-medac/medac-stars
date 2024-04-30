@@ -171,7 +171,8 @@ public class FrmPantallaPrincipalGestor extends javax.swing.JFrame {
     }//GEN-LAST:event_txtsalirActionPerformed
 
     private void txtlogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtlogoutActionPerformed
-        // boton de logout
+        new Frminicio(new javax.swing.JFrame(), true).setVisible(true);
+        this.dispose();
         
     }//GEN-LAST:event_txtlogoutActionPerformed
 

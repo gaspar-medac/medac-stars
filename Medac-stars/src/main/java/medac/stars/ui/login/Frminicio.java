@@ -137,7 +137,7 @@ public class Frminicio extends javax.swing.JFrame {
             }
         });
     }
-
+    private Frminicio FrmPantallaPrincipalGestor;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton txtlogin;
