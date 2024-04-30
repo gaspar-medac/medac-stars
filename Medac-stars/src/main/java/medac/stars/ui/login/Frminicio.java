@@ -29,25 +29,25 @@ public class Frminicio extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        txtlogin = new javax.swing.JButton();
-        txtsalir = new javax.swing.JButton();
+        buttonLogin = new javax.swing.JButton();
+        buttonSalir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("INICIO");
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        txtlogin.setText("Login");
-        txtlogin.addActionListener(new java.awt.event.ActionListener() {
+        buttonLogin.setText("Login");
+        buttonLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtloginActionPerformed(evt);
+                buttonLoginActionPerformed(evt);
             }
         });
 
-        txtsalir.setText("Salir");
-        txtsalir.addActionListener(new java.awt.event.ActionListener() {
+        buttonSalir.setText("Salir");
+        buttonSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtsalirActionPerformed(evt);
+                buttonSalirActionPerformed(evt);
             }
         });
 
@@ -58,17 +58,17 @@ public class Frminicio extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(165, 165, 165)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtsalir, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtlogin, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(buttonSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buttonLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(178, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(87, 87, 87)
-                .addComponent(txtlogin)
+                .addComponent(buttonLogin)
                 .addGap(67, 67, 67)
-                .addComponent(txtsalir)
+                .addComponent(buttonSalir)
                 .addContainerGap(98, Short.MAX_VALUE))
         );
 
@@ -86,15 +86,15 @@ public class Frminicio extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtloginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtloginActionPerformed
+    private void buttonLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLoginActionPerformed
         fr=new Frmlogin(null,true);
         fr.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_txtloginActionPerformed
+    }//GEN-LAST:event_buttonLoginActionPerformed
 
-    private void txtsalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtsalirActionPerformed
+    private void buttonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSalirActionPerformed
         this.dispose();
-    }//GEN-LAST:event_txtsalirActionPerformed
+    }//GEN-LAST:event_buttonSalirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -139,8 +139,8 @@ public class Frminicio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton buttonLogin;
+    private javax.swing.JButton buttonSalir;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JButton txtlogin;
-    private javax.swing.JButton txtsalir;
     // End of variables declaration//GEN-END:variables
 }
