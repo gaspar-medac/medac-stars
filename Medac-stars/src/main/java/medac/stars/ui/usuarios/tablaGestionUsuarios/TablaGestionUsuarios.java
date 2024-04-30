@@ -7,6 +7,9 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 
+/**
+ * @author Cristian
+ */
 public class TablaGestionUsuarios extends JFrame{
     private JTable usuarios;
     private JPanel mainPanel;
@@ -53,10 +56,9 @@ public class TablaGestionUsuarios extends JFrame{
         miTabla.getColumn("Editar").setCellEditor(new ButtonEditor(new JCheckBox()));
 
 
-
     }
 
-    public static void main(String[] Args){
+    public void main(String[] Args){
         new TablaGestionUsuarios();
     }
 
