@@ -39,10 +39,10 @@ public static Frmlogin fr;
         jPanel2 = new javax.swing.JPanel();
         txtapellido = new javax.swing.JTextField();
         txtemail = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
+        textFieldNombre = new javax.swing.JTextField();
         jPasswordField1 = new javax.swing.JPasswordField();
         combo = new javax.swing.JComboBox<>();
-        jButton1 = new javax.swing.JButton();
+        botonRegistro = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("REGISTRAR USUARIO");
@@ -56,7 +56,7 @@ public static Frmlogin fr;
 
         txtemail.setBorder(javax.swing.BorderFactory.createTitledBorder("Email"));
 
-        jTextField3.setBorder(javax.swing.BorderFactory.createTitledBorder("Nombre"));
+        textFieldNombre.setBorder(javax.swing.BorderFactory.createTitledBorder("Nombre"));
 
         jPasswordField1.setBorder(javax.swing.BorderFactory.createTitledBorder("Password"));
 
@@ -68,10 +68,10 @@ public static Frmlogin fr;
             }
         });
 
-        jButton1.setText("REGISTRAR USUARIO");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        botonRegistro.setText("REGISTRAR USUARIO");
+        botonRegistro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                botonRegistroActionPerformed(evt);
             }
         });
 
@@ -83,7 +83,7 @@ public static Frmlogin fr;
                 .addGap(12, 12, 12)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(textFieldNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(txtapellido, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
@@ -94,7 +94,7 @@ public static Frmlogin fr;
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jPasswordField1)
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jButton1)
+                                .addComponent(botonRegistro)
                                 .addGap(0, 0, Short.MAX_VALUE)))))
                 .addContainerGap(12, Short.MAX_VALUE))
         );
@@ -103,7 +103,7 @@ public static Frmlogin fr;
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(29, 29, 29)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtapellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -111,8 +111,8 @@ public static Frmlogin fr;
                     .addComponent(jPasswordField1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(combo, javax.swing.GroupLayout.DEFAULT_SIZE, 44, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(combo, javax.swing.GroupLayout.PREFERRED_SIZE, 44, Short.MAX_VALUE)
+                    .addComponent(botonRegistro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(92, Short.MAX_VALUE))
         );
 
@@ -147,8 +147,8 @@ public static Frmlogin fr;
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-  String nombre = jTextField3.getText().trim();
+    private void botonRegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonRegistroActionPerformed
+  String nombre = textFieldNombre.getText().trim();
     String apellido = txtapellido.getText().trim();
     String email = txtemail.getText().trim();
     String password = new String(jPasswordField1.getPassword()).trim();
@@ -169,7 +169,7 @@ public static Frmlogin fr;
                 break;
         }
         JOptionPane.showMessageDialog(this, mensaje, "Acceso", JOptionPane.INFORMATION_MESSAGE);
-    }        fr.setVisible(true);    }//GEN-LAST:event_jButton1ActionPerformed
+    }        fr.setVisible(true);    }//GEN-LAST:event_botonRegistroActionPerformed
 
     private void comboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboActionPerformed
         // TODO add your handling code here:
@@ -219,12 +219,12 @@ public static Frmlogin fr;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botonRegistro;
     private javax.swing.JComboBox<String> combo;
-    private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField textFieldNombre;
     private javax.swing.JTextField txtapellido;
     private javax.swing.JTextField txtemail;
     // End of variables declaration//GEN-END:variables
