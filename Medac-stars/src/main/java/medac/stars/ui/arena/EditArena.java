@@ -223,7 +223,7 @@ public class EditArena extends javax.swing.JFrame {
         fileChooser.setSelectedFile(new File(""));
 
         int resultado = fileChooser.showOpenDialog(this);
-        if (resultado == JFileChooser.APPROVE_OPTION) return;
+        if (resultado != JFileChooser.APPROVE_OPTION) return;
 
         String ruta = fileChooser.getSelectedFile().getAbsolutePath();
         loadAndSetImage(ruta);
