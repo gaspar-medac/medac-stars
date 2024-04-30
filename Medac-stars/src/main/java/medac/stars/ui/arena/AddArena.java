@@ -47,7 +47,7 @@ public class AddArena extends javax.swing.JFrame {
 
         bCancelar = new javax.swing.JButton();
         bAnyadirImagen = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        lNombre = new javax.swing.JLabel();
         tfNuevoNombre = new javax.swing.JTextField();
         cbCuentaAtras = new javax.swing.JCheckBox();
         jLabel2 = new javax.swing.JLabel();
@@ -76,8 +76,8 @@ public class AddArena extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
-        jLabel1.setText("Nombre");
+        lNombre.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        lNombre.setText("Nombre");
 
         tfNuevoNombre.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
         tfNuevoNombre.addActionListener(new java.awt.event.ActionListener() {
@@ -136,7 +136,7 @@ public class AddArena extends javax.swing.JFrame {
                             .addComponent(jlimagenArena, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(74, 74, 74)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
+                            .addComponent(lNombre)
                             .addComponent(jLabel2)
                             .addComponent(jLabel3)
                             .addComponent(tfDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -157,7 +157,7 @@ public class AddArena extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
+                        .addComponent(lNombre)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(tfNuevoNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
@@ -303,12 +303,12 @@ public class AddArena extends javax.swing.JFrame {
     private javax.swing.JButton bCancelar;
     private javax.swing.JButton bGuardarArena;
     private javax.swing.JCheckBox cbCuentaAtras;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JSpinner jSpinner1;
     private javax.swing.JLabel jlimagenArena;
+    private javax.swing.JLabel lNombre;
     private javax.swing.JTextField tfDescripcion;
     private javax.swing.JTextField tfNuevoNombre;
     // End of variables declaration//GEN-END:variables
