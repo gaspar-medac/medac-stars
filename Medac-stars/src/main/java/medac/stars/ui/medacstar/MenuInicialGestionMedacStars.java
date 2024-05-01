@@ -29,7 +29,7 @@ public class MenuInicialGestionMedacStars extends javax.swing.JFrame {
         jbGestionArena = new javax.swing.JButton();
         jbChat = new javax.swing.JButton();
         jbSalir = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        jLogout = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -89,11 +89,16 @@ public class MenuInicialGestionMedacStars extends javax.swing.JFrame {
             }
         });
 
-        jButton6.setBackground(new java.awt.Color(0, 0, 0));
-        jButton6.setFont(new java.awt.Font("Consolas", 2, 14)); // NOI18N
-        jButton6.setForeground(new java.awt.Color(255, 255, 255));
-        jButton6.setText("Logout\n");
-        jButton6.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLogout.setBackground(new java.awt.Color(0, 0, 0));
+        jLogout.setFont(new java.awt.Font("Consolas", 2, 14)); // NOI18N
+        jLogout.setForeground(new java.awt.Color(255, 255, 255));
+        jLogout.setText("Logout\n");
+        jLogout.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLogout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jLogoutActionPerformed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Consolas", 2, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 0, 51));
@@ -113,7 +118,7 @@ public class MenuInicialGestionMedacStars extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jbSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jbGestionUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -142,7 +147,7 @@ public class MenuInicialGestionMedacStars extends javax.swing.JFrame {
                 .addGap(78, 78, 78)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18))
         );
 
@@ -187,6 +192,10 @@ public class MenuInicialGestionMedacStars extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jbGestionMedacStarsActionPerformed
 
+    private void jLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jLogoutActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLogoutActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -226,8 +235,8 @@ public class MenuInicialGestionMedacStars extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton jLogout;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton jbChat;
     private javax.swing.JButton jbGestionArena;
