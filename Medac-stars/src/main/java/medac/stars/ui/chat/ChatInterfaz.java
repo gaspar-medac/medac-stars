@@ -11,6 +11,7 @@ import java.awt.event.ActionEvent;
 import java.util.ArrayList;
 import javax.swing.Box;
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollBar;
 import javax.swing.JTextField;
@@ -339,14 +340,20 @@ public class ChatInterfaz extends javax.swing.JFrame {
 
     private void bEnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bEnviarActionPerformed
         // TODO add your handling code here:
-
-        System.out.println("Aquí añadimos mensajes");
-        Message message = new Message(tEscribirMensaje.getText(), usu2, usuarioLogeado);
-        messagesAuxiliar.add(message);
-        mostrarMensaje(message);
-        tEscribirMensaje.setText("");
-        tEscribirMensaje.setCaretPosition(tEscribirMensaje.getDocument().getLength());
-        jScrollPane1.revalidate();
+        if (!tEscribirMensaje.getText().isEmpty()){
+            System.out.println("Aquí añadimos mensajes");
+            Message message = new Message(tEscribirMensaje.getText(), usu2, usuarioLogeado);
+            messagesAuxiliar.add(message);
+            mostrarMensaje(message);
+            tEscribirMensaje.setText("");
+            tEscribirMensaje.setCaretPosition(tEscribirMensaje.getDocument().getLength());
+            jScrollPane1.revalidate();
+        }else{
+            // Si no hay texto, mostrar un mensaje de error o realizar alguna acción apropiada
+            System.out.println("No se puede enviar un mensaje vacío.");
+        // Puedes mostrar un mensaje de error al usuario, por ejemplo:
+            JOptionPane.showMessageDialog(null, "No se puede enviar un mensaje vacío.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_bEnviarActionPerformed
 
     private void tEscribirMensajeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tEscribirMensajeActionPerformed
