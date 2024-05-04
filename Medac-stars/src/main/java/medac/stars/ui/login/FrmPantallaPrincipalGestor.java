@@ -40,7 +40,7 @@ public class FrmPantallaPrincipalGestor extends javax.swing.JFrame {
         txtsalir = new javax.swing.JButton();
         txtlogout = new javax.swing.JButton();
         jlMensajeBienvenida = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        jlOpciones = new javax.swing.JLabel();
         txtgestionusuarios = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -86,8 +86,8 @@ public class FrmPantallaPrincipalGestor extends javax.swing.JFrame {
         jlMensajeBienvenida.setForeground(new java.awt.Color(255, 0, 0));
         jlMensajeBienvenida.setText("Bienvenido Euphoria1");
 
-        jLabel2.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel2.setText("Aquí tienes todas las opciones que puedes realizar");
+        jlOpciones.setForeground(new java.awt.Color(255, 0, 0));
+        jlOpciones.setText("Aquí tienes todas las opciones que puedes realizar");
 
         txtgestionusuarios.setText("Gestion Usuarios");
         txtgestionusuarios.addActionListener(new java.awt.event.ActionListener() {
@@ -102,7 +102,7 @@ public class FrmPantallaPrincipalGestor extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(0, 100, Short.MAX_VALUE)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jlOpciones, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(75, 75, 75))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(17, 17, 17)
@@ -136,7 +136,7 @@ public class FrmPantallaPrincipalGestor extends javax.swing.JFrame {
                 .addGap(22, 22, 22)
                 .addComponent(jlMensajeBienvenida)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel2)
+                .addComponent(jlOpciones)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
                 .addComponent(txtgestionusuarios, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12)
@@ -247,7 +247,7 @@ public class FrmPantallaPrincipalGestor extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jlMensajeBienvenida;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jlOpciones;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton txtarena;
     private javax.swing.JButton txtchat;
