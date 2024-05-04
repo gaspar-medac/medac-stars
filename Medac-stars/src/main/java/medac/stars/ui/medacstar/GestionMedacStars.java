@@ -43,7 +43,7 @@ public class GestionMedacStars extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        jlImagen1 = new javax.swing.JLabel();
         jbCargarImagen = new javax.swing.JButton();
         tfUrl = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
@@ -92,8 +92,8 @@ public class GestionMedacStars extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        jLabel1.setBackground(new java.awt.Color(204, 204, 255));
-        jLabel1.setText("Imagen");
+        jlImagen1.setBackground(new java.awt.Color(204, 204, 255));
+        jlImagen1.setText("Imagen");
 
         jbCargarImagen.setBackground(new java.awt.Color(0, 0, 0));
         jbCargarImagen.setForeground(new java.awt.Color(255, 255, 255));
@@ -186,7 +186,7 @@ public class GestionMedacStars extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(6, 6, 6)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 312, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jlImagen1, javax.swing.GroupLayout.PREFERRED_SIZE, 312, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -242,7 +242,7 @@ public class GestionMedacStars extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jlImagen1, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(tfUrl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -391,10 +391,10 @@ public class GestionMedacStars extends javax.swing.JFrame {
         try {
             URL imageUrl = new URL(url);
             Image image = ImageIO.read(imageUrl);
-            Image dimg = image.getScaledInstance(jLabel1.getWidth(), jLabel1.getHeight(), Image.SCALE_SMOOTH);
+            Image dimg = image.getScaledInstance(jlImagen1.getWidth(), jlImagen1.getHeight(), Image.SCALE_SMOOTH);
             ImageIcon icon = new ImageIcon(dimg);
 
-            jLabel1.setIcon(icon);
+            jlImagen1.setIcon(icon);
         } catch (IOException ex) {
             ex.printStackTrace();
         }
@@ -417,7 +417,7 @@ public class GestionMedacStars extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bGuardarMedac;
     private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jlImagen1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
