@@ -1,10 +1,7 @@
 package medac.stars.controller;
 
-import java.awt.List;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Set;
 import medac.stars.model.Arena;
 import medac.stars.model.Chat;
 import medac.stars.model.Game;
