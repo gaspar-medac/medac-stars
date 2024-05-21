@@ -45,7 +45,7 @@
                           <Component id="tfDescripcion" alignment="0" min="-2" pref="202" max="-2" attributes="0"/>
                           <Component id="tfNuevoNombre" alignment="0" min="-2" pref="180" max="-2" attributes="0"/>
                           <Component id="cbCuentaAtras" min="-2" max="-2" attributes="0"/>
-                          <Component id="jSpinner1" min="-2" pref="52" max="-2" attributes="0"/>
+                          <Component id="contObstaculos" min="-2" pref="52" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="133" max="-2" attributes="0"/>
                   </Group>
@@ -74,7 +74,7 @@
                       <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                       <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jSpinner1" min="-2" max="-2" attributes="0"/>
+                      <Component id="contObstaculos" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                       <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                   </Group>
@@ -197,7 +197,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jlimagenArena">
     </Component>
-    <Component class="javax.swing.JSpinner" name="jSpinner1">
+    <Component class="javax.swing.JSpinner" name="contObstaculos">
     </Component>
   </SubComponents>
 </Form>

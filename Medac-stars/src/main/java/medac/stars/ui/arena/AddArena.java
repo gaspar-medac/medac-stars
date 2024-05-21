@@ -4,16 +4,10 @@
  */
 package medac.stars.ui.arena;
 
-import java.awt.Image;
 import java.io.File;
-import java.io.IOException;
-import java.net.URL;
-import javax.imageio.ImageIO;
-import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
-import javax.swing.JTextField;
 import static medac.stars.controller.ManageData.arenaSet;
 import medac.stars.model.Arena;
 
@@ -56,7 +50,7 @@ public class AddArena extends javax.swing.JFrame {
         bGuardarArena = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jlimagenArena = new javax.swing.JLabel();
-        jSpinner1 = new javax.swing.JSpinner();
+        contObstaculos = new javax.swing.JSpinner();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -142,7 +136,7 @@ public class AddArena extends javax.swing.JFrame {
                             .addComponent(tfDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(tfNuevoNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(cbCuentaAtras)
-                            .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(contObstaculos, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(133, 133, 133))))
             .addGroup(layout.createSequentialGroup()
                 .addGap(243, 243, 243)
@@ -165,7 +159,7 @@ public class AddArena extends javax.swing.JFrame {
                         .addGap(16, 16, 16)
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(contObstaculos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel3))
                     .addGroup(layout.createSequentialGroup()
@@ -197,7 +191,7 @@ public class AddArena extends javax.swing.JFrame {
      */
     private void bGuardarArenaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bGuardarArenaActionPerformed
 
-        Arena arena = new Arena(tfNuevoNombre.getText(), cbCuentaAtras.isSelected(), tfDescripcion.getText(), jlimagenArena.getIcon(), (int) jSpinner1.getValue());
+        Arena arena = new Arena(tfNuevoNombre.getText(), cbCuentaAtras.isSelected(), tfDescripcion.getText(), jlimagenArena.getIcon(), (int) contObstaculos.getValue());
         arenaSet.add(arena);
         JOptionPane.showMessageDialog(this, "La Arena se ha guardado con Exito!!");
         this.dispose();
@@ -303,11 +297,11 @@ public class AddArena extends javax.swing.JFrame {
     private javax.swing.JButton bCancelar;
     private javax.swing.JButton bGuardarArena;
     private javax.swing.JCheckBox cbCuentaAtras;
+    private javax.swing.JSpinner contObstaculos;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JSpinner jSpinner1;
     private javax.swing.JLabel jlimagenArena;
     private javax.swing.JTextField tfDescripcion;
     private javax.swing.JTextField tfNuevoNombre;
