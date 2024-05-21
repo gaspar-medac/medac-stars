@@ -1,6 +1,5 @@
 package medac.stars.model;
 
-import java.awt.List;
 import java.util.ArrayList;
 
 /**
