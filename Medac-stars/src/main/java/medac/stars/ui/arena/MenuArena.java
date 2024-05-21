@@ -35,7 +35,7 @@ public class MenuArena extends javax.swing.JFrame {
         bGestionMedacStars = new javax.swing.JButton();
         bGestionUsuarios = new javax.swing.JButton();
         bLogout = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        labelTituloMenu = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -61,9 +61,9 @@ public class MenuArena extends javax.swing.JFrame {
 
         bLogout.setText("Logout");
 
-        jLabel1.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 51, 51));
-        jLabel1.setText("Bienvenido NombreUsuario, aqui tienes todas las opciones que puedes realizar");
+        labelTituloMenu.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
+        labelTituloMenu.setForeground(new java.awt.Color(255, 51, 51));
+        labelTituloMenu.setText("Bienvenido NombreUsuario, aqui tienes todas las opciones que puedes realizar");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -73,7 +73,7 @@ public class MenuArena extends javax.swing.JFrame {
                 .addGap(15, 15, 15)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(labelTituloMenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -94,7 +94,7 @@ public class MenuArena extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(22, 22, 22)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(labelTituloMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 71, Short.MAX_VALUE)
                 .addComponent(bGestionUsuarios)
                 .addGap(18, 18, 18)
@@ -179,6 +179,6 @@ public class MenuArena extends javax.swing.JFrame {
     private javax.swing.JButton bGestionUsuarios;
     private javax.swing.JButton bLogout;
     private javax.swing.JButton bSalir;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel labelTituloMenu;
     // End of variables declaration//GEN-END:variables
 }
