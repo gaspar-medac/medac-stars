@@ -8,7 +8,6 @@ import java.io.File;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
-import medac.stars.controller.ManageData;
 import static medac.stars.controller.ManageData.arenaSet;
 import medac.stars.model.Arena;
 
