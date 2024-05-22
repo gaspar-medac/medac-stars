@@ -38,8 +38,8 @@ public class FrmPantallaPrincipalUsuario extends javax.swing.JFrame {
         txtchat = new javax.swing.JButton();
         txtsalir = new javax.swing.JButton();
         txtlogout = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        textoBienvenida = new javax.swing.JLabel();
+        textoInformativo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("PANTALLA PRINCIPAL USUARIO");
@@ -81,11 +81,11 @@ public class FrmPantallaPrincipalUsuario extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel1.setText("Bienvenido Euphoria1");
+        textoBienvenida.setForeground(new java.awt.Color(255, 0, 0));
+        textoBienvenida.setText("Bienvenido Euphoria1");
 
-        jLabel2.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel2.setText("Aquí tienes todas las opciones que puedes realizar");
+        textoInformativo.setForeground(new java.awt.Color(255, 0, 0));
+        textoInformativo.setText("Aquí tienes todas las opciones que puedes realizar");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -93,7 +93,7 @@ public class FrmPantallaPrincipalUsuario extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(0, 100, Short.MAX_VALUE)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(textoInformativo, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(75, 75, 75))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(17, 17, 17)
@@ -105,7 +105,7 @@ public class FrmPantallaPrincipalUsuario extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(179, 179, 179)
-                        .addComponent(jLabel1))
+                        .addComponent(textoBienvenida))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(178, 178, 178)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -122,9 +122,9 @@ public class FrmPantallaPrincipalUsuario extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(22, 22, 22)
-                .addComponent(jLabel1)
+                .addComponent(textoBienvenida)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel2)
+                .addComponent(textoInformativo)
                 .addGap(40, 40, 40)
                 .addComponent(txtverMedacStars, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -223,9 +223,9 @@ public class FrmPantallaPrincipalUsuario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel textoBienvenida;
+    private javax.swing.JLabel textoInformativo;
     private javax.swing.JButton txtchat;
     private javax.swing.JButton txtjugar;
     private javax.swing.JButton txtlogout;
