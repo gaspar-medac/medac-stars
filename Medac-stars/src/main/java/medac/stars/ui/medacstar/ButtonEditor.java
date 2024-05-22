@@ -63,7 +63,7 @@ class ButtonEditor extends DefaultCellEditor {
         }
         isPushed = false;
         //devolvemos el label, pero podria ser el numero de fila
-        return new String(label);
+        return label;
     }
 
     @Override

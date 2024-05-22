@@ -13,26 +13,16 @@ import java.awt.event.ActionListener;
  */
 class ButtonEditor extends DefaultCellEditor {
 
-
-    protected JButton button;
+    private final JButton button;
     private String label;
-
-    //aqui se puede indicar indice de la tabla, id del objeto medac star...
     private int numeroFila;
-
-    // es pulsado
     private boolean isPushed;
 
     public ButtonEditor(JCheckBox checkBox) {
         super(checkBox);
         button = new JButton();
         button.setOpaque(true);
-        button.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                fireEditingStopped();
-            }
-        });
+        button.addActionListener(e -> fireEditingStopped());
     }
 
     @Override
@@ -56,22 +46,10 @@ class ButtonEditor extends DefaultCellEditor {
     public Object getCellEditorValue() {
         if (isPushed) {
             JOptionPane.showMessageDialog(button, label + ": pulsado: " + ManageData.userSet.get(numeroFila).getName());
-
-            java.awt.EventQueue.invokeLater(new Runnable() {
-                public void run() {
-                    new Usuario(ManageData.userSet.get(numeroFila)).setVisible(true);
-
-
-                }
-
-            });
-
-
+            EventQueue.invokeLater(() -> new Usuario(ManageData.userSet.get(numeroFila)).setVisible(true));
         }
         isPushed = false;
-        //devolvemos el label, pero podria ser el numero de fila
-        return new String(label);
-
+        return label;
     }
 
     @Override
