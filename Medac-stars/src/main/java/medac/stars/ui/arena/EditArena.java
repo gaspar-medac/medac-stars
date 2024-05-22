@@ -39,7 +39,7 @@ public class EditArena extends javax.swing.JFrame {
         tfEditarDescripcion.setText(arena.getDescription());
         jSpinner1.setValue(arena.getBarriers());
         jlimagenArena.setIcon(arena.getImage());
-        this.index = index;
+        this.arenaIndex = index;
         this.tablaArenas = tablaArenas;
     }
 
@@ -203,8 +203,8 @@ public class EditArena extends javax.swing.JFrame {
     private void bGuardarCambiosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bGuardarCambiosActionPerformed
         Arena arena = new Arena(tfEditarNombre.getText(), cbCuentaAtrasEditar.isSelected(), tfEditarDescripcion.getText(), jlimagenArena.getIcon(), (int) jSpinner1.getValue());
         for (int i = 0; i < arenaSet.size(); i++) {
-            if (i == index) {
-                arenaSet.set(index, arena);
+            if (i == arenaIndex) {
+                arenaSet.set(arenaIndex, arena);
             }
         }
         JOptionPane.showMessageDialog(this, "Se ha guardado la modificacion");
@@ -255,7 +255,7 @@ public class EditArena extends javax.swing.JFrame {
     /**
      * Atributos creados para las distintas funciones
      */
-    int index;
+    int arenaIndex;
     private TablaArenas tablaArenas;
     private Arena arena;
     // Variables declaration - do not modify//GEN-BEGIN:variables
