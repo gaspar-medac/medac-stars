@@ -4,16 +4,12 @@
  */
 package medac.stars.ui.arena;
 
-import java.awt.Image;
+
 import java.io.File;
-import java.io.IOException;
-import java.net.URL;
-import javax.imageio.ImageIO;
-import javax.swing.Icon;
+
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
-import javax.swing.JTextField;
 import static medac.stars.controller.ManageData.arenaSet;
 import medac.stars.model.Arena;
 
