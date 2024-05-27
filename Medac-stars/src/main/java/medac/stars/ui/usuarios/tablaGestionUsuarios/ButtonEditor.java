@@ -14,7 +14,7 @@ import java.awt.event.ActionListener;
 class ButtonEditor extends DefaultCellEditor {
 
 
-    protected JButton button;
+    protected JButton bEditar;
     private String label;
 
     //aqui se puede indicar indice de la tabla, id del objeto medac star...
@@ -25,9 +25,9 @@ class ButtonEditor extends DefaultCellEditor {
 
     public ButtonEditor(JCheckBox checkBox) {
         super(checkBox);
-        button = new JButton();
-        button.setOpaque(true);
-        button.addActionListener(new ActionListener() {
+        bEditar = new JButton();
+        bEditar.setOpaque(true);
+        bEditar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 fireEditingStopped();
@@ -39,23 +39,23 @@ class ButtonEditor extends DefaultCellEditor {
     public Component getTableCellEditorComponent(JTable table, Object value,
                                                  boolean isSelected, int row, int column) {
         if (isSelected) {
-            button.setForeground(table.getSelectionForeground());
-            button.setBackground(table.getSelectionBackground());
+            bEditar.setForeground(table.getSelectionForeground());
+            bEditar.setBackground(table.getSelectionBackground());
         } else {
-            button.setForeground(table.getForeground());
-            button.setBackground(table.getBackground());
+            bEditar.setForeground(table.getForeground());
+            bEditar.setBackground(table.getBackground());
         }
         label = (value == null) ? "" : value.toString();
-        button.setText(label);
+        bEditar.setText(label);
         numeroFila = row;
         isPushed = true;
-        return button;
+        return bEditar;
     }
 
     @Override
     public Object getCellEditorValue() {
         if (isPushed) {
-            JOptionPane.showMessageDialog(button, label + ": pulsado: " + ManageData.userSet.get(numeroFila).getName());
+            JOptionPane.showMessageDialog(bEditar, label + ": pulsado: " + ManageData.userSet.get(numeroFila).getName());
 
             java.awt.EventQueue.invokeLater(new Runnable() {
                 public void run() {
