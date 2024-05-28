@@ -251,7 +251,7 @@ public class Frmlogin extends javax.swing.JDialog {
         this.dispose();
     }                                        
 
-    private void irFrmPantallaPrincipal() {
+    private void FramePantallaPrincipal() {
         // Obtener el nombre de usuario y la contraseña ingresados
     String nombreUsuario = txtusu.getText();
     String passwordIngresada = new String(txtpassword.getPassword());

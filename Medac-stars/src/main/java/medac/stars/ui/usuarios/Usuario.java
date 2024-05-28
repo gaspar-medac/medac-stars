@@ -213,8 +213,8 @@ public class Usuario extends javax.swing.JFrame {
             } else {
                 // aqui check si existe o no el usuario
                 boolean existe = false;
-                for (User user : ManageData.userSet) {
-                    if (user.getName().equals(nombreUsuario)) {
+                for (Usuario usuario : ManageData.userSet) {
+                    if (usuario.getName().equals(nombreUsuario)) {
                         existe = true;
                     }
                 }
