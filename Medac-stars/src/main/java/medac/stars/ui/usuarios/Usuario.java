@@ -241,7 +241,7 @@ public class Usuario extends javax.swing.JFrame {
     }//GEN-LAST:event_bEntrarActionPerformed
 
     private void bVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bVolverActionPerformed
-        // TODO add your handling code here:
+        // Manejar la informacion que sea necesaria
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new PanelPrincipalGestor().setVisible(true);
