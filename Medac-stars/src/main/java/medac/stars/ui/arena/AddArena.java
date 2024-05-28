@@ -224,7 +224,7 @@ public class AddArena extends javax.swing.JFrame {
      * una vez selecionadas coge la ruta de la imagen y la establece mediante el metodo LoadAndSetImage
      * @param evt 
      */
-    private void bAnyadirImagenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAnyadirImagenActionPerformed
+    private void bAgregarImagenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAnyadirImagenActionPerformed
         JFileChooser fileChooser = new JFileChooser();
         String ruta;
         fileChooser.setSelectedFile(new File(""));

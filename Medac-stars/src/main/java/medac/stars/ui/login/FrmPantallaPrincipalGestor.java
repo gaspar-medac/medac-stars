@@ -166,34 +166,34 @@ public class FrmPantallaPrincipalGestor extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtsalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtsalirActionPerformed
+    private void textsalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtsalirActionPerformed
         this.dispose();
     }//GEN-LAST:event_txtsalirActionPerformed
 
-    private void txtlogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtlogoutActionPerformed
+    private void textlogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtlogoutActionPerformed
         // boton de logout
         
     }//GEN-LAST:event_txtlogoutActionPerformed
 
-    private void txtgestionusuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtgestionusuariosActionPerformed
+    private void textgestionusuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtgestionusuariosActionPerformed
         // TODO add your handling code here:
         PanelPrincipalGestor ppg = new PanelPrincipalGestor();
         ppg.setVisible(true);
     }//GEN-LAST:event_txtgestionusuariosActionPerformed
 
-    private void txtgestionMedacStarsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtgestionMedacStarsActionPerformed
+    private void textgestionMedacStarsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtgestionMedacStarsActionPerformed
         // TODO add your handling code here:
         ListaMedacStars lms = new ListaMedacStars();
         lms.setVisible(true);
     }//GEN-LAST:event_txtgestionMedacStarsActionPerformed
 
-    private void txtarenaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtarenaActionPerformed
+    private void textarenaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtarenaActionPerformed
         // TODO add your handling code here:
         TablaArenas ta = new TablaArenas();
         ta.setVisible(true);
     }//GEN-LAST:event_txtarenaActionPerformed
 
-    private void txtchatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtchatActionPerformed
+    private void textchatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtchatActionPerformed
         // TODO add your handling code here:
         ChatInterfaz cj = new ChatInterfaz();
         cj.setVisible(true);
