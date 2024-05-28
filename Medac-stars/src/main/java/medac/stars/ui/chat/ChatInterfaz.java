@@ -26,9 +26,9 @@ public class ChatInterfaz extends javax.swing.JFrame {
     User usu2 = new User("PRIMO", "111", "", 0);
 
     ArrayList<Message> messages1 = new ArrayList();
-    ArrayList messages2 = new ArrayList();
-    ArrayList messages3 = new ArrayList();
-    ArrayList messages4 = new ArrayList();
+    ArrayList<Message> messages2 = new ArrayList<>();
+    ArrayList<Message> messages3 = new ArrayList<>();
+    ArrayList<Message> messages4 = new ArrayList<>();
     ArrayList messagesAuxiliar;
     
 
