@@ -11,7 +11,6 @@ import java.awt.event.ActionEvent;
 import java.util.ArrayList;
 import javax.swing.Box;
 import javax.swing.JButton;
-import javax.swing.JPanel;
 import javax.swing.JScrollBar;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
