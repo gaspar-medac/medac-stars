@@ -19,6 +19,8 @@ public class ManageData {
     public static ArrayList<Arena> arenaSet = new ArrayList<Arena>();
     public static ArrayList<MedacStar> medacStarSet = new ArrayList<MedacStar>();
     public static ArrayList<Game> gameList = new ArrayList<Game>();
+    public static User currentUser = null;
+
     static {
         arenaSet.add(new Arena("arena1", false, "bla", null, 10));
         arenaSet.add(new Arena("arena2", false, "bla", null, 10));

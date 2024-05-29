@@ -98,7 +98,6 @@ public class ChatInterfaz extends javax.swing.JFrame {
         userField.setHorizontalAlignment(SwingConstants.RIGHT);
         userField.setFont(new Font("Arial", Font.ITALIC, 14));
         pChat.add(userField);
-
     }
 
     public void mostrarReceptor(Message message) {

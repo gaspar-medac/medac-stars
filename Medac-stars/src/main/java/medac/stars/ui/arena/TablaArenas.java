@@ -97,7 +97,7 @@ public class TablaArenas extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void initMiTablaComponent() {
+    public void initMiTablaComponent() {
         DefaultTableModel model = new DefaultTableModel(new Object[]{"Nombre", "Editar"}, 0);
         ManageData.arenaSet.forEach(arena -> model.addRow(new Object[]{arena.getName(), "Editar"}));
         tablaArena.setModel(model);

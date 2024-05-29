@@ -73,12 +73,8 @@ public class Usuario extends javax.swing.JFrame {
         }
         //</editor-fold>
 
-        User usuario = new User("a", "b", "c", 0);
-
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
-            //editar
-            new Usuario(usuario).setVisible(true);
             //nuevo
             new Usuario(null).setVisible(true);
         });
@@ -242,6 +238,8 @@ public class Usuario extends javax.swing.JFrame {
         User user = new User(nombreUsuario, contraseña, email, tipoUsuario);
         ManageData.userSet.add(user);
         JOptionPane.showMessageDialog(this, "Usuario guardado exitosamente.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+
+        ManageData.currentUser = user;
 
         if (user.getType() == 0) {
             FrmPantallaPrincipalGestor fpg = new FrmPantallaPrincipalGestor();
