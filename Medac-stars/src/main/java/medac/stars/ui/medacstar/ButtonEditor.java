@@ -1,19 +1,12 @@
 package medac.stars.ui.medacstar;
 
-import java.awt.Component;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
-import javax.swing.DefaultCellEditor;
-import javax.swing.JButton;
-import javax.swing.JCheckBox;
-import javax.swing.JOptionPane;
-import javax.swing.JTable;
 import medac.stars.controller.ManageData;
 import medac.stars.model.MedacStar;
 
-class ButtonEditor extends DefaultCellEditor {
+import javax.swing.*;
+import java.awt.*;
 
+class ButtonEditor extends DefaultCellEditor {
     protected JButton button;
     private String label;
 
@@ -27,24 +20,13 @@ class ButtonEditor extends DefaultCellEditor {
         super(checkBox);
         button = new JButton();
         button.setOpaque(true);
-        button.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                fireEditingStopped();
-            }
-        });
+        button.addActionListener(e -> fireEditingStopped());
     }
 
     @Override
-    public Component getTableCellEditorComponent(JTable table, Object value,
-            boolean isSelected, int row, int column) {
-        if (isSelected) {
-            button.setForeground(table.getSelectionForeground());
-            button.setBackground(table.getSelectionBackground());
-        } else {
-            button.setForeground(table.getForeground());
-            button.setBackground(table.getBackground());
-        }
+    public Component getTableCellEditorComponent(JTable table, Object value, boolean isSelected, int row, int column) {
+        button.setForeground(isSelected ? table.getSelectionForeground() : table.getForeground());
+        button.setBackground(isSelected ? table.getSelectionBackground() : table.getBackground());
         label = (value == null) ? "" : value.toString();
         button.setText(label);
         numeroFila = row;
@@ -56,14 +38,14 @@ class ButtonEditor extends DefaultCellEditor {
     public Object getCellEditorValue() {
         if (isPushed) {
             // JOptionPane.showMessageDialog(Botton, label + ": pulsado: " + numeroFila);
-             JOptionPane.showMessageDialog(editorComponent, "Que MedacStar quiere editar?");
+            JOptionPane.showMessageDialog(editorComponent, "Que MedacStar quiere editar?");
             MedacStar medacStar = ManageData.medacStarSet.get(numeroFila);
             EditarMedacStars editFor = new EditarMedacStars(medacStar);
             editFor.setVisible(true);
         }
         isPushed = false;
         //devolvemos el label, pero podria ser el numero de fila
-        return new String(label);
+        return label;
     }
 
     @Override
