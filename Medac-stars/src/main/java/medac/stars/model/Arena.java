@@ -12,11 +12,11 @@ import javax.swing.Icon;
  */
 public class Arena {
 
-    String name;
-    boolean countdown;
-    String description;
-    Icon image;
-    int barriers;
+    private String name;
+    private boolean countdown;
+    private String description;
+    private Icon image;
+    private int barriers;
 
     public Arena(String name, boolean countdown, String description, Icon image, int barriers) {
         this.name = name;
