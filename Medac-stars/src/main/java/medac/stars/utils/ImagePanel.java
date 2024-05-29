@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class ImagePanel extends JPanel {
+    // Path to the image assets folder.
     private static final String IMAGE_PATH = "./src/main/java/medac/stars/ui/assets/images/";
     private Image backgroundImage;
 
@@ -14,6 +15,7 @@ public class ImagePanel extends JPanel {
      */
     public ImagePanel(String fileName) {
         setOpaque(false);
+        // Load the image file and set it as the background image.
         try {
             backgroundImage = new ImageIcon(IMAGE_PATH + fileName).getImage();
         } catch (Exception e) {
@@ -28,6 +30,7 @@ public class ImagePanel extends JPanel {
      */
     @Override
     protected void paintComponent(Graphics g) {
+        // Draw the background image to fill the panel.
         super.paintComponent(g);
         g.drawImage(backgroundImage, 0, 0, getWidth(), getHeight(), this);
     }
