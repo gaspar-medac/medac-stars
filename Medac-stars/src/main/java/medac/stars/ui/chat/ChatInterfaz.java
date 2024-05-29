@@ -115,7 +115,7 @@ public class ChatInterfaz extends javax.swing.JFrame {
     }
 
     private void mostrarReceptor(Message message) {
-        JTextField userField = new JTextField(message.getReceiver());
+        JTextField userField = new JTextField(message.getSender());
         userField.setForeground(new java.awt.Color(30, 144, 255));
         userField.setVisible(true);
         userField.setBackground(Color.WHITE);
