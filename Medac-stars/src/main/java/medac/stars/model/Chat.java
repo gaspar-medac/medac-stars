@@ -1,21 +1,23 @@
 package medac.stars.model;
 
-import java.awt.List;
 import java.util.ArrayList;
 
 /**
- *
  * @author gaspar
  */
 public class Chat {
 
-    private ArrayList<Message> messages;
+    private final ArrayList<Message> messages;
+    public User user1;
+    public User user2;
 
-    
-    public Chat() {
+    public Chat(User user1, User user2) {
         this.messages = new ArrayList<>();
+        this.user1 = user1;
+        this.user2 = user2;
     }
-    public Chat(ArrayList  messages) {
+
+    public Chat(ArrayList messages) {
         this.messages = messages;
     }
 
@@ -23,8 +25,8 @@ public class Chat {
         return messages;
     }
 
-    public void setMessages(ArrayList messages) {
-        this.messages = messages;
+    public void addMessage(Message message) {
+        this.messages.add(message);
     }
 
 }
