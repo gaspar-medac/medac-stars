@@ -249,6 +249,11 @@ public class ChatInterfaz extends javax.swing.JFrame {
         bSalirAlMenú.setBackground(new java.awt.Color(255, 0, 0));
         bSalirAlMenú.setForeground(new java.awt.Color(255, 153, 153));
         bSalirAlMenú.setText("jButton6");
+        bSalirAlMenú.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bSalirAlMenúActionPerformed(evt);
+            }
+        });
 
         jPanel2.setBackground(new java.awt.Color(0, 102, 153));
         jPanel2.setLayout(new java.awt.GridLayout(0, 1, 30, 40));
@@ -390,6 +395,15 @@ public class ChatInterfaz extends javax.swing.JFrame {
         jScrollPane1.revalidate();
 
     }//GEN-LAST:event_bUsuario4ActionPerformed
+
+    private void bSalirAlMenúActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSalirAlMenúActionPerformed
+
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new ChatJugadores().setVisible(true);
+            }
+        });
+    }//GEN-LAST:event_bSalirAlMenúActionPerformed
 
     /**
      * @param args the command line arguments
