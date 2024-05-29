@@ -101,8 +101,8 @@ public class ChatInterfaz extends javax.swing.JFrame {
         jPanel2.repaint();
     }
 
-    private void mostrarEmisor(Message message) {
-        JTextField userField = new JTextField(message.getSender());
+    private void mostrarEmisor(String username) {
+        JTextField userField = new JTextField(username);
         userField.setVisible(true);
         userField.setBackground(Color.WHITE);
         userField.setEditable(false);
@@ -114,8 +114,8 @@ public class ChatInterfaz extends javax.swing.JFrame {
         pChat.add(userField);
     }
 
-    private void mostrarReceptor(Message message) {
-        JTextField userField = new JTextField(message.getSender());
+    private void mostrarReceptor(String username) {
+        JTextField userField = new JTextField(username);
         userField.setForeground(new java.awt.Color(30, 144, 255));
         userField.setVisible(true);
         userField.setBackground(Color.WHITE);
@@ -152,10 +152,10 @@ public class ChatInterfaz extends javax.swing.JFrame {
 
     private void mostrarMensaje(Message message) {
         if (message.getSender().equals(ManageData.currentUser.getName())) {
-            mostrarEmisor(message);
+            mostrarEmisor(message.getSender());
             mostrarMensajeEnviado(message);
         } else {
-            mostrarReceptor(message);
+            mostrarReceptor(message.getSender());
             mostrarMensajesRecibido(message);
         }
         pChat.add(Box.createRigidArea(new Dimension(0, 10)));
