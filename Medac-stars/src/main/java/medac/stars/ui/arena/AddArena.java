@@ -4,7 +4,6 @@
  */
 package medac.stars.ui.arena;
 
-import java.awt.Image;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
